@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<title>Login</title>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="https://i.ibb.co/5kRLvM9/podar-logo.jpg" class="website_logo">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Saira:wght@200&display=swap');
+        * {
+            font-family: 'Saira', sans-serif;
+            color: white;
+        }
+        
+        body {
+            border-radius: 3px;
+            margin-top: 80px;
+            background-size: cover;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-align: center;
+            align-items: center;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            background-color: #f5f5f5;
+            background-image: url("https://i.postimg.cc/MKF3Z36q/background.png");
+                
+        }
+
+        .form-signin {
+            width: 100%;
+            max-width: 330px;
+            padding: 15px;
+            margin: auto;
+            box-shadow: 0px 0px 37px -7px rgba(0,0,0,0.75);
+
+        }
+
+        .form-signin .form-control {
+            margin: 16px 3px;
+            position: relative;
+            margin-top: 0px;
+            box-sizing: border-box;
+            height: auto;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .form-signin .form-control:focus {
+            z-index: 2;
+            
+        }
+
+        .form-signin input[type="password"] {
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
+
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .Book img {
+            border: 5px solid #c0ff03;
+            border-radius: 10px;
+            right: 1100px;
+            top: 200px;
+            position: absolute;
+            width: 100px;
+            transform: rotate(-25deg);
+            animation-name: move1;
+            animation-duration: 6s;
+            animation-iteration-count: infinite;
+        }
+        .Music img {
+            box-sizing: content-box;
+            border: 5px solid #03ffee;
+            border-radius: 100px;
+            right: 380px;
+            position: absolute;
+            width: 100px;
+            transform: rotate(25deg);
+            animation-name: move2;
+            animation-duration: 6s;
+            animation-iteration-count: infinite;
+        }
+        .Microscope img {
+            border: 5px solid #03ff20;
+            border-radius: 100px;
+            top: 570px;
+            right: 250px;
+            position: absolute;
+            width: 140px;
+            transform: rotate(25deg);
+            animation-name: move3;
+            animation-duration: 6s;
+            animation-iteration-count: infinite;
+        }
+        .Laptop img {
+            box-sizing: border-box;
+            border: 5px solid #ff036c;
+            border-radius: 100px;
+            top: 55px;
+            right: 285px;
+            position: absolute;
+            width: 280px;
+            transform: rotate(5deg);
+            animation-name: move4;
+            animation-duration: 7s;
+            animation-iteration-count: infinite;
+        }
+        .Hat img {
+            border: 5px solid #0381ff;
+            border-radius: 100px;
+            top: 400px;
+            right: 1050px;
+            position: absolute;
+            width: 170px;
+            transform: rotate(25deg);
+            animation-name: move5;
+            animation-duration: 7s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes move1 {
+            0%{
+                transform:translateY(10px) rotate(-5deg);
+           }
+            25%{
+                transform:translateY(-10px) rotate(-15deg);
+           }
+            50%{
+                transform:translateY(10px) rotate(-25deg);
+           }
+            75%{
+                transform:translateY(-10px) rotate(-15deg);
+           }
+            100%{
+                transform:translateY(10px) rotate(-5deg);
+           }
+        }
+        @keyframes move2 {
+            0%{
+                transform:translateY(10px) rotate(20deg);
+           }
+            25%{
+                transform:translateY(-10px) rotate(10deg);
+           }
+            50%{
+                transform:translateY(10px) rotate(-5deg);
+           }
+            75%{
+                transform:translateY(-10px) rotate(10deg);
+           }
+            100%{
+                transform:translateY(10px) rotate(20deg);
+           }
+        }
+        @keyframes move3 {
+            0%{
+                transform:translateY(10px) rotate(27deg);
+           }
+            25%{
+                transform:translateY(-10px) rotate(25deg);
+           }
+            50%{
+                transform:translateY(10px) rotate(20deg);
+           }
+            75%{
+                transform:translateY(-10px) rotate(25deg);
+           }
+            100%{
+                transform:translateY(10px) rotate(27deg);
+           }
+        }
+        @keyframes move4 {
+            0%{
+                transform:translateY(10px) rotate(7deg);
+           }
+            25%{
+                transform:translateY(-10px) rotate(5deg);
+           }
+            50%{
+                transform:translateY(10px) rotate(-3deg);
+           }
+            75%{
+                transform:translateY(-10px) rotate(5deg);
+           }
+            100%{
+                transform:translateY(10px) rotate(7deg);
+           }
+        }
+        @keyframes move5 {
+            0%{
+                transform:translateY(10px) rotate(-5deg);
+           }
+            25%{
+                transform:translateY(-10px) rotate(10deg);
+           }
+            50%{
+                transform:translateY(10px) rotate(20deg);
+           }
+            75%{
+                transform:translateY(-10px) rotate(10deg);
+           }
+            100%{
+                transform:translateY(10px) rotate(-5deg);
+           }
+        }
+
+
+    </style>
+
+</head>
+
+<body class="text-center">
+
+    <div class="Book">
+        <img src="https://i.postimg.cc/SxhmR7PB/IMG1.png">
+    </div>
+    <div class="Music">
+        <img src="https://i.postimg.cc/CMPkpdRT/Music.png">
+    </div>
+     <div class="Microscope">
+        <img src="https://i.postimg.cc/t4wGKdjZ/Microsope.png">
+    </div>
+    <div class="Laptop">
+        <img src="https://i.postimg.cc/XqQTQdLv/Laptop.png">
+    </div>
+    <div class="Hat">
+        <img src="https://i.postimg.cc/rwf6VHPz/Hat.png">
+    </div>
+
+
+
+
+    <form class="form-signin bg-dark p-5 rounded" style="margin-top:30px;" method="post" action="/login">
+        {% csrf_token %}
+        <img class="mb-4 rounded" src="https://i.ibb.co/5kRLvM9/podar-logo.jpg" alt="PodarLogo" width="72" height="72">
+        <h1 class="h3 mb-3 color-white font-weight-normal" style="font-size:30px;">Please Log in</h1>
+        <label for="inputEmail" style="box-shadow: inset 0px 0px 37px -7px rgba(0,0,0,0.75);" class="sr-only">Username</label>
+        <input type="text" id="inputEmail" name="username" class="form-control" placeholder="Username" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
+        <button class="btn btn-lg btn-info  btn-block rounded mt-3 m-1" type="submit">Login</button>
+        <p class="mt-5 mb-3 text-muted ">&copy;Podar International School</p>
+    </form>
+    
+    
+
+</body>
+
+</html>

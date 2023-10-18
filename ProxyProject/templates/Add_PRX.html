@@ -1,0 +1,59 @@
+<title>Podar Education Network</title>
+{% load static %}
+<link rel="icon" href="https://i.ibb.co/5kRLvM9/podar-logo.jpg" class="website_logo">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<button class="back_btn rounded" onclick="history.back()"
+    style="font-weight:bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Back</button>
+<body class="form_body">
+    <form method="POST" class="bg-Dark text-white p-5 col-sm-6 rounded shadow">
+        {% csrf_token %}    
+    {{form.as_p}}
+    <button class="Save_btn">Save</button>
+    </form>    
+</body>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@200&display=swap');
+    * {
+            font-family: 'Saira', sans-serif;
+            font-weight: bolder;
+    }
+    .Save_btn{
+        background-color: rgb(62, 255, 94);
+        position: relative;
+        width: 100px;
+        margin-left: 210px;
+        border: none;
+        border-radius: 5px;
+        font-size: 17px;
+        transition: 0.3s;
+
+    }
+    .Save_btn:hover{
+        background-color: rgb(154, 255, 169);
+    }
+    .form_body{
+        position: relative;
+        padding-top: 150px;
+        padding-left: 25%;
+        width: 1750px;    }
+
+    .back_btn {
+        background-color: rgb(0, 205, 85);
+        border: none;
+        height: 45px;
+        width: 120px;
+        color: black;
+        position: relative;
+        top: -140px;
+        left: -372px;
+        transition: 0.4s;
+        text-align: justify;
+        color: white;
+    }
+
+    .back_btn:hover {
+        background-color: rgb(24, 255, 120);
+    }
+</style>

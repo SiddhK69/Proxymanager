@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://i.ibb.co/5kRLvM9/podar-logo.jpg" class="website_logo">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Podar Education Network</title>
+</head>
+<body class="body bg-secondary">
+
+  <button class="back_btn rounded" onclick="history.back()"
+  style="font-weight:bold;"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+  </svg></button>
+
+<a href="/">
+<button class="back_btn rounded"
+  style="font-weight:bold;"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
+    <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z"/>
+    <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z"/>
+  </svg></button></a>
+
+
+  <div class="search_box form-floating">
+    <form action="" id="form2">
+        <div>
+            <input type="text" id="search">
+            <input type="button" id="submit_form" onclick="checkInput()" value="Find">
+        </div>
+    </form>
+  </div>
+
+  
+
+<div class="PRX_container">
+  <table class="table table-striped table-dark table-hover">
+    <thead>
+      {% for subPRX_Data1 in subPRX_Data1 %}
+      <tr>
+        <th scope="col"  style="border-top-left-radius:4.5px;">{{subPRX_Data1.Teacher.Acronym}}</th>
+        <th scope="col">1</th>
+        <th scope="col">2</th>
+        <th scope="col">3</th>
+        <th scope="col">4</th>
+        <th scope="col">5</th>
+        <th scope="col">6</th>
+        <th scope="col">7</th>
+        <th scope="col">8</th>
+        <th scope="col" style="border-top-right-radius:4.5px;">9</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Periods</th>
+        <td>{{subPRX_Data1.FIRST_period}}</td>
+        <td>{{subPRX_Data1.SECOND_period}}</td>
+        <td>{{subPRX_Data1.THIRD_period}}</td>
+        <td>{{subPRX_Data1.FOURTH_period}}</td>
+        <td>{{subPRX_Data1.FIFTH_period}}</td>
+        <td>{{subPRX_Data1.SIXTH_period}}</td>
+        <td>{{subPRX_Data1.SEVENTH_period}}</td>
+        <td>{{subPRX_Data1.EIGHTH_period}}</td>
+        <td>{{subPRX_Data1.NINETH_period}}</td>
+      </tr>
+      <tr>
+        <th scope="row"  style="border-bottom-left-radius:4.5px;">Proxy</th>
+        <td id="PRX1">{{subPRX_Data1.FIRST_proxy}}</td>
+        <td id="PRX2">{{subPRX_Data1.SECOND_proxy}}</td>
+        <td id="PRX3">{{subPRX_Data1.THIRD_proxy}}</td>
+        <td id="PRX4">{{subPRX_Data1.FOURTH_proxy}}</td>
+        <td id="PRX5">{{subPRX_Data1.FIFTH_proxy}}</td>
+        <td id="PRX6">{{subPRX_Data1.SIXTH_proxy}}</td>
+        <td id="PRX7">{{subPRX_Data1.SEVENTH_proxy}}</td>
+        <td id="PRX8">{{subPRX_Data1.EIGHTH_proxy}}</td>
+        <td id="PRX9" style="border-bottom-right-radius:4.5px;">{{subPRX_Data1.NINETH_proxy}}</td>
+      </tr>
+      {% endfor %}
+
+      <table class="table table-striped table-dark table-hover">
+        <thead>
+          {% for subPRX_Data2 in subPRX_Data2 %}
+          <tr>
+            <th scope="col"  style="border-top-left-radius:4.5px;">{{subPRX_Data2.Teacher.Acronym}}</th>
+            <th scope="col">1</th>
+            <th scope="col">2</th>
+            <th scope="col">3</th>
+            <th scope="col">4</th>
+            <th scope="col">5</th>
+            <th scope="col">6</th>
+            <th scope="col">7</th>
+            <th scope="col">8</th>
+            <th scope="col" style="border-top-right-radius:4.5px;">9</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Periods</th>
+            <td>{{subPRX_Data2.FIRST_period}}</td>
+            <td>{{subPRX_Data2.SECOND_period}}</td>
+            <td>{{subPRX_Data2.THIRD_period}}</td>
+            <td>{{subPRX_Data2.FOURTH_period}}</td>
+            <td>{{subPRX_Data2.FIFTH_period}}</td>
+            <td>{{subPRX_Data2.SIXTH_period}}</td>
+            <td>{{subPRX_Data2.SEVENTH_period}}</td>
+            <td>{{subPRX_Data2.EIGHTH_period}}</td>
+            <td>{{subPRX_Data2.NINETH_period}}</td>
+          </tr>
+          <tr>
+            <th scope="row"  style="border-bottom-left-radius:4.5px;">Proxy</th>
+            <td id="PRX1">{{subPRX_Data2.FIRST_proxy}}</td>
+            <td id="PRX2">{{subPRX_Data2.SECOND_proxy}}</td>
+            <td id="PRX3">{{subPRX_Data2.THIRD_proxy}}</td>
+            <td id="PRX4">{{subPRX_Data2.FOURTH_proxy}}</td>
+            <td id="PRX5">{{subPRX_Data2.FIFTH_proxy}}</td>
+            <td id="PRX6">{{subPRX_Data2.SIXTH_proxy}}</td>
+            <td id="PRX7">{{subPRX_Data2.SEVENTH_proxy}}</td>
+            <td id="PRX8">{{subPRX_Data2.EIGHTH_proxy}}</td>
+            <td id="PRX9" style="border-bottom-right-radius:4.5px;">{{subPRX_Data2.NINETH_proxy}}</td>
+          </tr>
+          
+          {% endfor %}
+
+          <table class="table table-striped table-dark table-hover">
+            <thead>
+              {% for subPRX_Data3 in subPRX_Data3 %}
+              <tr>
+                <th scope="col"  style="border-top-left-radius:4.5px;">{{subPRX_Data3.Teacher.Acronym}}</th>
+                <th scope="col">1</th>
+                <th scope="col">2</th>
+                <th scope="col">3</th>
+                <th scope="col">4</th>
+                <th scope="col">5</th>
+                <th scope="col">6</th>
+                <th scope="col">7</th>
+                <th scope="col">8</th>
+                <th scope="col" style="border-top-right-radius:4.5px;">9</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Periods</th>
+                <td>{{subPRX_Data3.FIRST_period}}</td>
+                <td>{{subPRX_Data3.SECOND_period}}</td>
+                <td>{{subPRX_Data3.THIRD_period}}</td>
+                <td>{{subPRX_Data3.FOURTH_period}}</td>
+                <td>{{subPRX_Data3.FIFTH_period}}</td>
+                <td>{{subPRX_Data3.SIXTH_period}}</td>
+                <td>{{subPRX_Data3.SEVENTH_period}}</td>
+                <td>{{subPRX_Data3.EIGHTH_period}}</td>
+                <td>{{subPRX_Data3.NINETH_period}}</td>
+              </tr>
+              <tr>
+                <th scope="row"  style="border-bottom-left-radius:4.5px;">Proxy</th>
+                <td id="PRX1">{{subPRX_Data3.FIRST_proxy}}</td>
+                <td id="PRX2">{{subPRX_Data3.SECOND_proxy}}</td>
+                <td id="PRX3">{{subPRX_Data3.THIRD_proxy}}</td>
+                <td id="PRX4">{{subPRX_Data3.FOURTH_proxy}}</td>
+                <td id="PRX5">{{subPRX_Data3.FIFTH_proxy}}</td>
+                <td id="PRX6">{{subPRX_Data3.SIXTH_proxy}}</td>
+                <td id="PRX7">{{subPRX_Data3.SEVENTH_proxy}}</td>
+                <td id="PRX8">{{subPRX_Data3.EIGHTH_proxy}}</td>
+                <td id="PRX9" style="border-bottom-right-radius:4.5px;">{{subPRX_Data3.NINETH_proxy}}</td>
+              </tr>
+              
+              {% endfor %}
+
+          <table class="table table-striped table-dark table-hover">
+    <thead>
+      {% for subPRX_Data4 in subPRX_Data4 %}
+      <tr>
+        <th scope="col"  style="border-top-left-radius:4.5px;">{{subPRX_Data4.Teacher.Acronym}}</th>
+        <th scope="col">1</th>
+        <th scope="col">2</th>
+        <th scope="col">3</th>
+        <th scope="col">4</th>
+        <th scope="col">5</th>
+        <th scope="col">6</th>
+        <th scope="col">7</th>
+        <th scope="col">8</th>
+        <th scope="col" style="border-top-right-radius:4.5px;">9</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Periods</th>
+        <td>{{subPRX_Data4.FIRST_period}}</td>
+        <td>{{subPRX_Data4.SECOND_period}}</td>
+        <td>{{subPRX_Data4.THIRD_period}}</td>
+        <td>{{subPRX_Data4.FOURTH_period}}</td>
+        <td>{{subPRX_Data4.FIFTH_period}}</td>
+        <td>{{subPRX_Data4.SIXTH_period}}</td>
+        <td>{{subPRX_Data4.SEVENTH_period}}</td>
+        <td>{{subPRX_Data4.EIGHTH_period}}</td>
+        <td>{{subPRX_Data4.NINETH_period}}</td>
+      </tr>
+      <tr>
+        <th scope="row"  style="border-bottom-left-radius:4.5px;">Proxy</th>
+        <td id="PRX1">{{subPRX_Data4.FIRST_proxy}}</td>
+        <td id="PRX2">{{subPRX_Data4.SECOND_proxy}}</td>
+        <td id="PRX3">{{subPRX_Data4.THIRD_proxy}}</td>
+        <td id="PRX4">{{subPRX_Data4.FOURTH_proxy}}</td>
+        <td id="PRX5">{{subPRX_Data4.FIFTH_proxy}}</td>
+        <td id="PRX6">{{subPRX_Data4.SIXTH_proxy}}</td>
+        <td id="PRX7">{{subPRX_Data4.SEVENTH_proxy}}</td>
+        <td id="PRX8">{{subPRX_Data4.EIGHTH_proxy}}</td>
+        <td id="PRX9" style="border-bottom-right-radius:4.5px;">{{subPRX_Data4.NINETH_proxy}}</td>
+      </tr>
+      {% endfor %}
+
+      <table class="table table-striped table-dark table-hover">
+    <thead>
+      {% for subPRX_Data5 in subPRX_Data5 %}
+      <tr>
+        <th scope="col"  style="border-top-left-radius:4.5px;">{{subPRX_Data5.Teacher.Acronym}}</th>
+        <th scope="col">1</th>
+        <th scope="col">2</th>
+        <th scope="col">3</th>
+        <th scope="col">4</th>
+        <th scope="col">5</th>
+        <th scope="col">6</th>
+        <th scope="col">7</th>
+        <th scope="col">8</th>
+        <th scope="col" style="border-top-right-radius:4.5px;">9</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Periods</th>
+        <td>{{subPRX_Data5.FIRST_period}}</td>
+        <td>{{subPRX_Data5.SECOND_period}}</td>
+        <td>{{subPRX_Data5.THIRD_period}}</td>
+        <td>{{subPRX_Data5.FOURTH_period}}</td>
+        <td>{{subPRX_Data5.FIFTH_period}}</td>
+        <td>{{subPRX_Data5.SIXTH_period}}</td>
+        <td>{{subPRX_Data5.SEVENTH_period}}</td>
+        <td>{{subPRX_Data5.EIGHTH_period}}</td>
+        <td>{{subPRX_Data5.NINETH_period}}</td>
+      </tr>
+      <tr>
+        <th scope="row"  style="border-bottom-left-radius:4.5px;">Proxy</th>
+        <td id="PRX1">{{subPRX_Data5.FIRST_proxy}}</td>
+        <td id="PRX2">{{subPRX_Data5.SECOND_proxy}}</td>
+        <td id="PRX3">{{subPRX_Data5.THIRD_proxy}}</td>
+        <td id="PRX4">{{subPRX_Data5.FOURTH_proxy}}</td>
+        <td id="PRX5">{{subPRX_Data5.FIFTH_proxy}}</td>
+        <td id="PRX6">{{subPRX_Data5.SIXTH_proxy}}</td>
+        <td id="PRX7">{{subPRX_Data5.SEVENTH_proxy}}</td>
+        <td id="PRX8">{{subPRX_Data5.EIGHTH_proxy}}</td>
+        <td id="PRX9" style="border-bottom-right-radius:4.5px;">{{subPRX_Data5.NINETH_proxy}}</td>
+      </tr>
+      {% endfor %}
+
+      <table class="table table-striped table-dark table-hover">
+    <thead>
+      {% for subPRX_Data6 in subPRX_Data6 %}
+      <tr>
+        <th scope="col"  style="border-top-left-radius:4.5px;">{{subPRX_Data6.Teacher.Acronym}}</th>
+        <th scope="col">1</th>
+        <th scope="col">2</th>
+        <th scope="col">3</th>
+        <th scope="col">4</th>
+        <th scope="col">5</th>
+        <th scope="col">6</th>
+        <th scope="col">7</th>
+        <th scope="col">8</th>
+        <th scope="col" style="border-top-right-radius:4.5px;">9</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Periods</th>
+        <td>{{subPRX_Data6.FIRST_period}}</td>
+        <td>{{subPRX_Data6.SECOND_period}}</td>
+        <td>{{subPRX_Data6.THIRD_period}}</td>
+        <td>{{subPRX_Data6.FOURTH_period}}</td>
+        <td>{{subPRX_Data6.FIFTH_period}}</td>
+        <td>{{subPRX_Data6.SIXTH_period}}</td>
+        <td>{{subPRX_Data6.SEVENTH_period}}</td>
+        <td>{{subPRX_Data6.EIGHTH_period}}</td>
+        <td>{{subPRX_Data6.NINETH_period}}</td>
+      </tr>
+      <tr>
+        <th scope="row"  style="border-bottom-left-radius:4.5px;">Proxy</th>
+        <td id="PRX1">{{subPRX_Data6.FIRST_proxy}}</td>
+        <td id="PRX2">{{subPRX_Data6.SECOND_proxy}}</td>
+        <td id="PRX3">{{subPRX_Data6.THIRD_proxy}}</td>
+        <td id="PRX4">{{subPRX_Data6.FOURTH_proxy}}</td>
+        <td id="PRX5">{{subPRX_Data6.FIFTH_proxy}}</td>
+        <td id="PRX6">{{subPRX_Data6.SIXTH_proxy}}</td>
+        <td id="PRX7">{{subPRX_Data6.SEVENTH_proxy}}</td>
+        <td id="PRX8">{{subPRX_Data6.EIGHTH_proxy}}</td>
+        <td id="PRX9" style="border-bottom-right-radius:4.5px;">{{subPRX_Data6.NINETH_proxy}}</td>
+      </tr>
+      {% endfor %}
+
+      <table class="table table-striped table-dark table-hover">
+    <thead>
+      {% for subPRX_Data7 in subPRX_Data7 %}
+      <tr>
+        <th scope="col"  style="border-top-left-radius:4.5px;">{{subPRX_Data7.Teacher.Acronym}}</th>
+        <th scope="col">1</th>
+        <th scope="col">2</th>
+        <th scope="col">3</th>
+        <th scope="col">4</th>
+        <th scope="col">5</th>
+        <th scope="col">6</th>
+        <th scope="col">7</th>
+        <th scope="col">8</th>
+        <th scope="col" style="border-top-right-radius:4.5px;">9</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Periods</th>
+        <td>{{subPRX_Data7.FIRST_period}}</td>
+        <td>{{subPRX_Data7.SECOND_period}}</td>
+        <td>{{subPRX_Data7.THIRD_period}}</td>
+        <td>{{subPRX_Data7.FOURTH_period}}</td>
+        <td>{{subPRX_Data7.FIFTH_period}}</td>
+        <td>{{subPRX_Data7.SIXTH_period}}</td>
+        <td>{{subPRX_Data7.SEVENTH_period}}</td>
+        <td>{{subPRX_Data7.EIGHTH_period}}</td>
+        <td>{{subPRX_Data7.NINETH_period}}</td>
+      </tr>
+      <tr>
+        <th scope="row"  style="border-bottom-left-radius:4.5px;">Proxy</th>
+        <td id="PRX1">{{subPRX_Data7.FIRST_proxy}}</td>
+        <td id="PRX2">{{subPRX_Data7.SECOND_proxy}}</td>
+        <td id="PRX3">{{subPRX_Data7.THIRD_proxy}}</td>
+        <td id="PRX4">{{subPRX_Data7.FOURTH_proxy}}</td>
+        <td id="PRX5">{{subPRX_Data7.FIFTH_proxy}}</td>
+        <td id="PRX6">{{subPRX_Data7.SIXTH_proxy}}</td>
+        <td id="PRX7">{{subPRX_Data7.SEVENTH_proxy}}</td>
+        <td id="PRX8">{{subPRX_Data7.EIGHTH_proxy}}</td>
+        <td id="PRX9" style="border-bottom-right-radius:4.5px;">{{subPRX_Data7.NINETH_proxy}}</td>
+      </tr>
+      {% endfor %}
+
+      <table class="table table-striped table-dark table-hover">
+    <thead>
+      {% for subPRX_Data8 in subPRX_Data8 %}
+      <tr>
+        <th scope="col"  style="border-top-left-radius:4.5px;">{{subPRX_Data8.Teacher.Acronym}}</th>
+        <th scope="col">1</th>
+        <th scope="col">2</th>
+        <th scope="col">3</th>
+        <th scope="col">4</th>
+        <th scope="col">5</th>
+        <th scope="col">6</th>
+        <th scope="col">7</th>
+        <th scope="col">8</th>
+        <th scope="col" style="border-top-right-radius:4.5px;">9</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Periods</th>
+        <td>{{subPRX_Data8.FIRST_period}}</td>
+        <td>{{subPRX_Data8.SECOND_period}}</td>
+        <td>{{subPRX_Data8.THIRD_period}}</td>
+        <td>{{subPRX_Data8.FOURTH_period}}</td>
+        <td>{{subPRX_Data8.FIFTH_period}}</td>
+        <td>{{subPRX_Data8.SIXTH_period}}</td>
+        <td>{{subPRX_Data8.SEVENTH_period}}</td>
+        <td>{{subPRX_Data8.EIGHTH_period}}</td>
+        <td>{{subPRX_Data8.NINETH_period}}</td>
+      </tr>
+      <tr>
+        <th scope="row"  style="border-bottom-left-radius:4.5px;">Proxy</th>
+        <td id="PRX1">{{subPRX_Data8.FIRST_proxy}}</td>
+        <td id="PRX2">{{subPRX_Data8.SECOND_proxy}}</td>
+        <td id="PRX3">{{subPRX_Data8.THIRD_proxy}}</td>
+        <td id="PRX4">{{subPRX_Data8.FOURTH_proxy}}</td>
+        <td id="PRX5">{{subPRX_Data8.FIFTH_proxy}}</td>
+        <td id="PRX6">{{subPRX_Data8.SIXTH_proxy}}</td>
+        <td id="PRX7">{{subPRX_Data8.SEVENTH_proxy}}</td>
+        <td id="PRX8">{{subPRX_Data8.EIGHTH_proxy}}</td>
+        <td id="PRX9" style="border-bottom-right-radius:4.5px;">{{subPRX_Data8.NINETH_proxy}}</td>
+      </tr>
+      {% endfor %}
+
+      <table class="table table-striped table-dark table-hover">
+    <thead>
+      {% for subPRX_Data9 in subPRX_Data9 %}
+      <tr>
+        <th scope="col"  style="border-top-left-radius:4.5px;">{{subPRX_Data9.Teacher.Acronym}}</th>
+        <th scope="col">1</th>
+        <th scope="col">2</th>
+        <th scope="col">3</th>
+        <th scope="col">4</th>
+        <th scope="col">5</th>
+        <th scope="col">6</th>
+        <th scope="col">7</th>
+        <th scope="col">8</th>
+        <th scope="col" style="border-top-right-radius:4.5px;">9</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Periods</th>
+        <td>{{subPRX_Data9.FIRST_period}}</td>
+        <td>{{subPRX_Data9.SECOND_period}}</td>
+        <td>{{subPRX_Data9.THIRD_period}}</td>
+        <td>{{subPRX_Data9.FOURTH_period}}</td>
+        <td>{{subPRX_Data9.FIFTH_period}}</td>
+        <td>{{subPRX_Data9.SIXTH_period}}</td>
+        <td>{{subPRX_Data9.SEVENTH_period}}</td>
+        <td>{{subPRX_Data9.EIGHTH_period}}</td>
+        <td>{{subPRX_Data9.NINETH_period}}</td>
+      </tr>
+      <tr>
+        <th scope="row"  style="border-bottom-left-radius:4.5px;">Proxy</th>
+        <td id="PRX1">{{subPRX_Data9.FIRST_proxy}}</td>
+        <td id="PRX2">{{subPRX_Data9.SECOND_proxy}}</td>
+        <td id="PRX3">{{subPRX_Data9.THIRD_proxy}}</td>
+        <td id="PRX4">{{subPRX_Data9.FOURTH_proxy}}</td>
+        <td id="PRX5">{{subPRX_Data9.FIFTH_proxy}}</td>
+        <td id="PRX6">{{subPRX_Data9.SIXTH_proxy}}</td>
+        <td id="PRX7">{{subPRX_Data9.SEVENTH_proxy}}</td>
+        <td id="PRX8">{{subPRX_Data9.EIGHTH_proxy}}</td>
+        <td id="PRX9" style="border-bottom-right-radius:4.5px;">{{subPRX_Data9.NINETH_proxy}}</td>
+      </tr>
+      {% endfor %}
+
+      <table class="table table-striped table-dark table-hover">
+    <thead>
+      {% for subPRX_Data10 in subPRX_Data10 %}
+      <tr>
+        <th scope="col"  style="border-top-left-radius:4.5px;">{{subPRX_Data10.Teacher.Acronym}}</th>
+        <th scope="col">1</th>
+        <th scope="col">2</th>
+        <th scope="col">3</th>
+        <th scope="col">4</th>
+        <th scope="col">5</th>
+        <th scope="col">6</th>
+        <th scope="col">7</th>
+        <th scope="col">8</th>
+        <th scope="col" style="border-top-right-radius:4.5px;">9</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Periods</th>
+        <td>{{subPRX_Data10.FIRST_period}}</td>
+        <td>{{subPRX_Data10.SECOND_period}}</td>
+        <td>{{subPRX_Data10.THIRD_period}}</td>
+        <td>{{subPRX_Data10.FOURTH_period}}</td>
+        <td>{{subPRX_Data10.FIFTH_period}}</td>
+        <td>{{subPRX_Data10.SIXTH_period}}</td>
+        <td>{{subPRX_Data10.SEVENTH_period}}</td>
+        <td>{{subPRX_Data10.EIGHTH_period}}</td>
+        <td>{{subPRX_Data10.NINETH_period}}</td>
+      </tr>
+      <tr>
+        <th scope="row"  style="border-bottom-left-radius:4.5px;">Proxy</th>
+        <td id="PRX1">{{subPRX_Data10.FIRST_proxy}}</td>
+        <td id="PRX2">{{subPRX_Data10.SECOND_proxy}}</td>
+        <td id="PRX3">{{subPRX_Data10.THIRD_proxy}}</td>
+        <td id="PRX4">{{subPRX_Data10.FOURTH_proxy}}</td>
+        <td id="PRX5">{{subPRX_Data10.FIFTH_proxy}}</td>
+        <td id="PRX6">{{subPRX_Data10.SIXTH_proxy}}</td>
+        <td id="PRX7">{{subPRX_Data10.SEVENTH_proxy}}</td>
+        <td id="PRX8">{{subPRX_Data10.EIGHTH_proxy}}</td>
+        <td id="PRX9" style="border-bottom-right-radius:4.5px;">{{subPRX_Data10.NINETH_proxy}}</td>
+      </tr>
+      {% endfor %}
+
+          <table class="table table-striped table-dark table-hover">
+    <thead>
+      {% for subPRX_Data11 in subPRX_Data11 %}
+      <tr>
+        <th scope="col"  style="border-top-left-radius:4.5px;">{{subPRX_Data11.Teacher.Acronym}}</th>
+        <th scope="col">1</th>
+        <th scope="col">2</th>
+        <th scope="col">3</th>
+        <th scope="col">4</th>
+        <th scope="col">5</th>
+        <th scope="col">6</th>
+        <th scope="col">7</th>
+        <th scope="col">8</th>
+        <th scope="col" style="border-top-right-radius:4.5px;">9</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Periods</th>
+        <td>{{subPRX_Data11.FIRST_period}}</td>
+        <td>{{subPRX_Data11.SECOND_period}}</td>
+        <td>{{subPRX_Data11.THIRD_period}}</td>
+        <td>{{subPRX_Data11.FOURTH_period}}</td>
+        <td>{{subPRX_Data11.FIFTH_period}}</td>
+        <td>{{subPRX_Data11.SIXTH_period}}</td>
+        <td>{{subPRX_Data11.SEVENTH_period}}</td>
+        <td>{{subPRX_Data11.EIGHTH_period}}</td>
+        <td>{{subPRX_Data11.NINETH_period}}</td>
+      </tr>
+      <tr>
+        <th scope="row"  style="border-bottom-left-radius:4.5px;">Proxy</th>
+        <td id="PRX1">{{subPRX_Data11.FIRST_proxy}}</td>
+        <td id="PRX2">{{subPRX_Data11.SECOND_proxy}}</td>
+        <td id="PRX3">{{subPRX_Data11.THIRD_proxy}}</td>
+        <td id="PRX4">{{subPRX_Data11.FOURTH_proxy}}</td>
+        <td id="PRX5">{{subPRX_Data11.FIFTH_proxy}}</td>
+        <td id="PRX6">{{subPRX_Data11.SIXTH_proxy}}</td>
+        <td id="PRX7">{{subPRX_Data11.SEVENTH_proxy}}</td>
+        <td id="PRX8">{{subPRX_Data11.EIGHTH_proxy}}</td>
+        <td id="PRX9" style="border-bottom-right-radius:4.5px;">{{subPRX_Data11.NINETH_proxy}}</td>
+      </tr>
+      {% endfor %}
+      
+    </div>
+</body>
+</html>
+
+<style>
+
+.PRX_container{
+  position: relative;
+  top: 0px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 50px;
+  overflow: auto;
+  border-color: rgba(0, 0, 0, 0)
+  }
+
+  .table{
+    table-layout: fixed;
+  }
+
+  .back_btn {
+        justify-content: center;
+        text-align: center;
+        background-color: rgb(0, 205, 85);
+        border: none;
+        height: 45px;
+        width: 45px;
+        color: black;
+        position: relative;
+        top: 20px;
+        left: 20px;
+        transition: 0.4s;
+        text-align: justify;
+        color: white;
+  }
+
+  .back_btn:hover {
+        background-color: rgb(24, 255, 120);
+  }
+
+    #submit_form{
+      background-color: rgb(0, 205, 85);
+      position: sticky;
+      border: none;
+      border-radius: 3px;
+      font-size: 17px;
+      transition: 0.3s;
+    }
+
+    #submit_form:hover{
+      background-color: rgb(154, 255, 169);
+
+    }
+
+    #search{
+      color: black;
+      position: sticky;
+      top: 0px;
+      max-width: 300px;
+      height: 30px;
+      padding: 3px;
+      margin-left: 645px;
+      margin-top: 0px;
+      border: 0;
+      border-radius: 3px;
+      background-color: rgb(199, 199, 199);
+    }
+
+
+</style>
+
+<script>
+  function checkInput() {
+      var query = document.getElementById('search').value;
+      window.find(query);
+      return true;
+  }
+</script>
+
+<script>
+var input = document.getElementById("search");
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("submit_form").click();
+  }
+});
+</script>

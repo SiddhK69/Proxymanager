@@ -1,0 +1,4005 @@
+<title>Podar Education Network</title>
+{% load static %}
+<link rel="icon" href="https://i.ibb.co/5kRLvM9/podar-logo.jpg" class="website_logo">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<button class="back_btn rounded" onclick="history.back()"
+    style="font-weight:bold;"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+    </svg></button>
+
+<a href="/">
+<button class="back_btn rounded"
+    style="font-weight:bold;"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
+      <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z"/>
+      <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z"/>
+    </svg></button></a>
+
+<body class="body bg-secondary">
+
+  <div class="search_box">
+    <form action="" id="form2">
+        <div>
+            <input type="text" id="search">
+            <input type="button" id="submit_form" onclick="checkInput()" value="Find">
+        </div>
+    </form>
+  </div>
+  
+  <div class="form_body">
+    <form method="POST" class="bg-Dark text-white w-75 p-5 col-sm-6 rounded shadow">
+      {% csrf_token %}    
+      {{form}}
+      <button class="Save_btn">Save</button>
+    </form> 
+  </div>
+    
+
+
+<div class="TT_container">
+    {% for subTT_Data1 in subTT_Data1 %}
+
+    <table id="sub1_TT" class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th scope="col"><button class="Teacher_name">{{subTT_Data1.Teacher.Acronym}}</button></th>
+          <th scope="col" style="color: aquamarine;">1</th>
+          <th scope="col" style="color: aquamarine;">2</th>
+          <th scope="col" style="color: aquamarine;">3</th>
+          <th scope="col" style="color: aquamarine;">4</th>
+          <th scope="col" style="color: aquamarine;">5</th>
+          <th scope="col" style="color: aquamarine;">6</th>
+          <th scope="col" style="color: aquamarine;">7</th>
+          <th scope="col" style="color: aquamarine;">8</th>
+          <th scope="col" style="color: aquamarine;">9</th>
+        </tr>
+      </thead>
+      <tbody>
+  
+        <tr>
+          <th scope="row">Mon</th>
+          <td>{{subTT_Data1.FIRST_period_1}}</td>
+          <td>{{subTT_Data1.SECOND_period_1}}</td>
+          <td>{{subTT_Data1.THIRD_period_1}}</td>
+          <td>{{subTT_Data1.FOURTH_period_1}}</td>
+          <td>{{subTT_Data1.FIFTH_period_1}}</td>
+          <td>{{subTT_Data1.SIXTH_period_1}}</td>
+          <td>{{subTT_Data1.SEVENTH_period_1}}</td>
+          <td>{{subTT_Data1.EIGHTH_period_1}}</td>
+          <td>{{subTT_Data1.NINETH_period_1}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Tue</th>
+          <td>{{subTT_Data1.FIRST_period_2}}</td>
+          <td>{{subTT_Data1.SECOND_period_2}}</td>
+          <td>{{subTT_Data1.THIRD_period_2}}</td>
+          <td>{{subTT_Data1.FOURTH_period_2}}</td>
+          <td>{{subTT_Data1.FIFTH_period_2}}</td>
+          <td>{{subTT_Data1.SIXTH_period_2}}</td>
+          <td>{{subTT_Data1.SEVENTH_period_2}}</td>
+          <td>{{subTT_Data1.EIGHTH_period_2}}</td>
+          <td>{{subTT_Data1.NINETH_period_2}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Wed</button></th>
+          <td>{{subTT_Data1.FIRST_period_3}}</td>
+          <td>{{subTT_Data1.SECOND_period_3}}</td>
+          <td>{{subTT_Data1.THIRD_period_3}}</td>
+          <td>{{subTT_Data1.FOURTH_period_3}}</td>
+          <td>{{subTT_Data1.FIFTH_period_3}}</td>
+          <td>{{subTT_Data1.SIXTH_period_3}}</td>
+          <td>{{subTT_Data1.SEVENTH_period_3}}</td>
+          <td>{{subTT_Data1.EIGHTH_period_3}}</td>
+          <td>{{subTT_Data1.NINETH_period_3}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Thu</button></th>
+          <td>{{subTT_Data1.FIRST_period_4}}</td>
+          <td>{{subTT_Data1.SECOND_period_4}}</td>
+          <td>{{subTT_Data1.THIRD_period_4}}</td>
+          <td>{{subTT_Data1.FOURTH_period_4}}</td>
+          <td>{{subTT_Data1.FIFTH_period_4}}</td>
+          <td>{{subTT_Data1.SIXTH_period_4}}</td>
+          <td>{{subTT_Data1.SEVENTH_period_4}}</td>
+          <td>{{subTT_Data1.EIGHTH_period_4}}</td>
+          <td>{{subTT_Data1.NINETH_period_4}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Fri</th>
+          <td>{{subTT_Data1.FIRST_period_5}}</td>
+          <td>{{subTT_Data1.SECOND_period_5}}</td>
+          <td>{{subTT_Data1.THIRD_period_5}}</td>
+          <td>{{subTT_Data1.FOURTH_period_5}}</td>
+          <td>{{subTT_Data1.FIFTH_period_5}}</td>
+          <td>{{subTT_Data1.SIXTH_period_5}}</td>
+          <td>{{subTT_Data1.SEVENTH_period_5}}</td>
+          <td>{{subTT_Data1.EIGHTH_period_5}}</td>
+          <td>{{subTT_Data1.NINETH_period_5}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Sat</th>
+          <td>{{subTT_Data1.FIRST_period_6}}</td>
+          <td>{{subTT_Data1.SECOND_period_6}}</td>
+          <td>{{subTT_Data1.THIRD_period_6}}</td>
+          <td>{{subTT_Data1.FOURTH_period_6}}</td>
+          <td>{{subTT_Data1.FIFTH_period_6}}</td>
+          <td>{{subTT_Data1.SIXTH_period_6}}</td>
+          <td>{{subTT_Data1.SEVENTH_period_6}}</td>
+          <td>{{subTT_Data1.EIGHTH_period_6}}</td>
+          <td>{{subTT_Data1.NINETH_period_6}}</td>
+        </tr>
+      </tbody>
+    </table>
+    {% endfor %}
+  
+      {% for subTT_Data2 in subTT_Data2 %}
+  
+      <table id="sub2_TT" class="table table-dark table-hover">
+        <thead>
+          <tr>
+            <th scope="col"><button class="Teacher_name">{{subTT_Data2.Teacher.Acronym}}</button></th>
+            <th scope="col" style="color: aquamarine;">1</th>
+            <th scope="col" style="color: aquamarine;">2</th>
+            <th scope="col" style="color: aquamarine;">3</th>
+            <th scope="col" style="color: aquamarine;">4</th>
+            <th scope="col" style="color: aquamarine;">5</th>
+            <th scope="col" style="color: aquamarine;">6</th>
+            <th scope="col" style="color: aquamarine;">7</th>
+            <th scope="col" style="color: aquamarine;">8</th>
+            <th scope="col" style="color: aquamarine;">9</th>
+          </tr>
+        </thead>
+        <tbody>
+  
+          <tr>
+            <th scope="row">Mon</th>
+            <td>{{subTT_Data2.FIRST_period_1}}</td>
+            <td>{{subTT_Data2.SECOND_period_1}}</td>
+            <td>{{subTT_Data2.THIRD_period_1}}</td>
+            <td>{{subTT_Data2.FOURTH_period_1}}</td>
+            <td>{{subTT_Data2.FIFTH_period_1}}</td>
+            <td>{{subTT_Data2.SIXTH_period_1}}</td>
+            <td>{{subTT_Data2.SEVENTH_period_1}}</td>
+            <td>{{subTT_Data2.EIGHTH_period_1}}</td>
+            <td>{{subTT_Data2.NINETH_period_1}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Tue</th>
+            <td>{{subTT_Data2.FIRST_period_2}}</td>
+            <td>{{subTT_Data2.SECOND_period_2}}</td>
+            <td>{{subTT_Data2.THIRD_period_2}}</td>
+            <td>{{subTT_Data2.FOURTH_period_2}}</td>
+            <td>{{subTT_Data2.FIFTH_period_2}}</td>
+            <td>{{subTT_Data2.SIXTH_period_2}}</td>
+            <td>{{subTT_Data2.SEVENTH_period_2}}</td>
+            <td>{{subTT_Data2.EIGHTH_period_2}}</td>
+            <td>{{subTT_Data2.NINETH_period_2}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Wed</th>
+            <td>{{subTT_Data2.FIRST_period_3}}</td>
+            <td>{{subTT_Data2.SECOND_period_3}}</td>
+            <td>{{subTT_Data2.THIRD_period_3}}</td>
+            <td>{{subTT_Data2.FOURTH_period_3}}</td>
+            <td>{{subTT_Data2.FIFTH_period_3}}</td>
+            <td>{{subTT_Data2.SIXTH_period_3}}</td>
+            <td>{{subTT_Data2.SEVENTH_period_3}}</td>
+            <td>{{subTT_Data2.EIGHTH_period_3}}</td>
+            <td>{{subTT_Data2.NINETH_period_3}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Thu</th>
+            <td>{{subTT_Data2.FIRST_period_4}}</td>
+            <td>{{subTT_Data2.SECOND_period_4}}</td>
+            <td>{{subTT_Data2.THIRD_period_4}}</td>
+            <td>{{subTT_Data2.FOURTH_period_4}}</td>
+            <td>{{subTT_Data2.FIFTH_period_4}}</td>
+            <td>{{subTT_Data2.SIXTH_period_4}}</td>
+            <td>{{subTT_Data2.SEVENTH_period_4}}</td>
+            <td>{{subTT_Data2.EIGHTH_period_4}}</td>
+            <td>{{subTT_Data2.NINETH_period_4}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Fri</th>
+            <td>{{subTT_Data2.FIRST_period_5}}</td>
+            <td>{{subTT_Data2.SECOND_period_5}}</td>
+            <td>{{subTT_Data2.THIRD_period_5}}</td>
+            <td>{{subTT_Data2.FOURTH_period_5}}</td>
+            <td>{{subTT_Data2.FIFTH_period_5}}</td>
+            <td>{{subTT_Data2.SIXTH_period_5}}</td>
+            <td>{{subTT_Data2.SEVENTH_period_5}}</td>
+            <td>{{subTT_Data2.EIGHTH_period_5}}</td>
+            <td>{{subTT_Data2.NINETH_period_5}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Sat</th>
+            <td>{{subTT_Data2.FIRST_period_6}}</td>
+            <td>{{subTT_Data2.SECOND_period_6}}</td>
+            <td>{{subTT_Data2.THIRD_period_6}}</td>
+            <td>{{subTT_Data2.FOURTH_period_6}}</td>
+            <td>{{subTT_Data2.FIFTH_period_6}}</td>
+            <td>{{subTT_Data2.SIXTH_period_6}}</td>
+            <td>{{subTT_Data2.SEVENTH_period_6}}</td>
+            <td>{{subTT_Data2.EIGHTH_period_6}}</td>
+            <td>{{subTT_Data2.NINETH_period_6}}</td>
+          </tr>
+        </tbody>
+      </table>
+      {% endfor %}
+      
+      {% for subTT_Data3 in subTT_Data3 %}
+  
+      <table id="sub3_TT" class="table table-dark table-hover">
+        <thead>
+          <tr>
+            <th scope="col"><button class="Teacher_name">{{subTT_Data3.Teacher.Acronym}}</button></th>
+            <th scope="col" style="color: aquamarine;">1</th>
+            <th scope="col" style="color: aquamarine;">2</th>
+            <th scope="col" style="color: aquamarine;">3</th>
+            <th scope="col" style="color: aquamarine;">4</th>
+            <th scope="col" style="color: aquamarine;">5</th>
+            <th scope="col" style="color: aquamarine;">6</th>
+            <th scope="col" style="color: aquamarine;">7</th>
+            <th scope="col" style="color: aquamarine;">8</th>
+            <th scope="col" style="color: aquamarine;">9</th>
+          </tr>
+        </thead>
+        <tbody>
+    
+          <tr>
+            <th scope="row">Mon</th>
+            <td>{{subTT_Data3.FIRST_period_1}}</td>
+            <td>{{subTT_Data3.SECOND_period_1}}</td>
+            <td>{{subTT_Data3.THIRD_period_1}}</td>
+            <td>{{subTT_Data3.FOURTH_period_1}}</td>
+            <td>{{subTT_Data3.FIFTH_period_1}}</td>
+            <td>{{subTT_Data3.SIXTH_period_1}}</td>
+            <td>{{subTT_Data3.SEVENTH_period_1}}</td>
+            <td>{{subTT_Data3.EIGHTH_period_1}}</td>
+            <td>{{subTT_Data3.NINETH_period_1}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Tue</th>
+            <td>{{subTT_Data3.FIRST_period_2}}</td>
+            <td>{{subTT_Data3.SECOND_period_2}}</td>
+            <td>{{subTT_Data3.THIRD_period_2}}</td>
+            <td>{{subTT_Data3.FOURTH_period_2}}</td>
+            <td>{{subTT_Data3.FIFTH_period_2}}</td>
+            <td>{{subTT_Data3.SIXTH_period_2}}</td>
+            <td>{{subTT_Data3.SEVENTH_period_2}}</td>
+            <td>{{subTT_Data3.EIGHTH_period_2}}</td>
+            <td>{{subTT_Data3.NINETH_period_2}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Wed</th>
+            <td>{{subTT_Data3.FIRST_period_3}}</td>
+            <td>{{subTT_Data3.SECOND_period_3}}</td>
+            <td>{{subTT_Data3.THIRD_period_3}}</td>
+            <td>{{subTT_Data3.FOURTH_period_3}}</td>
+            <td>{{subTT_Data3.FIFTH_period_3}}</td>
+            <td>{{subTT_Data3.SIXTH_period_3}}</td>
+            <td>{{subTT_Data3.SEVENTH_period_3}}</td>
+            <td>{{subTT_Data3.EIGHTH_period_3}}</td>
+            <td>{{subTT_Data3.NINETH_period_3}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Thu</th>
+            <td>{{subTT_Data3.FIRST_period_4}}</td>
+            <td>{{subTT_Data3.SECOND_period_4}}</td>
+            <td>{{subTT_Data3.THIRD_period_4}}</td>
+            <td>{{subTT_Data3.FOURTH_period_4}}</td>
+            <td>{{subTT_Data3.FIFTH_period_4}}</td>
+            <td>{{subTT_Data3.SIXTH_period_4}}</td>
+            <td>{{subTT_Data3.SEVENTH_period_4}}</td>
+            <td>{{subTT_Data3.EIGHTH_period_4}}</td>
+            <td>{{subTT_Data3.NINETH_period_4}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Fri</th>
+            <td>{{subTT_Data3.FIRST_period_5}}</td>
+            <td>{{subTT_Data3.SECOND_period_5}}</td>
+            <td>{{subTT_Data3.THIRD_period_5}}</td>
+            <td>{{subTT_Data3.FOURTH_period_5}}</td>
+            <td>{{subTT_Data3.FIFTH_period_5}}</td>
+            <td>{{subTT_Data3.SIXTH_period_5}}</td>
+            <td>{{subTT_Data3.SEVENTH_period_5}}</td>
+            <td>{{subTT_Data3.EIGHTH_period_5}}</td>
+            <td>{{subTT_Data3.NINETH_period_5}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Sat</th>
+            <td>{{subTT_Data3.FIRST_period_6}}</td>
+            <td>{{subTT_Data3.SECOND_period_6}}</td>
+            <td>{{subTT_Data3.THIRD_period_6}}</td>
+            <td>{{subTT_Data3.FOURTH_period_6}}</td>
+            <td>{{subTT_Data3.FIFTH_period_6}}</td>
+            <td>{{subTT_Data3.SIXTH_period_6}}</td>
+            <td>{{subTT_Data3.SEVENTH_period_6}}</td>
+            <td>{{subTT_Data3.EIGHTH_period_6}}</td>
+            <td>{{subTT_Data3.NINETH_period_6}}</td>
+          </tr>
+        </tbody>
+        </table>
+        {% endfor %}
+    {% for subTT_Data4 in subTT_Data4 %}
+    
+    <table id="sub4_TT" class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th scope="col"><button class="Teacher_name">{{subTT_Data4.Teacher.Acronym}}</button></th>
+          <th scope="col" style="color: aquamarine;">1</th>
+          <th scope="col" style="color: aquamarine;">2</th>
+          <th scope="col" style="color: aquamarine;">3</th>
+          <th scope="col" style="color: aquamarine;">4</th>
+          <th scope="col" style="color: aquamarine;">5</th>
+          <th scope="col" style="color: aquamarine;">6</th>
+          <th scope="col" style="color: aquamarine;">7</th>
+          <th scope="col" style="color: aquamarine;">8</th>
+          <th scope="col" style="color: aquamarine;">9</th>
+        </tr>
+      </thead>
+      <tbody>
+    
+        <tr>
+          <th scope="row">Mon</th>
+          <td>{{subTT_Data4.FIRST_period_1}}</td>
+          <td>{{subTT_Data4.SECOND_period_1}}</td>
+          <td>{{subTT_Data4.THIRD_period_1}}</td>
+          <td>{{subTT_Data4.FOURTH_period_1}}</td>
+          <td>{{subTT_Data4.FIFTH_period_1}}</td>
+          <td>{{subTT_Data4.SIXTH_period_1}}</td>
+          <td>{{subTT_Data4.SEVENTH_period_1}}</td>
+          <td>{{subTT_Data4.EIGHTH_period_1}}</td>
+          <td>{{subTT_Data4.NINETH_period_1}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Tue</th>
+          <td>{{subTT_Data4.FIRST_period_2}}</td>
+          <td>{{subTT_Data4.SECOND_period_2}}</td>
+          <td>{{subTT_Data4.THIRD_period_2}}</td>
+          <td>{{subTT_Data4.FOURTH_period_2}}</td>
+          <td>{{subTT_Data4.FIFTH_period_2}}</td>
+          <td>{{subTT_Data4.SIXTH_period_2}}</td>
+          <td>{{subTT_Data4.SEVENTH_period_2}}</td>
+          <td>{{subTT_Data4.EIGHTH_period_2}}</td>
+          <td>{{subTT_Data4.NINETH_period_2}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Wed</th>
+          <td>{{subTT_Data4.FIRST_period_3}}</td>
+          <td>{{subTT_Data4.SECOND_period_3}}</td>
+          <td>{{subTT_Data4.THIRD_period_3}}</td>
+          <td>{{subTT_Data4.FOURTH_period_3}}</td>
+          <td>{{subTT_Data4.FIFTH_period_3}}</td>
+          <td>{{subTT_Data4.SIXTH_period_3}}</td>
+          <td>{{subTT_Data4.SEVENTH_period_3}}</td>
+          <td>{{subTT_Data4.EIGHTH_period_3}}</td>
+          <td>{{subTT_Data4.NINETH_period_3}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Thu</th>
+          <td>{{subTT_Data4.FIRST_period_4}}</td>
+          <td>{{subTT_Data4.SECOND_period_4}}</td>
+          <td>{{subTT_Data4.THIRD_period_4}}</td>
+          <td>{{subTT_Data4.FOURTH_period_4}}</td>
+          <td>{{subTT_Data4.FIFTH_period_4}}</td>
+          <td>{{subTT_Data4.SIXTH_period_4}}</td>
+          <td>{{subTT_Data4.SEVENTH_period_4}}</td>
+          <td>{{subTT_Data4.EIGHTH_period_4}}</td>
+          <td>{{subTT_Data4.NINETH_period_4}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Fri</th>
+          <td>{{subTT_Data4.FIRST_period_5}}</td>
+          <td>{{subTT_Data4.SECOND_period_5}}</td>
+          <td>{{subTT_Data4.THIRD_period_5}}</td>
+          <td>{{subTT_Data4.FOURTH_period_5}}</td>
+          <td>{{subTT_Data4.FIFTH_period_5}}</td>
+          <td>{{subTT_Data4.SIXTH_period_5}}</td>
+          <td>{{subTT_Data4.SEVENTH_period_5}}</td>
+          <td>{{subTT_Data4.EIGHTH_period_5}}</td>
+          <td>{{subTT_Data4.NINETH_period_5}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Sat</th>
+          <td>{{subTT_Data4.FIRST_period_6}}</td>
+          <td>{{subTT_Data4.SECOND_period_6}}</td>
+          <td>{{subTT_Data4.THIRD_period_6}}</td>
+          <td>{{subTT_Data4.FOURTH_period_6}}</td>
+          <td>{{subTT_Data4.FIFTH_period_6}}</td>
+          <td>{{subTT_Data4.SIXTH_period_6}}</td>
+          <td>{{subTT_Data4.SEVENTH_period_6}}</td>
+          <td>{{subTT_Data4.EIGHTH_period_6}}</td>
+          <td>{{subTT_Data4.NINETH_period_6}}</td>
+        </tr>
+      </tbody>
+    </table>
+    {% endfor %}
+    
+    {% for subTT_Data5 in subTT_Data5 %}
+    
+    <table id="sub5_TT" class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th scope="col"><button class="Teacher_name">{{subTT_Data5.Teacher.Acronym}}</button></th>
+          <th scope="col" style="color: aquamarine;">1</th>
+          <th scope="col" style="color: aquamarine;">2</th>
+          <th scope="col" style="color: aquamarine;">3</th>
+          <th scope="col" style="color: aquamarine;">4</th>
+          <th scope="col" style="color: aquamarine;">5</th>
+          <th scope="col" style="color: aquamarine;">6</th>
+          <th scope="col" style="color: aquamarine;">7</th>
+          <th scope="col" style="color: aquamarine;">8</th>
+          <th scope="col" style="color: aquamarine;">9</th>
+        </tr>
+      </thead>
+      <tbody>
+    
+        <tr>
+          <th scope="row">Mon</th>
+          <td>{{subTT_Data5.FIRST_period_1}}</td>
+          <td>{{subTT_Data5.SECOND_period_1}}</td>
+          <td>{{subTT_Data5.THIRD_period_1}}</td>
+          <td>{{subTT_Data5.FOURTH_period15}}</td>
+          <td>{{subTT_Data5.FIFTH_period_1}}</td>
+          <td>{{subTT_Data5.SIXTH_period_1}}</td>
+          <td>{{subTT_Data5.SEVENTH_period_1}}</td>
+          <td>{{subTT_Data5.EIGHTH_period_1}}</td>
+          <td>{{subTT_Data5.NINETH_period_1}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Tue</th>
+          <td>{{subTT_Data5.FIRST_period_2}}</td>
+          <td>{{subTT_Data5.SECOND_period_2}}</td>
+          <td>{{subTT_Data5.THIRD_period_2}}</td>
+          <td>{{subTT_Data5.FOURTH_period_2}}</td>
+          <td>{{subTT_Data5.FIFTH_period_2}}</td>
+          <td>{{subTT_Data5.SIXTH_period_2}}</td>
+          <td>{{subTT_Data5.SEVENTH_period_2}}</td>
+          <td>{{subTT_Data5.EIGHTH_period_2}}</td>
+          <td>{{subTT_Data5.NINETH_period_2}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Wed</th>
+          <td>{{subTT_Data5.FIRST_period_3}}</td>
+          <td>{{subTT_Data5.SECOND_period_3}}</td>
+          <td>{{subTT_Data5.THIRD_period_3}}</td>
+          <td>{{subTT_Data5.FOURTH_period_3}}</td>
+          <td>{{subTT_Data5.FIFTH_period_3}}</td>
+          <td>{{subTT_Data5.SIXTH_period_3}}</td>
+          <td>{{subTT_Data5.SEVENTH_period_3}}</td>
+          <td>{{subTT_Data5.EIGHTH_period_3}}</td>
+          <td>{{subTT_Data5.NINETH_period_3}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Thu</th>
+          <td>{{subTT_Data5.FIRST_period_4}}</td>
+          <td>{{subTT_Data5.SECOND_period_4}}</td>
+          <td>{{subTT_Data5.THIRD_period_4}}</td>
+          <td>{{subTT_Data5.FOURTH_period_4}}</td>
+          <td>{{subTT_Data5.FIFTH_period_4}}</td>
+          <td>{{subTT_Data5.SIXTH_period_4}}</td>
+          <td>{{subTT_Data5.SEVENTH_period_4}}</td>
+          <td>{{subTT_Data5.EIGHTH_period_4}}</td>
+          <td>{{subTT_Data5.NINETH_period_4}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Fri</th>
+          <td>{{subTT_Data5.FIRST_period_5}}</td>
+          <td>{{subTT_Data5.SECOND_period_5}}</td>
+          <td>{{subTT_Data5.THIRD_period_5}}</td>
+          <td>{{subTT_Data5.FOURTH_period_5}}</td>
+          <td>{{subTT_Data5.FIFTH_period_5}}</td>
+          <td>{{subTT_Data5.SIXTH_period_5}}</td>
+          <td>{{subTT_Data5.SEVENTH_period_5}}</td>
+          <td>{{subTT_Data5.EIGHTH_period_5}}</td>
+          <td>{{subTT_Data5.NINETH_period_5}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Sat</th>
+          <td>{{subTT_Data5.FIRST_period_6}}</td>
+          <td>{{subTT_Data5.SECOND_period_6}}</td>
+          <td>{{subTT_Data5.THIRD_period_6}}</td>
+          <td>{{subTT_Data5.FOURTH_period_6}}</td>
+          <td>{{subTT_Data5.FIFTH_period_6}}</td>
+          <td>{{subTT_Data5.SIXTH_period_6}}</td>
+          <td>{{subTT_Data5.SEVENTH_period_6}}</td>
+          <td>{{subTT_Data5.EIGHTH_period_6}}</td>
+          <td>{{subTT_Data5.NINETH_period_6}}</td>
+        </tr>
+      </tbody>
+    </table>
+    {% endfor %}
+    
+    {% for subTT_Data6 in subTT_Data6 %}
+    
+    <table id="sub6_TT" class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th scope="col"><button class="Teacher_name">{{subTT_Data6.Teacher.Acronym}}</button></th>
+          <th scope="col" style="color: aquamarine;">1</th>
+          <th scope="col" style="color: aquamarine;">2</th>
+          <th scope="col" style="color: aquamarine;">3</th>
+          <th scope="col" style="color: aquamarine;">4</th>
+          <th scope="col" style="color: aquamarine;">5</th>
+          <th scope="col" style="color: aquamarine;">6</th>
+          <th scope="col" style="color: aquamarine;">7</th>
+          <th scope="col" style="color: aquamarine;">8</th>
+          <th scope="col" style="color: aquamarine;">9</th>
+        </tr>
+      </thead>
+      <tbody>
+    
+        <tr>
+          <th scope="row">Mon</th>
+          <td>{{subTT_Data6.FIRST_period_1}}</td>
+          <td>{{subTT_Data6.SECOND_period_1}}</td>
+          <td>{{subTT_Data6.THIRD_period_1}}</td>
+          <td>{{subTT_Data6.FOURTH_period_1}}</td>
+          <td>{{subTT_Data6.FIFTH_period_1}}</td>
+          <td>{{subTT_Data6.SIXTH_period_1}}</td>
+          <td>{{subTT_Data6.SEVENTH_period_1}}</td>
+          <td>{{subTT_Data6.EIGHTH_period_1}}</td>
+          <td>{{subTT_Data6.NINETH_period_1}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Tue</th>
+          <td>{{subTT_Data6.FIRST_period_2}}</td>
+          <td>{{subTT_Data6.SECOND_period_2}}</td>
+          <td>{{subTT_Data6.THIRD_period_2}}</td>
+          <td>{{subTT_Data6.FOURTH_period_2}}</td>
+          <td>{{subTT_Data6.FIFTH_period_2}}</td>
+          <td>{{subTT_Data6.SIXTH_period_2}}</td>
+          <td>{{subTT_Data6.SEVENTH_period_2}}</td>
+          <td>{{subTT_Data6.EIGHTH_period_2}}</td>
+          <td>{{subTT_Data6.NINETH_period_2}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Wed</th>
+          <td>{{subTT_Data6.FIRST_period_3}}</td>
+          <td>{{subTT_Data6.SECOND_period_3}}</td>
+          <td>{{subTT_Data6.THIRD_period_3}}</td>
+          <td>{{subTT_Data6.FOURTH_period_3}}</td>
+          <td>{{subTT_Data6.FIFTH_period_3}}</td>
+          <td>{{subTT_Data6.SIXTH_period_3}}</td>
+          <td>{{subTT_Data6.SEVENTH_period_3}}</td>
+          <td>{{subTT_Data6.EIGHTH_period_3}}</td>
+          <td>{{subTT_Data6.NINETH_period_3}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Thu</th>
+          <td>{{subTT_Data6.FIRST_period_4}}</td>
+          <td>{{subTT_Data6.SECOND_period_4}}</td>
+          <td>{{subTT_Data6.THIRD_period_4}}</td>
+          <td>{{subTT_Data6.FOURTH_period_4}}</td>
+          <td>{{subTT_Data6.FIFTH_period_4}}</td>
+          <td>{{subTT_Data6.SIXTH_period_4}}</td>
+          <td>{{subTT_Data6.SEVENTH_period_4}}</td>
+          <td>{{subTT_Data6.EIGHTH_period_4}}</td>
+          <td>{{subTT_Data6.NINETH_period_4}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Fri</th>
+          <td>{{subTT_Data6.FIRST_period_5}}</td>
+          <td>{{subTT_Data6.SECOND_period_5}}</td>
+          <td>{{subTT_Data6.THIRD_period_5}}</td>
+          <td>{{subTT_Data6.FOURTH_period_5}}</td>
+          <td>{{subTT_Data6.FIFTH_period_5}}</td>
+          <td>{{subTT_Data6.SIXTH_period_5}}</td>
+          <td>{{subTT_Data6.SEVENTH_period_5}}</td>
+          <td>{{subTT_Data6.EIGHTH_period_5}}</td>
+          <td>{{subTT_Data6.NINETH_period_5}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Sat</th>
+          <td>{{subTT_Data6.FIRST_period_6}}</td>
+          <td>{{subTT_Data6.SECOND_period_6}}</td>
+          <td>{{subTT_Data6.THIRD_period_6}}</td>
+          <td>{{subTT_Data6.FOURTH_period_6}}</td>
+          <td>{{subTT_Data6.FIFTH_period_6}}</td>
+          <td>{{subTT_Data6.SIXTH_period_6}}</td>
+          <td>{{subTT_Data6.SEVENTH_period_6}}</td>
+          <td>{{subTT_Data6.EIGHTH_period_6}}</td>
+          <td>{{subTT_Data6.NINETH_period_6}}</td>
+        </tr>
+      </tbody>
+    </table>
+    {% endfor %}
+    
+    {% for subTT_Data7 in subTT_Data7 %}
+    
+    <table id="sub7_TT" class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th scope="col"><button class="Teacher_name">{{subTT_Data7.Teacher.Acronym}}</button></th>
+          <th scope="col" style="color: aquamarine;">1</th>
+          <th scope="col" style="color: aquamarine;">2</th>
+          <th scope="col" style="color: aquamarine;">3</th>
+          <th scope="col" style="color: aquamarine;">4</th>
+          <th scope="col" style="color: aquamarine;">5</th>
+          <th scope="col" style="color: aquamarine;">6</th>
+          <th scope="col" style="color: aquamarine;">7</th>
+          <th scope="col" style="color: aquamarine;">8</th>
+          <th scope="col" style="color: aquamarine;">9</th>
+        </tr>
+      </thead>
+      <tbody>
+    
+        <tr>
+          <th scope="row">Mon</th>
+          <td>{{subTT_Data7.FIRST_period_1}}</td>
+          <td>{{subTT_Data7.SECOND_period_1}}</td>
+          <td>{{subTT_Data7.THIRD_period_1}}</td>
+          <td>{{subTT_Data7.FOURTH_period_1}}</td>
+          <td>{{subTT_Data7.FIFTH_period_1}}</td>
+          <td>{{subTT_Data7.SIXTH_period_1}}</td>
+          <td>{{subTT_Data7.SEVENTH_period_1}}</td>
+          <td>{{subTT_Data7.EIGHTH_period_1}}</td>
+          <td>{{subTT_Data7.NINETH_period_1}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Tue</th>
+          <td>{{subTT_Data7.FIRST_period_2}}</td>
+          <td>{{subTT_Data7.SECOND_period_2}}</td>
+          <td>{{subTT_Data7.THIRD_period_2}}</td>
+          <td>{{subTT_Data7.FOURTH_period_2}}</td>
+          <td>{{subTT_Data7.FIFTH_period_2}}</td>
+          <td>{{subTT_Data7.SIXTH_period_2}}</td>
+          <td>{{subTT_Data7.SEVENTH_period_2}}</td>
+          <td>{{subTT_Data7.EIGHTH_period_2}}</td>
+          <td>{{subTT_Data7.NINETH_period_2}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Wed</th>
+          <td>{{subTT_Data7.FIRST_period_3}}</td>
+          <td>{{subTT_Data7.SECOND_period_3}}</td>
+          <td>{{subTT_Data7.THIRD_period_3}}</td>
+          <td>{{subTT_Data7.FOURTH_period_3}}</td>
+          <td>{{subTT_Data7.FIFTH_period_3}}</td>
+          <td>{{subTT_Data7.SIXTH_period_3}}</td>
+          <td>{{subTT_Data7.SEVENTH_period_3}}</td>
+          <td>{{subTT_Data7.EIGHTH_period_3}}</td>
+          <td>{{subTT_Data7.NINETH_period_3}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Thu</th>
+          <td>{{subTT_Data7.FIRST_period_4}}</td>
+          <td>{{subTT_Data7.SECOND_period_4}}</td>
+          <td>{{subTT_Data7.THIRD_period_4}}</td>
+          <td>{{subTT_Data7.FOURTH_period_4}}</td>
+          <td>{{subTT_Data7.FIFTH_period_4}}</td>
+          <td>{{subTT_Data7.SIXTH_period_4}}</td>
+          <td>{{subTT_Data7.SEVENTH_period_4}}</td>
+          <td>{{subTT_Data7.EIGHTH_period_4}}</td>
+          <td>{{subTT_Data7.NINETH_period_4}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Fri</th>
+          <td>{{subTT_Data7.FIRST_period_5}}</td>
+          <td>{{subTT_Data7.SECOND_period_5}}</td>
+          <td>{{subTT_Data7.THIRD_period_5}}</td>
+          <td>{{subTT_Data7.FOURTH_period_5}}</td>
+          <td>{{subTT_Data7.FIFTH_period_5}}</td>
+          <td>{{subTT_Data7.SIXTH_period_5}}</td>
+          <td>{{subTT_Data7.SEVENTH_period_5}}</td>
+          <td>{{subTT_Data7.EIGHTH_period_5}}</td>
+          <td>{{subTT_Data7.NINETH_period_5}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Sat</th>
+          <td>{{subTT_Data7.FIRST_period_6}}</td>
+          <td>{{subTT_Data7.SECOND_period_6}}</td>
+          <td>{{subTT_Data7.THIRD_period_6}}</td>
+          <td>{{subTT_Data7.FOURTH_period_6}}</td>
+          <td>{{subTT_Data7.FIFTH_period_6}}</td>
+          <td>{{subTT_Data7.SIXTH_period_6}}</td>
+          <td>{{subTT_Data7.SEVENTH_period_6}}</td>
+          <td>{{subTT_Data7.EIGHTH_period_6}}</td>
+          <td>{{subTT_Data7.NINETH_period_6}}</td>
+        </tr>
+      </tbody>
+    </table>
+    {% endfor %}
+    
+    
+      {% for subTT_Data8 in subTT_Data8 %}
+    
+      <table id="sub8_TT" class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th scope="col"><button class="Teacher_name">{{subTT_Data8.Teacher.Acronym}}</button></th>
+          <th scope="col" style="color: aquamarine;">1</th>
+          <th scope="col" style="color: aquamarine;">2</th>
+          <th scope="col" style="color: aquamarine;">3</th>
+          <th scope="col" style="color: aquamarine;">4</th>
+          <th scope="col" style="color: aquamarine;">5</th>
+          <th scope="col" style="color: aquamarine;">6</th>
+          <th scope="col" style="color: aquamarine;">7</th>
+          <th scope="col" style="color: aquamarine;">8</th>
+          <th scope="col" style="color: aquamarine;">9</th>
+        </tr>
+      </thead>
+      <tbody>
+    
+        <tr>
+          <th scope="row">Mon</th>
+          <td>{{subTT_Data8.FIRST_period_1}}</td>
+          <td>{{subTT_Data8.SECOND_period_1}}</td>
+          <td>{{subTT_Data8.THIRD_period_1}}</td>
+          <td>{{subTT_Data8.FOURTH_period_1}}</td>
+          <td>{{subTT_Data8.FIFTH_period_1}}</td>
+          <td>{{subTT_Data8.SIXTH_period_1}}</td>
+          <td>{{subTT_Data8.SEVENTH_period_1}}</td>
+          <td>{{subTT_Data8.EIGHTH_period_1}}</td>
+          <td>{{subTT_Data8.NINETH_period_1}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Tue</th>
+          <td>{{subTT_Data8.FIRST_period_2}}</td>
+          <td>{{subTT_Data8.SECOND_period_2}}</td>
+          <td>{{subTT_Data8.THIRD_period_2}}</td>
+          <td>{{subTT_Data8.FOURTH_period_2}}</td>
+          <td>{{subTT_Data8.FIFTH_period_2}}</td>
+          <td>{{subTT_Data8.SIXTH_period_2}}</td>
+          <td>{{subTT_Data8.SEVENTH_period_2}}</td>
+          <td>{{subTT_Data8.EIGHTH_period_2}}</td>
+          <td>{{subTT_Data8.NINETH_period_2}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Wed</th>
+          <td>{{subTT_Data8.FIRST_period_3}}</td>
+          <td>{{subTT_Data8.SECOND_period_3}}</td>
+          <td>{{subTT_Data8.THIRD_period_3}}</td>
+          <td>{{subTT_Data8.FOURTH_period_3}}</td>
+          <td>{{subTT_Data8.FIFTH_period_3}}</td>
+          <td>{{subTT_Data8.SIXTH_period_3}}</td>
+          <td>{{subTT_Data8.SEVENTH_period_3}}</td>
+          <td>{{subTT_Data8.EIGHTH_period_3}}</td>
+          <td>{{subTT_Data8.NINETH_period_3}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Thu</th>
+          <td>{{subTT_Data8.FIRST_period_4}}</td>
+          <td>{{subTT_Data8.SECOND_period_4}}</td>
+          <td>{{subTT_Data8.THIRD_period_4}}</td>
+          <td>{{subTT_Data8.FOURTH_period_4}}</td>
+          <td>{{subTT_Data8.FIFTH_period_4}}</td>
+          <td>{{subTT_Data8.SIXTH_period_4}}</td>
+          <td>{{subTT_Data8.SEVENTH_period_4}}</td>
+          <td>{{subTT_Data8.EIGHTH_period_4}}</td>
+          <td>{{subTT_Data8.NINETH_period_4}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Fri</th>
+          <td>{{subTT_Data8.FIRST_period_5}}</td>
+          <td>{{subTT_Data8.SECOND_period_5}}</td>
+          <td>{{subTT_Data8.THIRD_period_5}}</td>
+          <td>{{subTT_Data8.FOURTH_period_5}}</td>
+          <td>{{subTT_Data8.FIFTH_period_5}}</td>
+          <td>{{subTT_Data8.SIXTH_period_5}}</td>
+          <td>{{subTT_Data8.SEVENTH_period_5}}</td>
+          <td>{{subTT_Data8.EIGHTH_period_5}}</td>
+          <td>{{subTT_Data8.NINETH_period_5}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Sat</th>
+          <td>{{subTT_Data8.FIRST_period_6}}</td>
+          <td>{{subTT_Data8.SECOND_period_6}}</td>
+          <td>{{subTT_Data8.THIRD_period_6}}</td>
+          <td>{{subTT_Data8.FOURTH_period_6}}</td>
+          <td>{{subTT_Data8.FIFTH_period_6}}</td>
+          <td>{{subTT_Data8.SIXTH_period_6}}</td>
+          <td>{{subTT_Data8.SEVENTH_period_6}}</td>
+          <td>{{subTT_Data8.EIGHTH_period_6}}</td>
+          <td>{{subTT_Data8.NINETH_period_6}}</td>
+        </tr>
+      </tbody>
+    </table>
+    {% endfor %}
+    
+    
+    {% for subTT_Data9 in subTT_Data9 %}
+      <table id="sub9_TT" class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th scope="col"><button class="Teacher_name">{{subTT_Data9.Teacher.Acronym}}</button></th>
+          <th scope="col" style="color: aquamarine;">1</th>
+          <th scope="col" style="color: aquamarine;">2</th>
+          <th scope="col" style="color: aquamarine;">3</th>
+          <th scope="col" style="color: aquamarine;">4</th>
+          <th scope="col" style="color: aquamarine;">5</th>
+          <th scope="col" style="color: aquamarine;">6</th>
+          <th scope="col" style="color: aquamarine;">7</th>
+          <th scope="col" style="color: aquamarine;">8</th>
+          <th scope="col" style="color: aquamarine;">9</th>
+        </tr>
+      </thead>
+      <tbody>
+    
+        <tr>
+          <th scope="row">Mon</th>
+          <td>{{subTT_Data9.FIRST_period_1}}</td>
+          <td>{{subTT_Data9.SECOND_period_1}}</td>
+          <td>{{subTT_Data9.THIRD_period_1}}</td>
+          <td>{{subTT_Data9.FOURTH_period_1}}</td>
+          <td>{{subTT_Data9.FIFTH_period_1}}</td>
+          <td>{{subTT_Data9.SIXTH_period_1}}</td>
+          <td>{{subTT_Data9.SEVENTH_period_1}}</td>
+          <td>{{subTT_Data9.EIGHTH_period_1}}</td>
+          <td>{{subTT_Data9.NINETH_period_1}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Tue</th>
+          <td>{{subTT_Data9.FIRST_period_2}}</td>
+          <td>{{subTT_Data9.SECOND_period_2}}</td>
+          <td>{{subTT_Data9.THIRD_period_2}}</td>
+          <td>{{subTT_Data9.FOURTH_period_2}}</td>
+          <td>{{subTT_Data9.FIFTH_period_2}}</td>
+          <td>{{subTT_Data9.SIXTH_period_2}}</td>
+          <td>{{subTT_Data9.SEVENTH_period_2}}</td>
+          <td>{{subTT_Data9.EIGHTH_period_2}}</td>
+          <td>{{subTT_Data9.NINETH_period_2}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Wed</th>
+          <td>{{subTT_Data9.FIRST_period_3}}</td>
+          <td>{{subTT_Data9.SECOND_period_3}}</td>
+          <td>{{subTT_Data9.THIRD_period_3}}</td>
+          <td>{{subTT_Data9.FOURTH_period_3}}</td>
+          <td>{{subTT_Data9.FIFTH_period_3}}</td>
+          <td>{{subTT_Data9.SIXTH_period_3}}</td>
+          <td>{{subTT_Data9.SEVENTH_period_3}}</td>
+          <td>{{subTT_Data9.EIGHTH_period_3}}</td>
+          <td>{{subTT_Data9.NINETH_period_3}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Thu</th>
+          <td>{{subTT_Data9.FIRST_period_4}}</td>
+          <td>{{subTT_Data9.SECOND_period_4}}</td>
+          <td>{{subTT_Data9.THIRD_period_4}}</td>
+          <td>{{subTT_Data9.FOURTH_period_4}}</td>
+          <td>{{subTT_Data9.FIFTH_period_4}}</td>
+          <td>{{subTT_Data9.SIXTH_period_4}}</td>
+          <td>{{subTT_Data9.SEVENTH_period_4}}</td>
+          <td>{{subTT_Data9.EIGHTH_period_4}}</td>
+          <td>{{subTT_Data9.NINETH_period_4}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Fri</th>
+          <td>{{subTT_Data9.FIRST_period_5}}</td>
+          <td>{{subTT_Data9.SECOND_period_5}}</td>
+          <td>{{subTT_Data9.THIRD_period_5}}</td>
+          <td>{{subTT_Data9.FOURTH_period_5}}</td>
+          <td>{{subTT_Data9.FIFTH_period_5}}</td>
+          <td>{{subTT_Data9.SIXTH_period_5}}</td>
+          <td>{{subTT_Data9.SEVENTH_period_5}}</td>
+          <td>{{subTT_Data9.EIGHTH_period_5}}</td>
+          <td>{{subTT_Data9.NINETH_period_5}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Sat</th>
+          <td>{{subTT_Data9.FIRST_period_6}}</td>
+          <td>{{subTT_Data9.SECOND_period_6}}</td>
+          <td>{{subTT_Data9.THIRD_period_6}}</td>
+          <td>{{subTT_Data9.FOURTH_period_6}}</td>
+          <td>{{subTT_Data9.FIFTH_period_6}}</td>
+          <td>{{subTT_Data9.SIXTH_period_6}}</td>
+          <td>{{subTT_Data9.SEVENTH_period_6}}</td>
+          <td>{{subTT_Data9.EIGHTH_period_6}}</td>
+          <td>{{subTT_Data9.NINETH_period_6}}</td>
+        </tr>
+      </tbody>
+    </table>
+    {% endfor %}
+    
+    {% for subTT_Data10 in subTT_Data10 %}
+    
+    <table id="sub11_TT" class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th scope="col"><button class="Teacher_name">{{subTT_Data10.Teacher.Acronym}}</button></th>
+          <th scope="col" style="color: aquamarine;">1</th>
+          <th scope="col" style="color: aquamarine;">2</th>
+          <th scope="col" style="color: aquamarine;">3</th>
+          <th scope="col" style="color: aquamarine;">4</th>
+          <th scope="col" style="color: aquamarine;">5</th>
+          <th scope="col" style="color: aquamarine;">6</th>
+          <th scope="col" style="color: aquamarine;">7</th>
+          <th scope="col" style="color: aquamarine;">8</th>
+          <th scope="col" style="color: aquamarine;">9</th>
+        </tr>
+      </thead>
+      <tbody>
+    
+        <tr>
+          <th scope="row">Mon</th>
+          <td>{{subTT_Data10.FIRST_period_1}}</td>
+          <td>{{subTT_Data10.SECOND_period_1}}</td>
+          <td>{{subTT_Data10.THIRD_period_1}}</td>
+          <td>{{subTT_Data10.FOURTH_period_1}}</td>
+          <td>{{subTT_Data10.FIFTH_period_1}}</td>
+          <td>{{subTT_Data10.SIXTH_period_1}}</td>
+          <td>{{subTT_Data10.SEVENTH_period_1}}</td>
+          <td>{{subTT_Data10.EIGHTH_period_1}}</td>
+          <td>{{subTT_Data10.NINETH_period_1}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Tue</th>
+          <td>{{subTT_Data10.FIRST_period_2}}</td>
+          <td>{{subTT_Data10.SECOND_period_2}}</td>
+          <td>{{subTT_Data10.THIRD_period_2}}</td>
+          <td>{{subTT_Data10.FOURTH_period_2}}</td>
+          <td>{{subTT_Data10.FIFTH_period_2}}</td>
+          <td>{{subTT_Data10.SIXTH_period_2}}</td>
+          <td>{{subTT_Data10.SEVENTH_period_2}}</td>
+          <td>{{subTT_Data10.EIGHTH_period_2}}</td>
+          <td>{{subTT_Data10.NINETH_period_2}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Wed</th>
+          <td>{{subTT_Data10.FIRST_period_3}}</td>
+          <td>{{subTT_Data10.SECOND_period_3}}</td>
+          <td>{{subTT_Data10.THIRD_period_3}}</td>
+          <td>{{subTT_Data10.FOURTH_period_3}}</td>
+          <td>{{subTT_Data10.FIFTH_period_3}}</td>
+          <td>{{subTT_Data10.SIXTH_period_3}}</td>
+          <td>{{subTT_Data10.SEVENTH_period_3}}</td>
+          <td>{{subTT_Data10.EIGHTH_period_3}}</td>
+          <td>{{subTT_Data10.NINETH_period_3}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Thu</th>
+          <td>{{subTT_Data10.FIRST_period_4}}</td>
+          <td>{{subTT_Data10.SECOND_period_4}}</td>
+          <td>{{subTT_Data10.THIRD_period_4}}</td>
+          <td>{{subTT_Data10.FOURTH_period_4}}</td>
+          <td>{{subTT_Data10.FIFTH_period_4}}</td>
+          <td>{{subTT_Data10.SIXTH_period_4}}</td>
+          <td>{{subTT_Data10.SEVENTH_period_4}}</td>
+          <td>{{subTT_Data10.EIGHTH_period_4}}</td>
+          <td>{{subTT_Data10.NINETH_period_4}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Fri</th>
+          <td>{{subTT_Data10.FIRST_period_5}}</td>
+          <td>{{subTT_Data10.SECOND_period_5}}</td>
+          <td>{{subTT_Data10.THIRD_period_5}}</td>
+          <td>{{subTT_Data10.FOURTH_period_5}}</td>
+          <td>{{subTT_Data10.FIFTH_period_5}}</td>
+          <td>{{subTT_Data10.SIXTH_period_5}}</td>
+          <td>{{subTT_Data10.SEVENTH_period_5}}</td>
+          <td>{{subTT_Data10.EIGHTH_period_5}}</td>
+          <td>{{subTT_Data10.NINETH_period_5}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Sat</th>
+          <td>{{subTT_Data10.FIRST_period_6}}</td>
+          <td>{{subTT_Data10.SECOND_period_6}}</td>
+          <td>{{subTT_Data10.THIRD_period_6}}</td>
+          <td>{{subTT_Data10.FOURTH_period_6}}</td>
+          <td>{{subTT_Data10.FIFTH_period_6}}</td>
+          <td>{{subTT_Data10.SIXTH_period_6}}</td>
+          <td>{{subTT_Data10.SEVENTH_period_6}}</td>
+          <td>{{subTT_Data10.EIGHTH_period_6}}</td>
+          <td>{{subTT_Data10.NINETH_period_6}}</td>
+        </tr>
+      </tbody>
+    </table>
+    {% endfor %}
+    
+    
+    {% for subTT_Data11 in subTT_Data11 %}
+    
+    <table id="sub11_TT" class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th scope="col"><button class="Teacher_name">{{subTT_Data11.Teacher.Acronym}}</button></th>
+          <th scope="col" style="color: aquamarine;">1</th>
+          <th scope="col" style="color: aquamarine;">2</th>
+          <th scope="col" style="color: aquamarine;">3</th>
+          <th scope="col" style="color: aquamarine;">4</th>
+          <th scope="col" style="color: aquamarine;">5</th>
+          <th scope="col" style="color: aquamarine;">6</th>
+          <th scope="col" style="color: aquamarine;">7</th>
+          <th scope="col" style="color: aquamarine;">8</th>
+          <th scope="col" style="color: aquamarine;">9</th>
+        </tr>
+      </thead>
+      <tbody>
+    
+        <tr>
+          <th scope="row">Mon</th>
+          <td>{{subTT_Data11.FIRST_period_1}}</td>
+          <td>{{subTT_Data11.SECOND_period_1}}</td>
+          <td>{{subTT_Data11.THIRD_period_1}}</td>
+          <td>{{subTT_Data11.FOURTH_period_1}}</td>
+          <td>{{subTT_Data11.FIFTH_period_1}}</td>
+          <td>{{subTT_Data11.SIXTH_period_1}}</td>
+          <td>{{subTT_Data11.SEVENTH_period_1}}</td>
+          <td>{{subTT_Data11.EIGHTH_period_1}}</td>
+          <td>{{subTT_Data11.NINETH_period_1}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Tue</th>
+          <td>{{subTT_Data11.FIRST_period_2}}</td>
+          <td>{{subTT_Data11.SECOND_period_2}}</td>
+          <td>{{subTT_Data11.THIRD_period_2}}</td>
+          <td>{{subTT_Data11.FOURTH_period_2}}</td>
+          <td>{{subTT_Data11.FIFTH_period_2}}</td>
+          <td>{{subTT_Data11.SIXTH_period_2}}</td>
+          <td>{{subTT_Data11.SEVENTH_period_2}}</td>
+          <td>{{subTT_Data11.EIGHTH_period_2}}</td>
+          <td>{{subTT_Data11.NINETH_period_2}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Wed</th>
+          <td>{{subTT_Data11.FIRST_period_3}}</td>
+          <td>{{subTT_Data11.SECOND_period_3}}</td>
+          <td>{{subTT_Data11.THIRD_period_3}}</td>
+          <td>{{subTT_Data11.FOURTH_period_3}}</td>
+          <td>{{subTT_Data11.FIFTH_period_3}}</td>
+          <td>{{subTT_Data11.SIXTH_period_3}}</td>
+          <td>{{subTT_Data11.SEVENTH_period_3}}</td>
+          <td>{{subTT_Data11.EIGHTH_period_3}}</td>
+          <td>{{subTT_Data11.NINETH_period_3}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Thu</th>
+          <td>{{subTT_Data11.FIRST_period_4}}</td>
+          <td>{{subTT_Data11.SECOND_period_4}}</td>
+          <td>{{subTT_Data11.THIRD_period_4}}</td>
+          <td>{{subTT_Data11.FOURTH_period_4}}</td>
+          <td>{{subTT_Data11.FIFTH_period_4}}</td>
+          <td>{{subTT_Data11.SIXTH_period_4}}</td>
+          <td>{{subTT_Data11.SEVENTH_period_4}}</td>
+          <td>{{subTT_Data11.EIGHTH_period_4}}</td>
+          <td>{{subTT_Data11.NINETH_period_4}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Fri</th>
+          <td>{{subTT_Data11.FIRST_period_5}}</td>
+          <td>{{subTT_Data11.SECOND_period_5}}</td>
+          <td>{{subTT_Data11.THIRD_period_5}}</td>
+          <td>{{subTT_Data11.FOURTH_period_5}}</td>
+          <td>{{subTT_Data11.FIFTH_period_5}}</td>
+          <td>{{subTT_Data11.SIXTH_period_5}}</td>
+          <td>{{subTT_Data11.SEVENTH_period_5}}</td>
+          <td>{{subTT_Data11.EIGHTH_period_5}}</td>
+          <td>{{subTT_Data11.NINETH_period_5}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Sat</th>
+          <td>{{subTT_Data11.FIRST_period_6}}</td>
+          <td>{{subTT_Data11.SECOND_period_6}}</td>
+          <td>{{subTT_Data11.THIRD_period_6}}</td>
+          <td>{{subTT_Data11.FOURTH_period_6}}</td>
+          <td>{{subTT_Data11.FIFTH_period_6}}</td>
+          <td>{{subTT_Data11.SIXTH_period_6}}</td>
+          <td>{{subTT_Data11.SEVENTH_period_6}}</td>
+          <td>{{subTT_Data11.EIGHTH_period_6}}</td>
+          <td>{{subTT_Data11.NINETH_period_6}}</td>
+        </tr>
+      </tbody>
+    </table>
+    {% endfor %}
+    
+    
+    {% for subTT_Data12 in subTT_Data12 %}
+    
+    <table id="sub12_TT" class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th scope="col"><button class="Teacher_name">{{subTT_Data12.Teacher.Acronym}}</button></th>
+          <th scope="col" style="color: aquamarine;">1</th>
+          <th scope="col" style="color: aquamarine;">2</th>
+          <th scope="col" style="color: aquamarine;">3</th>
+          <th scope="col" style="color: aquamarine;">4</th>
+          <th scope="col" style="color: aquamarine;">5</th>
+          <th scope="col" style="color: aquamarine;">6</th>
+          <th scope="col" style="color: aquamarine;">7</th>
+          <th scope="col" style="color: aquamarine;">8</th>
+          <th scope="col" style="color: aquamarine;">9</th>
+        </tr>
+      </thead>
+      <tbody>
+    
+        <tr>
+          <th scope="row">Mon</th>
+          <td>{{subTT_Data12.FIRST_period_1}}</td>
+          <td>{{subTT_Data12.SECOND_period_1}}</td>
+          <td>{{subTT_Data12.THIRD_period_1}}</td>
+          <td>{{subTT_Data12.FOURTH_period_1}}</td>
+          <td>{{subTT_Data12.FIFTH_period_1}}</td>
+          <td>{{subTT_Data12.SIXTH_period_1}}</td>
+          <td>{{subTT_Data12.SEVENTH_period_1}}</td>
+          <td>{{subTT_Data12.EIGHTH_period_1}}</td>
+          <td>{{subTT_Data12.NINETH_period_1}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Tue</th>
+          <td>{{subTT_Data12.FIRST_period_2}}</td>
+          <td>{{subTT_Data12.SECOND_period_2}}</td>
+          <td>{{subTT_Data12.THIRD_period_2}}</td>
+          <td>{{subTT_Data12.FOURTH_period_2}}</td>
+          <td>{{subTT_Data12.FIFTH_period_2}}</td>
+          <td>{{subTT_Data12.SIXTH_period_2}}</td>
+          <td>{{subTT_Data12.SEVENTH_period_2}}</td>
+          <td>{{subTT_Data12.EIGHTH_period_2}}</td>
+          <td>{{subTT_Data12.NINETH_period_2}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Wed</th>
+          <td>{{subTT_Data12.FIRST_period_3}}</td>
+          <td>{{subTT_Data12.SECOND_period_3}}</td>
+          <td>{{subTT_Data12.THIRD_period_3}}</td>
+          <td>{{subTT_Data12.FOURTH_period_3}}</td>
+          <td>{{subTT_Data12.FIFTH_period_3}}</td>
+          <td>{{subTT_Data12.SIXTH_period_3}}</td>
+          <td>{{subTT_Data12.SEVENTH_period_3}}</td>
+          <td>{{subTT_Data12.EIGHTH_period_3}}</td>
+          <td>{{subTT_Data12.NINETH_period_3}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Thu</th>
+          <td>{{subTT_Data12.FIRST_period_4}}</td>
+          <td>{{subTT_Data12.SECOND_period_4}}</td>
+          <td>{{subTT_Data12.THIRD_period_4}}</td>
+          <td>{{subTT_Data12.FOURTH_period_4}}</td>
+          <td>{{subTT_Data12.FIFTH_period_4}}</td>
+          <td>{{subTT_Data12.SIXTH_period_4}}</td>
+          <td>{{subTT_Data12.SEVENTH_period_4}}</td>
+          <td>{{subTT_Data12.EIGHTH_period_4}}</td>
+          <td>{{subTT_Data12.NINETH_period_4}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Fri</th>
+          <td>{{subTT_Data12.FIRST_period_5}}</td>
+          <td>{{subTT_Data12.SECOND_period_5}}</td>
+          <td>{{subTT_Data12.THIRD_period_5}}</td>
+          <td>{{subTT_Data12.FOURTH_period_5}}</td>
+          <td>{{subTT_Data12.FIFTH_period_5}}</td>
+          <td>{{subTT_Data12.SIXTH_period_5}}</td>
+          <td>{{subTT_Data12.SEVENTH_period_5}}</td>
+          <td>{{subTT_Data12.EIGHTH_period_5}}</td>
+          <td>{{subTT_Data12.NINETH_period_5}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Sat</th>
+          <td>{{subTT_Data12.FIRST_period_6}}</td>
+          <td>{{subTT_Data12.SECOND_period_6}}</td>
+          <td>{{subTT_Data12.THIRD_period_6}}</td>
+          <td>{{subTT_Data12.FOURTH_period_6}}</td>
+          <td>{{subTT_Data12.FIFTH_period_6}}</td>
+          <td>{{subTT_Data12.SIXTH_period_6}}</td>
+          <td>{{subTT_Data12.SEVENTH_period_6}}</td>
+          <td>{{subTT_Data12.EIGHTH_period_6}}</td>
+          <td>{{subTT_Data12.NINETH_period_6}}</td>
+        </tr>
+      </tbody>
+    </table>
+    {% endfor %}
+    
+    
+    {% for subTT_Data13 in subTT_Data13 %}
+    
+    <table id="sub13_TT" class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th scope="col"><button class="Teacher_name">{{subTT_Data13.Teacher.Acronym}}</button></th>
+          <th scope="col" style="color: aquamarine;">1</th>
+          <th scope="col" style="color: aquamarine;">2</th>
+          <th scope="col" style="color: aquamarine;">3</th>
+          <th scope="col" style="color: aquamarine;">4</th>
+          <th scope="col" style="color: aquamarine;">5</th>
+          <th scope="col" style="color: aquamarine;">6</th>
+          <th scope="col" style="color: aquamarine;">7</th>
+          <th scope="col" style="color: aquamarine;">8</th>
+          <th scope="col" style="color: aquamarine;">9</th>
+        </tr>
+      </thead>
+      <tbody>
+    
+        <tr>
+          <th scope="row">Mon</th>
+          <td>{{subTT_Data13.FIRST_period_1}}</td>
+          <td>{{subTT_Data13.SECOND_period_1}}</td>
+          <td>{{subTT_Data13.THIRD_period_1}}</td>
+          <td>{{subTT_Data13.FOURTH_period_1}}</td>
+          <td>{{subTT_Data13.FIFTH_period_1}}</td>
+          <td>{{subTT_Data13.SIXTH_period_1}}</td>
+          <td>{{subTT_Data13.SEVENTH_period_1}}</td>
+          <td>{{subTT_Data13.EIGHTH_period_1}}</td>
+          <td>{{subTT_Data13.NINETH_period_1}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Tue</th>
+          <td>{{subTT_Data13.FIRST_period_2}}</td>
+          <td>{{subTT_Data13.SECOND_period_2}}</td>
+          <td>{{subTT_Data13.THIRD_period_2}}</td>
+          <td>{{subTT_Data13.FOURTH_period_2}}</td>
+          <td>{{subTT_Data13.FIFTH_period_2}}</td>
+          <td>{{subTT_Data13.SIXTH_period_2}}</td>
+          <td>{{subTT_Data13.SEVENTH_period_2}}</td>
+          <td>{{subTT_Data13.EIGHTH_period_2}}</td>
+          <td>{{subTT_Data13.NINETH_period_2}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Wed</th>
+          <td>{{subTT_Data13.FIRST_period_3}}</td>
+          <td>{{subTT_Data13.SECOND_period_3}}</td>
+          <td>{{subTT_Data13.THIRD_period_3}}</td>
+          <td>{{subTT_Data13.FOURTH_period_3}}</td>
+          <td>{{subTT_Data13.FIFTH_period_3}}</td>
+          <td>{{subTT_Data13.SIXTH_period_3}}</td>
+          <td>{{subTT_Data13.SEVENTH_period_3}}</td>
+          <td>{{subTT_Data13.EIGHTH_period_3}}</td>
+          <td>{{subTT_Data13.NINETH_period_3}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Thu</th>
+          <td>{{subTT_Data13.FIRST_period_4}}</td>
+          <td>{{subTT_Data13.SECOND_period_4}}</td>
+          <td>{{subTT_Data13.THIRD_period_4}}</td>
+          <td>{{subTT_Data13.FOURTH_period_4}}</td>
+          <td>{{subTT_Data13.FIFTH_period_4}}</td>
+          <td>{{subTT_Data13.SIXTH_period_4}}</td>
+          <td>{{subTT_Data13.SEVENTH_period_4}}</td>
+          <td>{{subTT_Data13.EIGHTH_period_4}}</td>
+          <td>{{subTT_Data13.NINETH_period_4}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Fri</th>
+          <td>{{subTT_Data13.FIRST_period_5}}</td>
+          <td>{{subTT_Data13.SECOND_period_5}}</td>
+          <td>{{subTT_Data13.THIRD_period_5}}</td>
+          <td>{{subTT_Data13.FOURTH_period_5}}</td>
+          <td>{{subTT_Data13.FIFTH_period_5}}</td>
+          <td>{{subTT_Data13.SIXTH_period_5}}</td>
+          <td>{{subTT_Data13.SEVENTH_period_5}}</td>
+          <td>{{subTT_Data13.EIGHTH_period_5}}</td>
+          <td>{{subTT_Data13.NINETH_period_5}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Sat</th>
+          <td>{{subTT_Data13.FIRST_period_6}}</td>
+          <td>{{subTT_Data13.SECOND_period_6}}</td>
+          <td>{{subTT_Data13.THIRD_period_6}}</td>
+          <td>{{subTT_Data13.FOURTH_period_6}}</td>
+          <td>{{subTT_Data13.FIFTH_period_6}}</td>
+          <td>{{subTT_Data13.SIXTH_period_6}}</td>
+          <td>{{subTT_Data13.SEVENTH_period_6}}</td>
+          <td>{{subTT_Data13.EIGHTH_period_6}}</td>
+          <td>{{subTT_Data13.NINETH_period_6}}</td>
+        </tr>
+      </tbody>
+    </table>
+    {% endfor %}
+    
+    
+  
+    {% for subTT_Data14 in subTT_Data14 %}
+    
+    <table id="sub14_TT" class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th scope="col"><button class="Teacher_name">{{subTT_Data14.Teacher.Acronym}}</button></th>
+          <th scope="col" style="color: aquamarine;">1</th>
+          <th scope="col" style="color: aquamarine;">2</th>
+          <th scope="col" style="color: aquamarine;">3</th>
+          <th scope="col" style="color: aquamarine;">4</th>
+          <th scope="col" style="color: aquamarine;">5</th>
+          <th scope="col" style="color: aquamarine;">6</th>
+          <th scope="col" style="color: aquamarine;">7</th>
+          <th scope="col" style="color: aquamarine;">8</th>
+          <th scope="col" style="color: aquamarine;">9</th>
+        </tr>
+      </thead>
+      <tbody>
+    
+        <tr>
+          <th scope="row">Mon</th>
+          <td>{{subTT_Data14.FIRST_period_1}}</td>
+          <td>{{subTT_Data14.SECOND_period_1}}</td>
+          <td>{{subTT_Data14.THIRD_period_1}}</td>
+          <td>{{subTT_Data14.FOURTH_period_1}}</td>
+          <td>{{subTT_Data14.FIFTH_period_1}}</td>
+          <td>{{subTT_Data14.SIXTH_period_1}}</td>
+          <td>{{subTT_Data14.SEVENTH_period_1}}</td>
+          <td>{{subTT_Data14.EIGHTH_period_1}}</td>
+          <td>{{subTT_Data14.NINETH_period_1}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Tue</th>
+          <td>{{subTT_Data14.FIRST_period_2}}</td>
+          <td>{{subTT_Data14.SECOND_period_2}}</td>
+          <td>{{subTT_Data14.THIRD_period_2}}</td>
+          <td>{{subTT_Data14.FOURTH_period_2}}</td>
+          <td>{{subTT_Data14.FIFTH_period_2}}</td>
+          <td>{{subTT_Data14.SIXTH_period_2}}</td>
+          <td>{{subTT_Data14.SEVENTH_period_2}}</td>
+          <td>{{subTT_Data14.EIGHTH_period_2}}</td>
+          <td>{{subTT_Data14.NINETH_period_2}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Wed</th>
+          <td>{{subTT_Data14.FIRST_period_3}}</td>
+          <td>{{subTT_Data14.SECOND_period_3}}</td>
+          <td>{{subTT_Data14.THIRD_period_3}}</td>
+          <td>{{subTT_Data14.FOURTH_period_3}}</td>
+          <td>{{subTT_Data14.FIFTH_period_3}}</td>
+          <td>{{subTT_Data14.SIXTH_period_3}}</td>
+          <td>{{subTT_Data14.SEVENTH_period_3}}</td>
+          <td>{{subTT_Data14.EIGHTH_period_3}}</td>
+          <td>{{subTT_Data14.NINETH_period_3}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Thu</th>
+          <td>{{subTT_Data14.FIRST_period_4}}</td>
+          <td>{{subTT_Data14.SECOND_period_4}}</td>
+          <td>{{subTT_Data14.THIRD_period_4}}</td>
+          <td>{{subTT_Data14.FOURTH_period_4}}</td>
+          <td>{{subTT_Data14.FIFTH_period_4}}</td>
+          <td>{{subTT_Data14.SIXTH_period_4}}</td>
+          <td>{{subTT_Data14.SEVENTH_period_4}}</td>
+          <td>{{subTT_Data14.EIGHTH_period_4}}</td>
+          <td>{{subTT_Data14.NINETH_period_4}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Fri</th>
+          <td>{{subTT_Data14.FIRST_period_5}}</td>
+          <td>{{subTT_Data14.SECOND_period_5}}</td>
+          <td>{{subTT_Data14.THIRD_period_5}}</td>
+          <td>{{subTT_Data14.FOURTH_period_5}}</td>
+          <td>{{subTT_Data14.FIFTH_period_5}}</td>
+          <td>{{subTT_Data14.SIXTH_period_5}}</td>
+          <td>{{subTT_Data14.SEVENTH_period_5}}</td>
+          <td>{{subTT_Data14.EIGHTH_period_5}}</td>
+          <td>{{subTT_Data14.NINETH_period_5}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Sat</th>
+          <td>{{subTT_Data14.FIRST_period_6}}</td>
+          <td>{{subTT_Data14.SECOND_period_6}}</td>
+          <td>{{subTT_Data14.THIRD_period_6}}</td>
+          <td>{{subTT_Data14.FOURTH_period_6}}</td>
+          <td>{{subTT_Data14.FIFTH_period_6}}</td>
+          <td>{{subTT_Data14.SIXTH_period_6}}</td>
+          <td>{{subTT_Data14.SEVENTH_period_6}}</td>
+          <td>{{subTT_Data14.EIGHTH_period_6}}</td>
+          <td>{{subTT_Data14.NINETH_period_6}}</td>
+        </tr>
+      </tbody>
+    </table>
+    {% endfor %}
+    
+    
+  
+    {% for subTT_Data15 in subTT_Data15 %}
+    
+    <table id="sub15_TT" class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th scope="col"><button class="Teacher_name">{{subTT_Data15.Teacher.Acronym}}</button></th>
+          <th scope="col" style="color: aquamarine;">1</th>
+          <th scope="col" style="color: aquamarine;">2</th>
+          <th scope="col" style="color: aquamarine;">3</th>
+          <th scope="col" style="color: aquamarine;">4</th>
+          <th scope="col" style="color: aquamarine;">5</th>
+          <th scope="col" style="color: aquamarine;">6</th>
+          <th scope="col" style="color: aquamarine;">7</th>
+          <th scope="col" style="color: aquamarine;">8</th>
+          <th scope="col" style="color: aquamarine;">9</th>
+        </tr>
+      </thead>
+      <tbody>
+    
+        <tr>
+          <th scope="row">Mon</th>
+          <td>{{subTT_Data15.FIRST_period_1}}</td>
+          <td>{{subTT_Data15.SECOND_period_1}}</td>
+          <td>{{subTT_Data15.THIRD_period_1}}</td>
+          <td>{{subTT_Data15.FOURTH_period_1}}</td>
+          <td>{{subTT_Data15.FIFTH_period_1}}</td>
+          <td>{{subTT_Data15.SIXTH_period_1}}</td>
+          <td>{{subTT_Data15.SEVENTH_period_1}}</td>
+          <td>{{subTT_Data15.EIGHTH_period_1}}</td>
+          <td>{{subTT_Data15.NINETH_period_1}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Tue</th>
+          <td>{{subTT_Data15.FIRST_period_2}}</td>
+          <td>{{subTT_Data15.SECOND_period_2}}</td>
+          <td>{{subTT_Data15.THIRD_period_2}}</td>
+          <td>{{subTT_Data15.FOURTH_period_2}}</td>
+          <td>{{subTT_Data15.FIFTH_period_2}}</td>
+          <td>{{subTT_Data15.SIXTH_period_2}}</td>
+          <td>{{subTT_Data15.SEVENTH_period_2}}</td>
+          <td>{{subTT_Data15.EIGHTH_period_2}}</td>
+          <td>{{subTT_Data15.NINETH_period_2}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Wed</th>
+          <td>{{subTT_Data15.FIRST_period_3}}</td>
+          <td>{{subTT_Data15.SECOND_period_3}}</td>
+          <td>{{subTT_Data15.THIRD_period_3}}</td>
+          <td>{{subTT_Data15.FOURTH_period_3}}</td>
+          <td>{{subTT_Data15.FIFTH_period_3}}</td>
+          <td>{{subTT_Data15.SIXTH_period_3}}</td>
+          <td>{{subTT_Data15.SEVENTH_period_3}}</td>
+          <td>{{subTT_Data15.EIGHTH_period_3}}</td>
+          <td>{{subTT_Data15.NINETH_period_3}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Thu</th>
+          <td>{{subTT_Data15.FIRST_period_4}}</td>
+          <td>{{subTT_Data15.SECOND_period_4}}</td>
+          <td>{{subTT_Data15.THIRD_period_4}}</td>
+          <td>{{subTT_Data15.FOURTH_period_4}}</td>
+          <td>{{subTT_Data15.FIFTH_period_4}}</td>
+          <td>{{subTT_Data15.SIXTH_period_4}}</td>
+          <td>{{subTT_Data15.SEVENTH_period_4}}</td>
+          <td>{{subTT_Data15.EIGHTH_period_4}}</td>
+          <td>{{subTT_Data15.NINETH_period_4}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Fri</th>
+          <td>{{subTT_Data15.FIRST_period_5}}</td>
+          <td>{{subTT_Data15.SECOND_period_5}}</td>
+          <td>{{subTT_Data15.THIRD_period_5}}</td>
+          <td>{{subTT_Data15.FOURTH_period_5}}</td>
+          <td>{{subTT_Data15.FIFTH_period_5}}</td>
+          <td>{{subTT_Data15.SIXTH_period_5}}</td>
+          <td>{{subTT_Data15.SEVENTH_period_5}}</td>
+          <td>{{subTT_Data15.EIGHTH_period_5}}</td>
+          <td>{{subTT_Data15.NINETH_period_5}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Sat</th>
+          <td>{{subTT_Data15.FIRST_period_6}}</td>
+          <td>{{subTT_Data15.SECOND_period_6}}</td>
+          <td>{{subTT_Data15.THIRD_period_6}}</td>
+          <td>{{subTT_Data15.FOURTH_period_6}}</td>
+          <td>{{subTT_Data15.FIFTH_period_6}}</td>
+          <td>{{subTT_Data15.SIXTH_period_6}}</td>
+          <td>{{subTT_Data15.SEVENTH_period_6}}</td>
+          <td>{{subTT_Data15.EIGHTH_period_6}}</td>
+          <td>{{subTT_Data15.NINETH_period_6}}</td>
+        </tr>
+      </tbody>
+    </table>
+    {% endfor %}
+    
+    
+    {% for subTT_Data16 in subTT_Data16 %}
+    
+    <table id="sub16_TT" class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th scope="col"><button class="Teacher_name">{{subTT_Data16.Teacher.Acronym}}</button></th>
+          <th scope="col" style="color: aquamarine;">1</th>
+          <th scope="col" style="color: aquamarine;">2</th>
+          <th scope="col" style="color: aquamarine;">3</th>
+          <th scope="col" style="color: aquamarine;">4</th>
+          <th scope="col" style="color: aquamarine;">5</th>
+          <th scope="col" style="color: aquamarine;">6</th>
+          <th scope="col" style="color: aquamarine;">7</th>
+          <th scope="col" style="color: aquamarine;">8</th>
+          <th scope="col" style="color: aquamarine;">9</th>
+        </tr>
+      </thead>
+      <tbody>
+    
+        <tr>
+          <th scope="row">Mon</th>
+          <td>{{subTT_Data16.FIRST_period_1}}</td>
+          <td>{{subTT_Data16.SECOND_period_1}}</td>
+          <td>{{subTT_Data16.THIRD_period_1}}</td>
+          <td>{{subTT_Data16.FOURTH_period_1}}</td>
+          <td>{{subTT_Data16.FIFTH_period_1}}</td>
+          <td>{{subTT_Data16.SIXTH_period_1}}</td>
+          <td>{{subTT_Data16.SEVENTH_period_1}}</td>
+          <td>{{subTT_Data16.EIGHTH_period_1}}</td>
+          <td>{{subTT_Data16.NINETH_period_1}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Tue</th>
+          <td>{{subTT_Data16.FIRST_period_2}}</td>
+          <td>{{subTT_Data16.SECOND_period_2}}</td>
+          <td>{{subTT_Data16.THIRD_period_2}}</td>
+          <td>{{subTT_Data16.FOURTH_period_2}}</td>
+          <td>{{subTT_Data16.FIFTH_period_2}}</td>
+          <td>{{subTT_Data16.SIXTH_period_2}}</td>
+          <td>{{subTT_Data16.SEVENTH_period_2}}</td>
+          <td>{{subTT_Data16.EIGHTH_period_2}}</td>
+          <td>{{subTT_Data16.NINETH_period_2}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Wed</th>
+          <td>{{subTT_Data16.FIRST_period_3}}</td>
+          <td>{{subTT_Data16.SECOND_period_3}}</td>
+          <td>{{subTT_Data16.THIRD_period_3}}</td>
+          <td>{{subTT_Data16.FOURTH_period_3}}</td>
+          <td>{{subTT_Data16.FIFTH_period_3}}</td>
+          <td>{{subTT_Data16.SIXTH_period_3}}</td>
+          <td>{{subTT_Data16.SEVENTH_period_3}}</td>
+          <td>{{subTT_Data16.EIGHTH_period_3}}</td>
+          <td>{{subTT_Data16.NINETH_period_3}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Thu</th>
+          <td>{{subTT_Data16.FIRST_period_4}}</td>
+          <td>{{subTT_Data16.SECOND_period_4}}</td>
+          <td>{{subTT_Data16.THIRD_period_4}}</td>
+          <td>{{subTT_Data16.FOURTH_period_4}}</td>
+          <td>{{subTT_Data16.FIFTH_period_4}}</td>
+          <td>{{subTT_Data16.SIXTH_period_4}}</td>
+          <td>{{subTT_Data16.SEVENTH_period_4}}</td>
+          <td>{{subTT_Data16.EIGHTH_period_4}}</td>
+          <td>{{subTT_Data16.NINETH_period_4}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Fri</th>
+          <td>{{subTT_Data16.FIRST_period_5}}</td>
+          <td>{{subTT_Data16.SECOND_period_5}}</td>
+          <td>{{subTT_Data16.THIRD_period_5}}</td>
+          <td>{{subTT_Data16.FOURTH_period_5}}</td>
+          <td>{{subTT_Data16.FIFTH_period_5}}</td>
+          <td>{{subTT_Data16.SIXTH_period_5}}</td>
+          <td>{{subTT_Data16.SEVENTH_period_5}}</td>
+          <td>{{subTT_Data16.EIGHTH_period_5}}</td>
+          <td>{{subTT_Data16.NINETH_period_5}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Sat</th>
+          <td>{{subTT_Data16.FIRST_period_6}}</td>
+          <td>{{subTT_Data16.SECOND_period_6}}</td>
+          <td>{{subTT_Data16.THIRD_period_6}}</td>
+          <td>{{subTT_Data16.FOURTH_period_6}}</td>
+          <td>{{subTT_Data16.FIFTH_period_6}}</td>
+          <td>{{subTT_Data16.SIXTH_period_6}}</td>
+          <td>{{subTT_Data16.SEVENTH_period_6}}</td>
+          <td>{{subTT_Data16.EIGHTH_period_6}}</td>
+          <td>{{subTT_Data16.NINETH_period_6}}</td>
+        </tr>
+      </tbody>
+    </table>
+    {% endfor %}
+    
+    
+    {% for subTT_Data17 in subTT_Data17 %}
+    
+    <table id="sub17_TT" class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th scope="col"><button class="Teacher_name">{{subTT_Data17.Teacher.Acronym}}</button></th>
+          <th scope="col" style="color: aquamarine;">1</th>
+          <th scope="col" style="color: aquamarine;">2</th>
+          <th scope="col" style="color: aquamarine;">3</th>
+          <th scope="col" style="color: aquamarine;">4</th>
+          <th scope="col" style="color: aquamarine;">5</th>
+          <th scope="col" style="color: aquamarine;">6</th>
+          <th scope="col" style="color: aquamarine;">7</th>
+          <th scope="col" style="color: aquamarine;">8</th>
+          <th scope="col" style="color: aquamarine;">9</th>
+        </tr>
+      </thead>
+      <tbody>
+    
+        <tr>
+          <th scope="row">Mon</th>
+          <td>{{subTT_Data17.FIRST_period_1}}</td>
+          <td>{{subTT_Data17.SECOND_period_1}}</td>
+          <td>{{subTT_Data17.THIRD_period_1}}</td>
+          <td>{{subTT_Data17.FOURTH_period_1}}</td>
+          <td>{{subTT_Data17.FIFTH_period_1}}</td>
+          <td>{{subTT_Data17.SIXTH_period_1}}</td>
+          <td>{{subTT_Data17.SEVENTH_period_1}}</td>
+          <td>{{subTT_Data17.EIGHTH_period_1}}</td>
+          <td>{{subTT_Data17.NINETH_period_1}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Tue</th>
+          <td>{{subTT_Data17.FIRST_period_2}}</td>
+          <td>{{subTT_Data17.SECOND_period_2}}</td>
+          <td>{{subTT_Data17.THIRD_period_2}}</td>
+          <td>{{subTT_Data17.FOURTH_period_2}}</td>
+          <td>{{subTT_Data17.FIFTH_period_2}}</td>
+          <td>{{subTT_Data17.SIXTH_period_2}}</td>
+          <td>{{subTT_Data17.SEVENTH_period_2}}</td>
+          <td>{{subTT_Data17.EIGHTH_period_2}}</td>
+          <td>{{subTT_Data17.NINETH_period_2}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Wed</th>
+          <td>{{subTT_Data17.FIRST_period_3}}</td>
+          <td>{{subTT_Data17.SECOND_period_3}}</td>
+          <td>{{subTT_Data17.THIRD_period_3}}</td>
+          <td>{{subTT_Data17.FOURTH_period_3}}</td>
+          <td>{{subTT_Data17.FIFTH_period_3}}</td>
+          <td>{{subTT_Data17.SIXTH_period_3}}</td>
+          <td>{{subTT_Data17.SEVENTH_period_3}}</td>
+          <td>{{subTT_Data17.EIGHTH_period_3}}</td>
+          <td>{{subTT_Data17.NINETH_period_3}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Thu</th>
+          <td>{{subTT_Data17.FIRST_period_4}}</td>
+          <td>{{subTT_Data17.SECOND_period_4}}</td>
+          <td>{{subTT_Data17.THIRD_period_4}}</td>
+          <td>{{subTT_Data17.FOURTH_period_4}}</td>
+          <td>{{subTT_Data17.FIFTH_period_4}}</td>
+          <td>{{subTT_Data17.SIXTH_period_4}}</td>
+          <td>{{subTT_Data17.SEVENTH_period_4}}</td>
+          <td>{{subTT_Data17.EIGHTH_period_4}}</td>
+          <td>{{subTT_Data17.NINETH_period_4}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Fri</th>
+          <td>{{subTT_Data17.FIRST_period_5}}</td>
+          <td>{{subTT_Data17.SECOND_period_5}}</td>
+          <td>{{subTT_Data17.THIRD_period_5}}</td>
+          <td>{{subTT_Data17.FOURTH_period_5}}</td>
+          <td>{{subTT_Data17.FIFTH_period_5}}</td>
+          <td>{{subTT_Data17.SIXTH_period_5}}</td>
+          <td>{{subTT_Data17.SEVENTH_period_5}}</td>
+          <td>{{subTT_Data17.EIGHTH_period_5}}</td>
+          <td>{{subTT_Data17.NINETH_period_5}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Sat</th>
+          <td>{{subTT_Data17.FIRST_period_6}}</td>
+          <td>{{subTT_Data17.SECOND_period_6}}</td>
+          <td>{{subTT_Data17.THIRD_period_6}}</td>
+          <td>{{subTT_Data17.FOURTH_period_6}}</td>
+          <td>{{subTT_Data17.FIFTH_period_6}}</td>
+          <td>{{subTT_Data17.SIXTH_period_6}}</td>
+          <td>{{subTT_Data17.SEVENTH_period_6}}</td>
+          <td>{{subTT_Data17.EIGHTH_period_6}}</td>
+          <td>{{subTT_Data17.NINETH_period_6}}</td>
+        </tr>
+      </tbody>
+    </table>
+    {% endfor %}
+    
+    
+    {% for subTT_Data18 in subTT_Data18 %}
+    
+    <table id="sub18_TT" class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th scope="col"><button class="Teacher_name">{{subTT_Data18.Teacher.Acronym}}</button></th>
+          <th scope="col" style="color: aquamarine;">1</th>
+          <th scope="col" style="color: aquamarine;">2</th>
+          <th scope="col" style="color: aquamarine;">3</th>
+          <th scope="col" style="color: aquamarine;">4</th>
+          <th scope="col" style="color: aquamarine;">5</th>
+          <th scope="col" style="color: aquamarine;">6</th>
+          <th scope="col" style="color: aquamarine;">7</th>
+          <th scope="col" style="color: aquamarine;">8</th>
+          <th scope="col" style="color: aquamarine;">9</th>
+        </tr>
+      </thead>
+      <tbody>
+    
+        <tr>
+          <th scope="row">Mon</th>
+          <td>{{subTT_Data18.FIRST_period_1}}</td>
+          <td>{{subTT_Data18.SECOND_period_1}}</td>
+          <td>{{subTT_Data18.THIRD_period_1}}</td>
+          <td>{{subTT_Data18.FOURTH_period_1}}</td>
+          <td>{{subTT_Data18.FIFTH_period_1}}</td>
+          <td>{{subTT_Data18.SIXTH_period_1}}</td>
+          <td>{{subTT_Data18.SEVENTH_period_1}}</td>
+          <td>{{subTT_Data18.EIGHTH_period_1}}</td>
+          <td>{{subTT_Data18.NINETH_period_1}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Tue</th>
+          <td>{{subTT_Data18.FIRST_period_2}}</td>
+          <td>{{subTT_Data18.SECOND_period_2}}</td>
+          <td>{{subTT_Data18.THIRD_period_2}}</td>
+          <td>{{subTT_Data18.FOURTH_period_2}}</td>
+          <td>{{subTT_Data18.FIFTH_period_2}}</td>
+          <td>{{subTT_Data18.SIXTH_period_2}}</td>
+          <td>{{subTT_Data18.SEVENTH_period_2}}</td>
+          <td>{{subTT_Data18.EIGHTH_period_2}}</td>
+          <td>{{subTT_Data18.NINETH_period_2}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Wed</th>
+          <td>{{subTT_Data18.FIRST_period_3}}</td>
+          <td>{{subTT_Data18.SECOND_period_3}}</td>
+          <td>{{subTT_Data18.THIRD_period_3}}</td>
+          <td>{{subTT_Data18.FOURTH_period_3}}</td>
+          <td>{{subTT_Data18.FIFTH_period_3}}</td>
+          <td>{{subTT_Data18.SIXTH_period_3}}</td>
+          <td>{{subTT_Data18.SEVENTH_period_3}}</td>
+          <td>{{subTT_Data18.EIGHTH_period_3}}</td>
+          <td>{{subTT_Data18.NINETH_period_3}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Thu</th>
+          <td>{{subTT_Data18.FIRST_period_4}}</td>
+          <td>{{subTT_Data18.SECOND_period_4}}</td>
+          <td>{{subTT_Data18.THIRD_period_4}}</td>
+          <td>{{subTT_Data18.FOURTH_period_4}}</td>
+          <td>{{subTT_Data18.FIFTH_period_4}}</td>
+          <td>{{subTT_Data18.SIXTH_period_4}}</td>
+          <td>{{subTT_Data18.SEVENTH_period_4}}</td>
+          <td>{{subTT_Data18.EIGHTH_period_4}}</td>
+          <td>{{subTT_Data18.NINETH_period_4}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Fri</th>
+          <td>{{subTT_Data18.FIRST_period_5}}</td>
+          <td>{{subTT_Data18.SECOND_period_5}}</td>
+          <td>{{subTT_Data18.THIRD_period_5}}</td>
+          <td>{{subTT_Data18.FOURTH_period_5}}</td>
+          <td>{{subTT_Data18.FIFTH_period_5}}</td>
+          <td>{{subTT_Data18.SIXTH_period_5}}</td>
+          <td>{{subTT_Data18.SEVENTH_period_5}}</td>
+          <td>{{subTT_Data18.EIGHTH_period_5}}</td>
+          <td>{{subTT_Data18.NINETH_period_5}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Sat</th>
+          <td>{{subTT_Data18.FIRST_period_6}}</td>
+          <td>{{subTT_Data18.SECOND_period_6}}</td>
+          <td>{{subTT_Data18.THIRD_period_6}}</td>
+          <td>{{subTT_Data18.FOURTH_period_6}}</td>
+          <td>{{subTT_Data18.FIFTH_period_6}}</td>
+          <td>{{subTT_Data18.SIXTH_period_6}}</td>
+          <td>{{subTT_Data18.SEVENTH_period_6}}</td>
+          <td>{{subTT_Data18.EIGHTH_period_6}}</td>
+          <td>{{subTT_Data18.NINETH_period_6}}</td>
+        </tr>
+      </tbody>
+    </table>
+    {% endfor %}
+    
+    {% for subTT_Data19 in subTT_Data19 %}
+    
+    <table id="sub19_TT" class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th scope="col"><button class="Teacher_name">{{subTT_Data19.Teacher.Acronym}}</button></th>
+          <th scope="col" style="color: aquamarine;">1</th>
+          <th scope="col" style="color: aquamarine;">2</th>
+          <th scope="col" style="color: aquamarine;">3</th>
+          <th scope="col" style="color: aquamarine;">4</th>
+          <th scope="col" style="color: aquamarine;">5</th>
+          <th scope="col" style="color: aquamarine;">6</th>
+          <th scope="col" style="color: aquamarine;">7</th>
+          <th scope="col" style="color: aquamarine;">8</th>
+          <th scope="col" style="color: aquamarine;">9</th>
+        </tr>
+      </thead>
+      <tbody>
+    
+        <tr>
+          <th scope="row">Mon</th>
+          <td>{{subTT_Data19.FIRST_period_1}}</td>
+          <td>{{subTT_Data19.SECOND_period_1}}</td>
+          <td>{{subTT_Data19.THIRD_period_1}}</td>
+          <td>{{subTT_Data19.FOURTH_period_1}}</td>
+          <td>{{subTT_Data19.FIFTH_period_1}}</td>
+          <td>{{subTT_Data19.SIXTH_period_1}}</td>
+          <td>{{subTT_Data19.SEVENTH_period_1}}</td>
+          <td>{{subTT_Data19.EIGHTH_period_1}}</td>
+          <td>{{subTT_Data19.NINETH_period_1}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Tue</th>
+          <td>{{subTT_Data19.FIRST_period_2}}</td>
+          <td>{{subTT_Data19.SECOND_period_2}}</td>
+          <td>{{subTT_Data19.THIRD_period_2}}</td>
+          <td>{{subTT_Data19.FOURTH_period_2}}</td>
+          <td>{{subTT_Data19.FIFTH_period_2}}</td>
+          <td>{{subTT_Data19.SIXTH_period_2}}</td>
+          <td>{{subTT_Data19.SEVENTH_period_2}}</td>
+          <td>{{subTT_Data19.EIGHTH_period_2}}</td>
+          <td>{{subTT_Data19.NINETH_period_2}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Wed</th>
+          <td>{{subTT_Data19.FIRST_period_3}}</td>
+          <td>{{subTT_Data19.SECOND_period_3}}</td>
+          <td>{{subTT_Data19.THIRD_period_3}}</td>
+          <td>{{subTT_Data19.FOURTH_period_3}}</td>
+          <td>{{subTT_Data19.FIFTH_period_3}}</td>
+          <td>{{subTT_Data19.SIXTH_period_3}}</td>
+          <td>{{subTT_Data19.SEVENTH_period_3}}</td>
+          <td>{{subTT_Data19.EIGHTH_period_3}}</td>
+          <td>{{subTT_Data19.NINETH_period_3}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Thu</th>
+          <td>{{subTT_Data19.FIRST_period_4}}</td>
+          <td>{{subTT_Data19.SECOND_period_4}}</td>
+          <td>{{subTT_Data19.THIRD_period_4}}</td>
+          <td>{{subTT_Data19.FOURTH_period_4}}</td>
+          <td>{{subTT_Data19.FIFTH_period_4}}</td>
+          <td>{{subTT_Data19.SIXTH_period_4}}</td>
+          <td>{{subTT_Data19.SEVENTH_period_4}}</td>
+          <td>{{subTT_Data19.EIGHTH_period_4}}</td>
+          <td>{{subTT_Data19.NINETH_period_4}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Fri</th>
+          <td>{{subTT_Data19.FIRST_period_5}}</td>
+          <td>{{subTT_Data19.SECOND_period_5}}</td>
+          <td>{{subTT_Data19.THIRD_period_5}}</td>
+          <td>{{subTT_Data19.FOURTH_period_5}}</td>
+          <td>{{subTT_Data19.FIFTH_period_5}}</td>
+          <td>{{subTT_Data19.SIXTH_period_5}}</td>
+          <td>{{subTT_Data19.SEVENTH_period_5}}</td>
+          <td>{{subTT_Data19.EIGHTH_period_5}}</td>
+          <td>{{subTT_Data19.NINETH_period_5}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Sat</th>
+          <td>{{subTT_Data19.FIRST_period_6}}</td>
+          <td>{{subTT_Data19.SECOND_period_6}}</td>
+          <td>{{subTT_Data19.THIRD_period_6}}</td>
+          <td>{{subTT_Data19.FOURTH_period_6}}</td>
+          <td>{{subTT_Data19.FIFTH_period_6}}</td>
+          <td>{{subTT_Data19.SIXTH_period_6}}</td>
+          <td>{{subTT_Data19.SEVENTH_period_6}}</td>
+          <td>{{subTT_Data19.EIGHTH_period_6}}</td>
+          <td>{{subTT_Data19.NINETH_period_6}}</td>
+        </tr>
+      </tbody>
+    </table>
+    {% endfor %}
+    
+    {% for subTT_Data20 in subTT_Data20 %}
+    
+    <table id="sub20_TT" class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th scope="col"><button class="Teacher_name">{{subTT_Data20.Teacher.Acronym}}</button></th>
+          <th scope="col" style="color: aquamarine;">1</th>
+          <th scope="col" style="color: aquamarine;">2</th>
+          <th scope="col" style="color: aquamarine;">3</th>
+          <th scope="col" style="color: aquamarine;">4</th>
+          <th scope="col" style="color: aquamarine;">5</th>
+          <th scope="col" style="color: aquamarine;">6</th>
+          <th scope="col" style="color: aquamarine;">7</th>
+          <th scope="col" style="color: aquamarine;">8</th>
+          <th scope="col" style="color: aquamarine;">9</th>
+        </tr>
+      </thead>
+      <tbody>
+    
+        <tr>
+          <th scope="row">Mon</th>
+          <td>{{subTT_Data20.FIRST_period_1}}</td>
+          <td>{{subTT_Data20.SECOND_period_1}}</td>
+          <td>{{subTT_Data20.THIRD_period_1}}</td>
+          <td>{{subTT_Data20.FOURTH_period_1}}</td>
+          <td>{{subTT_Data20.FIFTH_period_1}}</td>
+          <td>{{subTT_Data20.SIXTH_period_1}}</td>
+          <td>{{subTT_Data20.SEVENTH_period_1}}</td>
+          <td>{{subTT_Data20.EIGHTH_period_1}}</td>
+          <td>{{subTT_Data20.NINETH_period_1}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Tue</th>
+          <td>{{subTT_Data20.FIRST_period_2}}</td>
+          <td>{{subTT_Data20.SECOND_period_2}}</td>
+          <td>{{subTT_Data20.THIRD_period_2}}</td>
+          <td>{{subTT_Data20.FOURTH_period_2}}</td>
+          <td>{{subTT_Data20.FIFTH_period_2}}</td>
+          <td>{{subTT_Data20.SIXTH_period_2}}</td>
+          <td>{{subTT_Data20.SEVENTH_period_2}}</td>
+          <td>{{subTT_Data20.EIGHTH_period_2}}</td>
+          <td>{{subTT_Data20.NINETH_period_2}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Wed</th>
+          <td>{{subTT_Data20.FIRST_period_3}}</td>
+          <td>{{subTT_Data20.SECOND_period_3}}</td>
+          <td>{{subTT_Data20.THIRD_period_3}}</td>
+          <td>{{subTT_Data20.FOURTH_period_3}}</td>
+          <td>{{subTT_Data20.FIFTH_period_3}}</td>
+          <td>{{subTT_Data20.SIXTH_period_3}}</td>
+          <td>{{subTT_Data20.SEVENTH_period_3}}</td>
+          <td>{{subTT_Data20.EIGHTH_period_3}}</td>
+          <td>{{subTT_Data20.NINETH_period_3}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Thu</th>
+          <td>{{subTT_Data20.FIRST_period_4}}</td>
+          <td>{{subTT_Data20.SECOND_period_4}}</td>
+          <td>{{subTT_Data20.THIRD_period_4}}</td>
+          <td>{{subTT_Data20.FOURTH_period_4}}</td>
+          <td>{{subTT_Data20.FIFTH_period_4}}</td>
+          <td>{{subTT_Data20.SIXTH_period_4}}</td>
+          <td>{{subTT_Data20.SEVENTH_period_4}}</td>
+          <td>{{subTT_Data20.EIGHTH_period_4}}</td>
+          <td>{{subTT_Data20.NINETH_period_4}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Fri</th>
+          <td>{{subTT_Data20.FIRST_period_5}}</td>
+          <td>{{subTT_Data20.SECOND_period_5}}</td>
+          <td>{{subTT_Data20.THIRD_period_5}}</td>
+          <td>{{subTT_Data20.FOURTH_period_5}}</td>
+          <td>{{subTT_Data20.FIFTH_period_5}}</td>
+          <td>{{subTT_Data20.SIXTH_period_5}}</td>
+          <td>{{subTT_Data20.SEVENTH_period_5}}</td>
+          <td>{{subTT_Data20.EIGHTH_period_5}}</td>
+          <td>{{subTT_Data20.NINETH_period_5}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Sat</th>
+          <td>{{subTT_Data20.FIRST_period_6}}</td>
+          <td>{{subTT_Data20.SECOND_period_6}}</td>
+          <td>{{subTT_Data20.THIRD_period_6}}</td>
+          <td>{{subTT_Data20.FOURTH_period_6}}</td>
+          <td>{{subTT_Data20.FIFTH_period_6}}</td>
+          <td>{{subTT_Data20.SIXTH_period_6}}</td>
+          <td>{{subTT_Data20.SEVENTH_period_6}}</td>
+          <td>{{subTT_Data20.EIGHTH_period_6}}</td>
+          <td>{{subTT_Data20.NINETH_period_6}}</td>
+        </tr>
+      </tbody>
+    </table>
+    {% endfor %}
+    
+    {% for subTT_Data21 in subTT_Data21 %}
+    
+    <table id="sub21_TT" class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th scope="col"><button class="Teacher_name">{{subTT_Data21.Teacher.Acronym}}</button></th>
+          <th scope="col" style="color: aquamarine;">1</th>
+          <th scope="col" style="color: aquamarine;">2</th>
+          <th scope="col" style="color: aquamarine;">3</th>
+          <th scope="col" style="color: aquamarine;">4</th>
+          <th scope="col" style="color: aquamarine;">5</th>
+          <th scope="col" style="color: aquamarine;">6</th>
+          <th scope="col" style="color: aquamarine;">7</th>
+          <th scope="col" style="color: aquamarine;">8</th>
+          <th scope="col" style="color: aquamarine;">9</th>
+        </tr>
+      </thead>
+      <tbody>
+    
+        <tr>
+          <th scope="row">Mon</th>
+          <td>{{subTT_Data21.FIRST_period_1}}</td>
+          <td>{{subTT_Data21.SECOND_period_1}}</td>
+          <td>{{subTT_Data21.THIRD_period_1}}</td>
+          <td>{{subTT_Data21.FOURTH_period_1}}</td>
+          <td>{{subTT_Data21.FIFTH_period_1}}</td>
+          <td>{{subTT_Data21.SIXTH_period_1}}</td>
+          <td>{{subTT_Data21.SEVENTH_period_1}}</td>
+          <td>{{subTT_Data21.EIGHTH_period_1}}</td>
+          <td>{{subTT_Data21.NINETH_period_1}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Tue</th>
+          <td>{{subTT_Data21.FIRST_period_2}}</td>
+          <td>{{subTT_Data21.SECOND_period_2}}</td>
+          <td>{{subTT_Data21.THIRD_period_2}}</td>
+          <td>{{subTT_Data21.FOURTH_period_2}}</td>
+          <td>{{subTT_Data21.FIFTH_period_2}}</td>
+          <td>{{subTT_Data21.SIXTH_period_2}}</td>
+          <td>{{subTT_Data21.SEVENTH_period_2}}</td>
+          <td>{{subTT_Data21.EIGHTH_period_2}}</td>
+          <td>{{subTT_Data21.NINETH_period_2}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Wed</th>
+          <td>{{subTT_Data21.FIRST_period_3}}</td>
+          <td>{{subTT_Data21.SECOND_period_3}}</td>
+          <td>{{subTT_Data21.THIRD_period_3}}</td>
+          <td>{{subTT_Data21.FOURTH_period_3}}</td>
+          <td>{{subTT_Data21.FIFTH_period_3}}</td>
+          <td>{{subTT_Data21.SIXTH_period_3}}</td>
+          <td>{{subTT_Data21.SEVENTH_period_3}}</td>
+          <td>{{subTT_Data21.EIGHTH_period_3}}</td>
+          <td>{{subTT_Data21.NINETH_period_3}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Thu</th>
+          <td>{{subTT_Data21.FIRST_period_4}}</td>
+          <td>{{subTT_Data21.SECOND_period_4}}</td>
+          <td>{{subTT_Data21.THIRD_period_4}}</td>
+          <td>{{subTT_Data21.FOURTH_period_4}}</td>
+          <td>{{subTT_Data21.FIFTH_period_4}}</td>
+          <td>{{subTT_Data21.SIXTH_period_4}}</td>
+          <td>{{subTT_Data21.SEVENTH_period_4}}</td>
+          <td>{{subTT_Data21.EIGHTH_period_4}}</td>
+          <td>{{subTT_Data21.NINETH_period_4}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Fri</th>
+          <td>{{subTT_Data21.FIRST_period_5}}</td>
+          <td>{{subTT_Data21.SECOND_period_5}}</td>
+          <td>{{subTT_Data21.THIRD_period_5}}</td>
+          <td>{{subTT_Data21.FOURTH_period_5}}</td>
+          <td>{{subTT_Data21.FIFTH_period_5}}</td>
+          <td>{{subTT_Data21.SIXTH_period_5}}</td>
+          <td>{{subTT_Data21.SEVENTH_period_5}}</td>
+          <td>{{subTT_Data21.EIGHTH_period_5}}</td>
+          <td>{{subTT_Data21.NINETH_period_5}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Sat</th>
+          <td>{{subTT_Data21.FIRST_period_6}}</td>
+          <td>{{subTT_Data21.SECOND_period_6}}</td>
+          <td>{{subTT_Data21.THIRD_period_6}}</td>
+          <td>{{subTT_Data21.FOURTH_period_6}}</td>
+          <td>{{subTT_Data21.FIFTH_period_6}}</td>
+          <td>{{subTT_Data21.SIXTH_period_6}}</td>
+          <td>{{subTT_Data21.SEVENTH_period_6}}</td>
+          <td>{{subTT_Data21.EIGHTH_period_6}}</td>
+          <td>{{subTT_Data21.NINETH_period_6}}</td>
+        </tr>
+      </tbody>
+    </table>
+    {% endfor %}
+    
+    {% for subTT_Data22 in subTT_Data22 %}
+    
+    <table id="sub22_TT" class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th scope="col"><button class="Teacher_name">{{subTT_Data22.Teacher.Acronym}}</button></th>
+          <th scope="col" style="color: aquamarine;">1</th>
+          <th scope="col" style="color: aquamarine;">2</th>
+          <th scope="col" style="color: aquamarine;">3</th>
+          <th scope="col" style="color: aquamarine;">4</th>
+          <th scope="col" style="color: aquamarine;">5</th>
+          <th scope="col" style="color: aquamarine;">6</th>
+          <th scope="col" style="color: aquamarine;">7</th>
+          <th scope="col" style="color: aquamarine;">8</th>
+          <th scope="col" style="color: aquamarine;">9</th>
+        </tr>
+      </thead>
+      <tbody>
+    
+        <tr>
+          <th scope="row">Mon</th>
+          <td>{{subTT_Data22.FIRST_period_1}}</td>
+          <td>{{subTT_Data22.SECOND_period_1}}</td>
+          <td>{{subTT_Data22.THIRD_period_1}}</td>
+          <td>{{subTT_Data22.FOURTH_period_1}}</td>
+          <td>{{subTT_Data22.FIFTH_period_1}}</td>
+          <td>{{subTT_Data22.SIXTH_period_1}}</td>
+          <td>{{subTT_Data22.SEVENTH_period_1}}</td>
+          <td>{{subTT_Data22.EIGHTH_period_1}}</td>
+          <td>{{subTT_Data22.NINETH_period_1}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Tue</th>
+          <td>{{subTT_Data22.FIRST_period_2}}</td>
+          <td>{{subTT_Data22.SECOND_period_2}}</td>
+          <td>{{subTT_Data22.THIRD_period_2}}</td>
+          <td>{{subTT_Data22.FOURTH_period_2}}</td>
+          <td>{{subTT_Data22.FIFTH_period_2}}</td>
+          <td>{{subTT_Data22.SIXTH_period_2}}</td>
+          <td>{{subTT_Data22.SEVENTH_period_2}}</td>
+          <td>{{subTT_Data22.EIGHTH_period_2}}</td>
+          <td>{{subTT_Data22.NINETH_period_2}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Wed</th>
+          <td>{{subTT_Data22.FIRST_period_3}}</td>
+          <td>{{subTT_Data22.SECOND_period_3}}</td>
+          <td>{{subTT_Data22.THIRD_period_3}}</td>
+          <td>{{subTT_Data22.FOURTH_period_3}}</td>
+          <td>{{subTT_Data22.FIFTH_period_3}}</td>
+          <td>{{subTT_Data22.SIXTH_period_3}}</td>
+          <td>{{subTT_Data22.SEVENTH_period_3}}</td>
+          <td>{{subTT_Data22.EIGHTH_period_3}}</td>
+          <td>{{subTT_Data22.NINETH_period_3}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Thu</th>
+          <td>{{subTT_Data22.FIRST_period_4}}</td>
+          <td>{{subTT_Data22.SECOND_period_4}}</td>
+          <td>{{subTT_Data22.THIRD_period_4}}</td>
+          <td>{{subTT_Data22.FOURTH_period_4}}</td>
+          <td>{{subTT_Data22.FIFTH_period_4}}</td>
+          <td>{{subTT_Data22.SIXTH_period_4}}</td>
+          <td>{{subTT_Data22.SEVENTH_period_4}}</td>
+          <td>{{subTT_Data22.EIGHTH_period_4}}</td>
+          <td>{{subTT_Data22.NINETH_period_4}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Fri</th>
+          <td>{{subTT_Data22.FIRST_period_5}}</td>
+          <td>{{subTT_Data22.SECOND_period_5}}</td>
+          <td>{{subTT_Data22.THIRD_period_5}}</td>
+          <td>{{subTT_Data22.FOURTH_period_5}}</td>
+          <td>{{subTT_Data22.FIFTH_period_5}}</td>
+          <td>{{subTT_Data22.SIXTH_period_5}}</td>
+          <td>{{subTT_Data22.SEVENTH_period_5}}</td>
+          <td>{{subTT_Data22.EIGHTH_period_5}}</td>
+          <td>{{subTT_Data22.NINETH_period_5}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Sat</th>
+          <td>{{subTT_Data22.FIRST_period_6}}</td>
+          <td>{{subTT_Data22.SECOND_period_6}}</td>
+          <td>{{subTT_Data22.THIRD_period_6}}</td>
+          <td>{{subTT_Data22.FOURTH_period_6}}</td>
+          <td>{{subTT_Data22.FIFTH_period_6}}</td>
+          <td>{{subTT_Data22.SIXTH_period_6}}</td>
+          <td>{{subTT_Data22.SEVENTH_period_6}}</td>
+          <td>{{subTT_Data22.EIGHTH_period_6}}</td>
+          <td>{{subTT_Data22.NINETH_period_6}}</td>
+        </tr>
+      </tbody>
+    </table>
+    {% endfor %}
+    
+    {% for subTT_Data23 in subTT_Data23 %}
+    
+    <table id="sub23_TT" class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th scope="col"><button class="Teacher_name">{{subTT_Data23.Teacher.Acronym}}</button></th>
+          <th scope="col" style="color: aquamarine;">1</th>
+          <th scope="col" style="color: aquamarine;">2</th>
+          <th scope="col" style="color: aquamarine;">3</th>
+          <th scope="col" style="color: aquamarine;">4</th>
+          <th scope="col" style="color: aquamarine;">5</th>
+          <th scope="col" style="color: aquamarine;">6</th>
+          <th scope="col" style="color: aquamarine;">7</th>
+          <th scope="col" style="color: aquamarine;">8</th>
+          <th scope="col" style="color: aquamarine;">9</th>
+        </tr>
+      </thead>
+      <tbody>
+    
+        <tr>
+          <th scope="row">Mon</th>
+          <td>{{subTT_Data23.FIRST_period_1}}</td>
+          <td>{{subTT_Data23.SECOND_period_1}}</td>
+          <td>{{subTT_Data23.THIRD_period_1}}</td>
+          <td>{{subTT_Data23.FOURTH_period_1}}</td>
+          <td>{{subTT_Data23.FIFTH_period_1}}</td>
+          <td>{{subTT_Data23.SIXTH_period_1}}</td>
+          <td>{{subTT_Data23.SEVENTH_period_1}}</td>
+          <td>{{subTT_Data23.EIGHTH_period_1}}</td>
+          <td>{{subTT_Data23.NINETH_period_1}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Tue</th>
+          <td>{{subTT_Data23.FIRST_period_2}}</td>
+          <td>{{subTT_Data23.SECOND_period_2}}</td>
+          <td>{{subTT_Data23.THIRD_period_2}}</td>
+          <td>{{subTT_Data23.FOURTH_period_2}}</td>
+          <td>{{subTT_Data23.FIFTH_period_2}}</td>
+          <td>{{subTT_Data23.SIXTH_period_2}}</td>
+          <td>{{subTT_Data23.SEVENTH_period_2}}</td>
+          <td>{{subTT_Data23.EIGHTH_period_2}}</td>
+          <td>{{subTT_Data23.NINETH_period_2}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Wed</th>
+          <td>{{subTT_Data23.FIRST_period_3}}</td>
+          <td>{{subTT_Data23.SECOND_period_3}}</td>
+          <td>{{subTT_Data23.THIRD_period_3}}</td>
+          <td>{{subTT_Data23.FOURTH_period_3}}</td>
+          <td>{{subTT_Data23.FIFTH_period_3}}</td>
+          <td>{{subTT_Data23.SIXTH_period_3}}</td>
+          <td>{{subTT_Data23.SEVENTH_period_3}}</td>
+          <td>{{subTT_Data23.EIGHTH_period_3}}</td>
+          <td>{{subTT_Data23.NINETH_period_3}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Thu</th>
+          <td>{{subTT_Data23.FIRST_period_4}}</td>
+          <td>{{subTT_Data23.SECOND_period_4}}</td>
+          <td>{{subTT_Data23.THIRD_period_4}}</td>
+          <td>{{subTT_Data23.FOURTH_period_4}}</td>
+          <td>{{subTT_Data23.FIFTH_period_4}}</td>
+          <td>{{subTT_Data23.SIXTH_period_4}}</td>
+          <td>{{subTT_Data23.SEVENTH_period_4}}</td>
+          <td>{{subTT_Data23.EIGHTH_period_4}}</td>
+          <td>{{subTT_Data23.NINETH_period_4}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Fri</th>
+          <td>{{subTT_Data23.FIRST_period_5}}</td>
+          <td>{{subTT_Data23.SECOND_period_5}}</td>
+          <td>{{subTT_Data23.THIRD_period_5}}</td>
+          <td>{{subTT_Data23.FOURTH_period_5}}</td>
+          <td>{{subTT_Data23.FIFTH_period_5}}</td>
+          <td>{{subTT_Data23.SIXTH_period_5}}</td>
+          <td>{{subTT_Data23.SEVENTH_period_5}}</td>
+          <td>{{subTT_Data23.EIGHTH_period_5}}</td>
+          <td>{{subTT_Data23.NINETH_period_5}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Sat</th>
+          <td>{{subTT_Data23.FIRST_period_6}}</td>
+          <td>{{subTT_Data23.SECOND_period_6}}</td>
+          <td>{{subTT_Data23.THIRD_period_6}}</td>
+          <td>{{subTT_Data23.FOURTH_period_6}}</td>
+          <td>{{subTT_Data23.FIFTH_period_6}}</td>
+          <td>{{subTT_Data23.SIXTH_period_6}}</td>
+          <td>{{subTT_Data23.SEVENTH_period_6}}</td>
+          <td>{{subTT_Data23.EIGHTH_period_6}}</td>
+          <td>{{subTT_Data23.NINETH_period_6}}</td>
+        </tr>
+      </tbody>
+    </table>
+    {% endfor %}
+    
+    {% for subTT_Data24 in subTT_Data24 %}
+    
+    <table id="sub24_TT" class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th scope="col"><button class="Teacher_name">{{subTT_Data24.Teacher.Acronym}}</button></th>
+          <th scope="col" style="color: aquamarine;">1</th>
+          <th scope="col" style="color: aquamarine;">2</th>
+          <th scope="col" style="color: aquamarine;">3</th>
+          <th scope="col" style="color: aquamarine;">4</th>
+          <th scope="col" style="color: aquamarine;">5</th>
+          <th scope="col" style="color: aquamarine;">6</th>
+          <th scope="col" style="color: aquamarine;">7</th>
+          <th scope="col" style="color: aquamarine;">8</th>
+          <th scope="col" style="color: aquamarine;">9</th>
+        </tr>
+      </thead>
+      <tbody>
+    
+        <tr>
+          <th scope="row">Mon</th>
+          <td>{{subTT_Data24.FIRST_period_1}}</td>
+          <td>{{subTT_Data24.SECOND_period_1}}</td>
+          <td>{{subTT_Data24.THIRD_period_1}}</td>
+          <td>{{subTT_Data24.FOURTH_period_1}}</td>
+          <td>{{subTT_Data24.FIFTH_period_1}}</td>
+          <td>{{subTT_Data24.SIXTH_period_1}}</td>
+          <td>{{subTT_Data24.SEVENTH_period_1}}</td>
+          <td>{{subTT_Data24.EIGHTH_period_1}}</td>
+          <td>{{subTT_Data24.NINETH_period_1}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Tue</th>
+          <td>{{subTT_Data24.FIRST_period_2}}</td>
+          <td>{{subTT_Data24.SECOND_period_2}}</td>
+          <td>{{subTT_Data24.THIRD_period_2}}</td>
+          <td>{{subTT_Data24.FOURTH_period_2}}</td>
+          <td>{{subTT_Data24.FIFTH_period_2}}</td>
+          <td>{{subTT_Data24.SIXTH_period_2}}</td>
+          <td>{{subTT_Data24.SEVENTH_period_2}}</td>
+          <td>{{subTT_Data24.EIGHTH_period_2}}</td>
+          <td>{{subTT_Data24.NINETH_period_2}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Wed</th>
+          <td>{{subTT_Data24.FIRST_period_3}}</td>
+          <td>{{subTT_Data24.SECOND_period_3}}</td>
+          <td>{{subTT_Data24.THIRD_period_3}}</td>
+          <td>{{subTT_Data24.FOURTH_period_3}}</td>
+          <td>{{subTT_Data24.FIFTH_period_3}}</td>
+          <td>{{subTT_Data24.SIXTH_period_3}}</td>
+          <td>{{subTT_Data24.SEVENTH_period_3}}</td>
+          <td>{{subTT_Data24.EIGHTH_period_3}}</td>
+          <td>{{subTT_Data24.NINETH_period_3}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Thu</th>
+          <td>{{subTT_Data24.FIRST_period_4}}</td>
+          <td>{{subTT_Data24.SECOND_period_4}}</td>
+          <td>{{subTT_Data24.THIRD_period_4}}</td>
+          <td>{{subTT_Data24.FOURTH_period_4}}</td>
+          <td>{{subTT_Data24.FIFTH_period_4}}</td>
+          <td>{{subTT_Data24.SIXTH_period_4}}</td>
+          <td>{{subTT_Data24.SEVENTH_period_4}}</td>
+          <td>{{subTT_Data24.EIGHTH_period_4}}</td>
+          <td>{{subTT_Data24.NINETH_period_4}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Fri</th>
+          <td>{{subTT_Data24.FIRST_period_5}}</td>
+          <td>{{subTT_Data24.SECOND_period_5}}</td>
+          <td>{{subTT_Data24.THIRD_period_5}}</td>
+          <td>{{subTT_Data24.FOURTH_period_5}}</td>
+          <td>{{subTT_Data24.FIFTH_period_5}}</td>
+          <td>{{subTT_Data24.SIXTH_period_5}}</td>
+          <td>{{subTT_Data24.SEVENTH_period_5}}</td>
+          <td>{{subTT_Data24.EIGHTH_period_5}}</td>
+          <td>{{subTT_Data24.NINETH_period_5}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Sat</th>
+          <td>{{subTT_Data24.FIRST_period_6}}</td>
+          <td>{{subTT_Data24.SECOND_period_6}}</td>
+          <td>{{subTT_Data24.THIRD_period_6}}</td>
+          <td>{{subTT_Data24.FOURTH_period_6}}</td>
+          <td>{{subTT_Data24.FIFTH_period_6}}</td>
+          <td>{{subTT_Data24.SIXTH_period_6}}</td>
+          <td>{{subTT_Data24.SEVENTH_period_6}}</td>
+          <td>{{subTT_Data24.EIGHTH_period_6}}</td>
+          <td>{{subTT_Data24.NINETH_period_6}}</td>
+        </tr>
+      </tbody>
+    </table>
+    {% endfor %}
+    
+    {% for subTT_Data25 in subTT_Data25 %}
+    
+    <table id="sub25_TT" class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th scope="col"><button class="Teacher_name">{{subTT_Data25.Teacher.Acronym}}</button></th>
+          <th scope="col" style="color: aquamarine;">1</th>
+          <th scope="col" style="color: aquamarine;">2</th>
+          <th scope="col" style="color: aquamarine;">3</th>
+          <th scope="col" style="color: aquamarine;">4</th>
+          <th scope="col" style="color: aquamarine;">5</th>
+          <th scope="col" style="color: aquamarine;">6</th>
+          <th scope="col" style="color: aquamarine;">7</th>
+          <th scope="col" style="color: aquamarine;">8</th>
+          <th scope="col" style="color: aquamarine;">9</th>
+        </tr>
+      </thead>
+      <tbody>
+    
+        <tr>
+          <th scope="row">Mon</th>
+          <td>{{subTT_Data25.FIRST_period_1}}</td>
+          <td>{{subTT_Data25.SECOND_period_1}}</td>
+          <td>{{subTT_Data25.THIRD_period_1}}</td>
+          <td>{{subTT_Data25.FOURTH_period_1}}</td>
+          <td>{{subTT_Data25.FIFTH_period_1}}</td>
+          <td>{{subTT_Data25.SIXTH_period_1}}</td>
+          <td>{{subTT_Data25.SEVENTH_period_1}}</td>
+          <td>{{subTT_Data25.EIGHTH_period_1}}</td>
+          <td>{{subTT_Data25.NINETH_period_1}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Tue</th>
+          <td>{{subTT_Data25.FIRST_period_2}}</td>
+          <td>{{subTT_Data25.SECOND_period_2}}</td>
+          <td>{{subTT_Data25.THIRD_period_2}}</td>
+          <td>{{subTT_Data25.FOURTH_period_2}}</td>
+          <td>{{subTT_Data25.FIFTH_period_2}}</td>
+          <td>{{subTT_Data25.SIXTH_period_2}}</td>
+          <td>{{subTT_Data25.SEVENTH_period_2}}</td>
+          <td>{{subTT_Data25.EIGHTH_period_2}}</td>
+          <td>{{subTT_Data25.NINETH_period_2}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Wed</th>
+          <td>{{subTT_Data25.FIRST_period_3}}</td>
+          <td>{{subTT_Data25.SECOND_period_3}}</td>
+          <td>{{subTT_Data25.THIRD_period_3}}</td>
+          <td>{{subTT_Data25.FOURTH_period_3}}</td>
+          <td>{{subTT_Data25.FIFTH_period_3}}</td>
+          <td>{{subTT_Data25.SIXTH_period_3}}</td>
+          <td>{{subTT_Data25.SEVENTH_period_3}}</td>
+          <td>{{subTT_Data25.EIGHTH_period_3}}</td>
+          <td>{{subTT_Data25.NINETH_period_3}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Thu</th>
+          <td>{{subTT_Data25.FIRST_period_4}}</td>
+          <td>{{subTT_Data25.SECOND_period_4}}</td>
+          <td>{{subTT_Data25.THIRD_period_4}}</td>
+          <td>{{subTT_Data25.FOURTH_period_4}}</td>
+          <td>{{subTT_Data25.FIFTH_period_4}}</td>
+          <td>{{subTT_Data25.SIXTH_period_4}}</td>
+          <td>{{subTT_Data25.SEVENTH_period_4}}</td>
+          <td>{{subTT_Data25.EIGHTH_period_4}}</td>
+          <td>{{subTT_Data25.NINETH_period_4}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Fri</th>
+          <td>{{subTT_Data25.FIRST_period_5}}</td>
+          <td>{{subTT_Data25.SECOND_period_5}}</td>
+          <td>{{subTT_Data25.THIRD_period_5}}</td>
+          <td>{{subTT_Data25.FOURTH_period_5}}</td>
+          <td>{{subTT_Data25.FIFTH_period_5}}</td>
+          <td>{{subTT_Data25.SIXTH_period_5}}</td>
+          <td>{{subTT_Data25.SEVENTH_period_5}}</td>
+          <td>{{subTT_Data25.EIGHTH_period_5}}</td>
+          <td>{{subTT_Data25.NINETH_period_5}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Sat</th>
+          <td>{{subTT_Data25.FIRST_period_6}}</td>
+          <td>{{subTT_Data25.SECOND_period_6}}</td>
+          <td>{{subTT_Data25.THIRD_period_6}}</td>
+          <td>{{subTT_Data25.FOURTH_period_6}}</td>
+          <td>{{subTT_Data25.FIFTH_period_6}}</td>
+          <td>{{subTT_Data25.SIXTH_period_6}}</td>
+          <td>{{subTT_Data25.SEVENTH_period_6}}</td>
+          <td>{{subTT_Data25.EIGHTH_period_6}}</td>
+          <td>{{subTT_Data25.NINETH_period_6}}</td>
+        </tr>
+      </tbody>
+    </table>
+    {% endfor %}
+    
+    {% for subTT_Data26 in subTT_Data26 %}
+    
+    <table id="sub26_TT" class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th scope="col"><button class="Teacher_name">{{subTT_Data26.Teacher.Acronym}}</button></th>
+          <th scope="col" style="color: aquamarine;">1</th>
+          <th scope="col" style="color: aquamarine;">2</th>
+          <th scope="col" style="color: aquamarine;">3</th>
+          <th scope="col" style="color: aquamarine;">4</th>
+          <th scope="col" style="color: aquamarine;">5</th>
+          <th scope="col" style="color: aquamarine;">6</th>
+          <th scope="col" style="color: aquamarine;">7</th>
+          <th scope="col" style="color: aquamarine;">8</th>
+          <th scope="col" style="color: aquamarine;">9</th>
+        </tr>
+      </thead>
+      <tbody>
+    
+        <tr>
+          <th scope="row">Mon</th>
+          <td>{{subTT_Data26.FIRST_period_1}}</td>
+          <td>{{subTT_Data26.SECOND_period_1}}</td>
+          <td>{{subTT_Data26.THIRD_period_1}}</td>
+          <td>{{subTT_Data26.FOURTH_period_1}}</td>
+          <td>{{subTT_Data26.FIFTH_period_1}}</td>
+          <td>{{subTT_Data26.SIXTH_period_1}}</td>
+          <td>{{subTT_Data26.SEVENTH_period_1}}</td>
+          <td>{{subTT_Data26.EIGHTH_period_1}}</td>
+          <td>{{subTT_Data26.NINETH_period_1}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Tue</th>
+          <td>{{subTT_Data26.FIRST_period_2}}</td>
+          <td>{{subTT_Data26.SECOND_period_2}}</td>
+          <td>{{subTT_Data26.THIRD_period_2}}</td>
+          <td>{{subTT_Data26.FOURTH_period_2}}</td>
+          <td>{{subTT_Data26.FIFTH_period_2}}</td>
+          <td>{{subTT_Data26.SIXTH_period_2}}</td>
+          <td>{{subTT_Data26.SEVENTH_period_2}}</td>
+          <td>{{subTT_Data26.EIGHTH_period_2}}</td>
+          <td>{{subTT_Data26.NINETH_period_2}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Wed</th>
+          <td>{{subTT_Data26.FIRST_period_3}}</td>
+          <td>{{subTT_Data26.SECOND_period_3}}</td>
+          <td>{{subTT_Data26.THIRD_period_3}}</td>
+          <td>{{subTT_Data26.FOURTH_period_3}}</td>
+          <td>{{subTT_Data26.FIFTH_period_3}}</td>
+          <td>{{subTT_Data26.SIXTH_period_3}}</td>
+          <td>{{subTT_Data26.SEVENTH_period_3}}</td>
+          <td>{{subTT_Data26.EIGHTH_period_3}}</td>
+          <td>{{subTT_Data26.NINETH_period_3}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Thu</th>
+          <td>{{subTT_Data26.FIRST_period_4}}</td>
+          <td>{{subTT_Data26.SECOND_period_4}}</td>
+          <td>{{subTT_Data26.THIRD_period_4}}</td>
+          <td>{{subTT_Data26.FOURTH_period_4}}</td>
+          <td>{{subTT_Data26.FIFTH_period_4}}</td>
+          <td>{{subTT_Data26.SIXTH_period_4}}</td>
+          <td>{{subTT_Data26.SEVENTH_period_4}}</td>
+          <td>{{subTT_Data26.EIGHTH_period_4}}</td>
+          <td>{{subTT_Data26.NINETH_period_4}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Fri</th>
+          <td>{{subTT_Data26.FIRST_period_5}}</td>
+          <td>{{subTT_Data26.SECOND_period_5}}</td>
+          <td>{{subTT_Data26.THIRD_period_5}}</td>
+          <td>{{subTT_Data26.FOURTH_period_5}}</td>
+          <td>{{subTT_Data26.FIFTH_period_5}}</td>
+          <td>{{subTT_Data26.SIXTH_period_5}}</td>
+          <td>{{subTT_Data26.SEVENTH_period_5}}</td>
+          <td>{{subTT_Data26.EIGHTH_period_5}}</td>
+          <td>{{subTT_Data26.NINETH_period_5}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Sat</th>
+          <td>{{subTT_Data26.FIRST_period_6}}</td>
+          <td>{{subTT_Data26.SECOND_period_6}}</td>
+          <td>{{subTT_Data26.THIRD_period_6}}</td>
+          <td>{{subTT_Data26.FOURTH_period_6}}</td>
+          <td>{{subTT_Data26.FIFTH_period_6}}</td>
+          <td>{{subTT_Data26.SIXTH_period_6}}</td>
+          <td>{{subTT_Data26.SEVENTH_period_6}}</td>
+          <td>{{subTT_Data26.EIGHTH_period_6}}</td>
+          <td>{{subTT_Data26.NINETH_period_6}}</td>
+        </tr>
+      </tbody>
+    </table>
+    {% endfor %}
+    
+    {% for subTT_Data26 in subTT_Data26 %}
+    
+    <table id="sub26_TT" class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th scope="col"><button class="Teacher_name">{{subTT_Data26.Teacher.Acronym}}</button></th>
+          <th scope="col" style="color: aquamarine;">1</th>
+          <th scope="col" style="color: aquamarine;">2</th>
+          <th scope="col" style="color: aquamarine;">3</th>
+          <th scope="col" style="color: aquamarine;">4</th>
+          <th scope="col" style="color: aquamarine;">5</th>
+          <th scope="col" style="color: aquamarine;">6</th>
+          <th scope="col" style="color: aquamarine;">7</th>
+          <th scope="col" style="color: aquamarine;">8</th>
+          <th scope="col" style="color: aquamarine;">9</th>
+        </tr>
+      </thead>
+      <tbody>
+    
+        <tr>
+          <th scope="row">Mon</th>
+          <td>{{subTT_Data26.FIRST_period_1}}</td>
+          <td>{{subTT_Data26.SECOND_period_1}}</td>
+          <td>{{subTT_Data26.THIRD_period_1}}</td>
+          <td>{{subTT_Data26.FOURTH_period_1}}</td>
+          <td>{{subTT_Data26.FIFTH_period_1}}</td>
+          <td>{{subTT_Data26.SIXTH_period_1}}</td>
+          <td>{{subTT_Data26.SEVENTH_period_1}}</td>
+          <td>{{subTT_Data26.EIGHTH_period_1}}</td>
+          <td>{{subTT_Data26.NINETH_period_1}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Tue</th>
+          <td>{{subTT_Data26.FIRST_period_2}}</td>
+          <td>{{subTT_Data26.SECOND_period_2}}</td>
+          <td>{{subTT_Data26.THIRD_period_2}}</td>
+          <td>{{subTT_Data26.FOURTH_period_2}}</td>
+          <td>{{subTT_Data26.FIFTH_period_2}}</td>
+          <td>{{subTT_Data26.SIXTH_period_2}}</td>
+          <td>{{subTT_Data26.SEVENTH_period_2}}</td>
+          <td>{{subTT_Data26.EIGHTH_period_2}}</td>
+          <td>{{subTT_Data26.NINETH_period_2}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Wed</th>
+          <td>{{subTT_Data26.FIRST_period_3}}</td>
+          <td>{{subTT_Data26.SECOND_period_3}}</td>
+          <td>{{subTT_Data26.THIRD_period_3}}</td>
+          <td>{{subTT_Data26.FOURTH_period_3}}</td>
+          <td>{{subTT_Data26.FIFTH_period_3}}</td>
+          <td>{{subTT_Data26.SIXTH_period_3}}</td>
+          <td>{{subTT_Data26.SEVENTH_period_3}}</td>
+          <td>{{subTT_Data26.EIGHTH_period_3}}</td>
+          <td>{{subTT_Data26.NINETH_period_3}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Thu</th>
+          <td>{{subTT_Data26.FIRST_period_4}}</td>
+          <td>{{subTT_Data26.SECOND_period_4}}</td>
+          <td>{{subTT_Data26.THIRD_period_4}}</td>
+          <td>{{subTT_Data26.FOURTH_period_4}}</td>
+          <td>{{subTT_Data26.FIFTH_period_4}}</td>
+          <td>{{subTT_Data26.SIXTH_period_4}}</td>
+          <td>{{subTT_Data26.SEVENTH_period_4}}</td>
+          <td>{{subTT_Data26.EIGHTH_period_4}}</td>
+          <td>{{subTT_Data26.NINETH_period_4}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Fri</th>
+          <td>{{subTT_Data26.FIRST_period_5}}</td>
+          <td>{{subTT_Data26.SECOND_period_5}}</td>
+          <td>{{subTT_Data26.THIRD_period_5}}</td>
+          <td>{{subTT_Data26.FOURTH_period_5}}</td>
+          <td>{{subTT_Data26.FIFTH_period_5}}</td>
+          <td>{{subTT_Data26.SIXTH_period_5}}</td>
+          <td>{{subTT_Data26.SEVENTH_period_5}}</td>
+          <td>{{subTT_Data26.EIGHTH_period_5}}</td>
+          <td>{{subTT_Data26.NINETH_period_5}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Sat</th>
+          <td>{{subTT_Data26.FIRST_period_6}}</td>
+          <td>{{subTT_Data26.SECOND_period_6}}</td>
+          <td>{{subTT_Data26.THIRD_period_6}}</td>
+          <td>{{subTT_Data26.FOURTH_period_6}}</td>
+          <td>{{subTT_Data26.FIFTH_period_6}}</td>
+          <td>{{subTT_Data26.SIXTH_period_6}}</td>
+          <td>{{subTT_Data26.SEVENTH_period_6}}</td>
+          <td>{{subTT_Data26.EIGHTH_period_6}}</td>
+          <td>{{subTT_Data26.NINETH_period_6}}</td>
+        </tr>
+      </tbody>
+    </table>
+    {% endfor %}
+    
+    {% for subTT_Data27 in subTT_Data27 %}
+    
+    <table id="sub27_TT" class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th scope="col"><button class="Teacher_name">{{subTT_Data27.Teacher.Acronym}}</button></th>
+          <th scope="col" style="color: aquamarine;">1</th>
+          <th scope="col" style="color: aquamarine;">2</th>
+          <th scope="col" style="color: aquamarine;">3</th>
+          <th scope="col" style="color: aquamarine;">4</th>
+          <th scope="col" style="color: aquamarine;">5</th>
+          <th scope="col" style="color: aquamarine;">6</th>
+          <th scope="col" style="color: aquamarine;">7</th>
+          <th scope="col" style="color: aquamarine;">8</th>
+          <th scope="col" style="color: aquamarine;">9</th>
+        </tr>
+      </thead>
+      <tbody>
+    
+        <tr>
+          <th scope="row">Mon</th>
+          <td>{{subTT_Data27.FIRST_period_1}}</td>
+          <td>{{subTT_Data27.SECOND_period_1}}</td>
+          <td>{{subTT_Data27.THIRD_period_1}}</td>
+          <td>{{subTT_Data27.FOURTH_period_1}}</td>
+          <td>{{subTT_Data27.FIFTH_period_1}}</td>
+          <td>{{subTT_Data27.SIXTH_period_1}}</td>
+          <td>{{subTT_Data27.SEVENTH_period_1}}</td>
+          <td>{{subTT_Data27.EIGHTH_period_1}}</td>
+          <td>{{subTT_Data27.NINETH_period_1}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Tue</th>
+          <td>{{subTT_Data27.FIRST_period_2}}</td>
+          <td>{{subTT_Data27.SECOND_period_2}}</td>
+          <td>{{subTT_Data27.THIRD_period_2}}</td>
+          <td>{{subTT_Data27.FOURTH_period_2}}</td>
+          <td>{{subTT_Data27.FIFTH_period_2}}</td>
+          <td>{{subTT_Data27.SIXTH_period_2}}</td>
+          <td>{{subTT_Data27.SEVENTH_period_2}}</td>
+          <td>{{subTT_Data27.EIGHTH_period_2}}</td>
+          <td>{{subTT_Data27.NINETH_period_2}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Wed</th>
+          <td>{{subTT_Data27.FIRST_period_3}}</td>
+          <td>{{subTT_Data27.SECOND_period_3}}</td>
+          <td>{{subTT_Data27.THIRD_period_3}}</td>
+          <td>{{subTT_Data27.FOURTH_period_3}}</td>
+          <td>{{subTT_Data27.FIFTH_period_3}}</td>
+          <td>{{subTT_Data27.SIXTH_period_3}}</td>
+          <td>{{subTT_Data27.SEVENTH_period_3}}</td>
+          <td>{{subTT_Data27.EIGHTH_period_3}}</td>
+          <td>{{subTT_Data27.NINETH_period_3}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Thu</th>
+          <td>{{subTT_Data27.FIRST_period_4}}</td>
+          <td>{{subTT_Data27.SECOND_period_4}}</td>
+          <td>{{subTT_Data27.THIRD_period_4}}</td>
+          <td>{{subTT_Data27.FOURTH_period_4}}</td>
+          <td>{{subTT_Data27.FIFTH_period_4}}</td>
+          <td>{{subTT_Data27.SIXTH_period_4}}</td>
+          <td>{{subTT_Data27.SEVENTH_period_4}}</td>
+          <td>{{subTT_Data27.EIGHTH_period_4}}</td>
+          <td>{{subTT_Data27.NINETH_period_4}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Fri</th>
+          <td>{{subTT_Data27.FIRST_period_5}}</td>
+          <td>{{subTT_Data27.SECOND_period_5}}</td>
+          <td>{{subTT_Data27.THIRD_period_5}}</td>
+          <td>{{subTT_Data27.FOURTH_period_5}}</td>
+          <td>{{subTT_Data27.FIFTH_period_5}}</td>
+          <td>{{subTT_Data27.SIXTH_period_5}}</td>
+          <td>{{subTT_Data27.SEVENTH_period_5}}</td>
+          <td>{{subTT_Data27.EIGHTH_period_5}}</td>
+          <td>{{subTT_Data27.NINETH_period_5}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Sat</th>
+          <td>{{subTT_Data27.FIRST_period_6}}</td>
+          <td>{{subTT_Data27.SECOND_period_6}}</td>
+          <td>{{subTT_Data27.THIRD_period_6}}</td>
+          <td>{{subTT_Data27.FOURTH_period_6}}</td>
+          <td>{{subTT_Data27.FIFTH_period_6}}</td>
+          <td>{{subTT_Data27.SIXTH_period_6}}</td>
+          <td>{{subTT_Data27.SEVENTH_period_6}}</td>
+          <td>{{subTT_Data27.EIGHTH_period_6}}</td>
+          <td>{{subTT_Data27.NINETH_period_6}}</td>
+        </tr>
+      </tbody>
+    </table>
+    {% endfor %}
+    
+    {% for subTT_Data28 in subTT_Data28 %}
+    
+    <table id="sub28_TT" class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th scope="col"><button class="Teacher_name">{{subTT_Data28.Teacher.Acronym}}</button></th>
+          <th scope="col" style="color: aquamarine;">1</th>
+          <th scope="col" style="color: aquamarine;">2</th>
+          <th scope="col" style="color: aquamarine;">3</th>
+          <th scope="col" style="color: aquamarine;">4</th>
+          <th scope="col" style="color: aquamarine;">5</th>
+          <th scope="col" style="color: aquamarine;">6</th>
+          <th scope="col" style="color: aquamarine;">7</th>
+          <th scope="col" style="color: aquamarine;">8</th>
+          <th scope="col" style="color: aquamarine;">9</th>
+        </tr>
+      </thead>
+      <tbody>
+    
+        <tr>
+          <th scope="row">Mon</th>
+          <td>{{subTT_Data28.FIRST_period_1}}</td>
+          <td>{{subTT_Data28.SECOND_period_1}}</td>
+          <td>{{subTT_Data28.THIRD_period_1}}</td>
+          <td>{{subTT_Data28.FOURTH_period_1}}</td>
+          <td>{{subTT_Data28.FIFTH_period_1}}</td>
+          <td>{{subTT_Data28.SIXTH_period_1}}</td>
+          <td>{{subTT_Data28.SEVENTH_period_1}}</td>
+          <td>{{subTT_Data28.EIGHTH_period_1}}</td>
+          <td>{{subTT_Data28.NINETH_period_1}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Tue</th>
+          <td>{{subTT_Data28.FIRST_period_2}}</td>
+          <td>{{subTT_Data28.SECOND_period_2}}</td>
+          <td>{{subTT_Data28.THIRD_period_2}}</td>
+          <td>{{subTT_Data28.FOURTH_period_2}}</td>
+          <td>{{subTT_Data28.FIFTH_period_2}}</td>
+          <td>{{subTT_Data28.SIXTH_period_2}}</td>
+          <td>{{subTT_Data28.SEVENTH_period_2}}</td>
+          <td>{{subTT_Data28.EIGHTH_period_2}}</td>
+          <td>{{subTT_Data28.NINETH_period_2}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Wed</th>
+          <td>{{subTT_Data28.FIRST_period_3}}</td>
+          <td>{{subTT_Data28.SECOND_period_3}}</td>
+          <td>{{subTT_Data28.THIRD_period_3}}</td>
+          <td>{{subTT_Data28.FOURTH_period_3}}</td>
+          <td>{{subTT_Data28.FIFTH_period_3}}</td>
+          <td>{{subTT_Data28.SIXTH_period_3}}</td>
+          <td>{{subTT_Data28.SEVENTH_period_3}}</td>
+          <td>{{subTT_Data28.EIGHTH_period_3}}</td>
+          <td>{{subTT_Data28.NINETH_period_3}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Thu</th>
+          <td>{{subTT_Data28.FIRST_period_4}}</td>
+          <td>{{subTT_Data28.SECOND_period_4}}</td>
+          <td>{{subTT_Data28.THIRD_period_4}}</td>
+          <td>{{subTT_Data28.FOURTH_period_4}}</td>
+          <td>{{subTT_Data28.FIFTH_period_4}}</td>
+          <td>{{subTT_Data28.SIXTH_period_4}}</td>
+          <td>{{subTT_Data28.SEVENTH_period_4}}</td>
+          <td>{{subTT_Data28.EIGHTH_period_4}}</td>
+          <td>{{subTT_Data28.NINETH_period_4}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Fri</th>
+          <td>{{subTT_Data28.FIRST_period_5}}</td>
+          <td>{{subTT_Data28.SECOND_period_5}}</td>
+          <td>{{subTT_Data28.THIRD_period_5}}</td>
+          <td>{{subTT_Data28.FOURTH_period_5}}</td>
+          <td>{{subTT_Data28.FIFTH_period_5}}</td>
+          <td>{{subTT_Data28.SIXTH_period_5}}</td>
+          <td>{{subTT_Data28.SEVENTH_period_5}}</td>
+          <td>{{subTT_Data28.EIGHTH_period_5}}</td>
+          <td>{{subTT_Data28.NINETH_period_5}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Sat</th>
+          <td>{{subTT_Data28.FIRST_period_6}}</td>
+          <td>{{subTT_Data28.SECOND_period_6}}</td>
+          <td>{{subTT_Data28.THIRD_period_6}}</td>
+          <td>{{subTT_Data28.FOURTH_period_6}}</td>
+          <td>{{subTT_Data28.FIFTH_period_6}}</td>
+          <td>{{subTT_Data28.SIXTH_period_6}}</td>
+          <td>{{subTT_Data28.SEVENTH_period_6}}</td>
+          <td>{{subTT_Data28.EIGHTH_period_6}}</td>
+          <td>{{subTT_Data28.NINETH_period_6}}</td>
+        </tr>
+      </tbody>
+    </table>
+    {% endfor %}
+    
+    {% for subTT_Data29 in subTT_Data29 %}
+    
+    <table id="sub29_TT" class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th scope="col"><button class="Teacher_name">{{subTT_Data29.Teacher.Acronym}}</button></th>
+          <th scope="col" style="color: aquamarine;">1</th>
+          <th scope="col" style="color: aquamarine;">2</th>
+          <th scope="col" style="color: aquamarine;">3</th>
+          <th scope="col" style="color: aquamarine;">4</th>
+          <th scope="col" style="color: aquamarine;">5</th>
+          <th scope="col" style="color: aquamarine;">6</th>
+          <th scope="col" style="color: aquamarine;">7</th>
+          <th scope="col" style="color: aquamarine;">8</th>
+          <th scope="col" style="color: aquamarine;">9</th>
+        </tr>
+      </thead>
+      <tbody>
+    
+        <tr>
+          <th scope="row">Mon</th>
+          <td>{{subTT_Data29.FIRST_period_1}}</td>
+          <td>{{subTT_Data29.SECOND_period_1}}</td>
+          <td>{{subTT_Data29.THIRD_period_1}}</td>
+          <td>{{subTT_Data29.FOURTH_period_1}}</td>
+          <td>{{subTT_Data29.FIFTH_period_1}}</td>
+          <td>{{subTT_Data29.SIXTH_period_1}}</td>
+          <td>{{subTT_Data29.SEVENTH_period_1}}</td>
+          <td>{{subTT_Data29.EIGHTH_period_1}}</td>
+          <td>{{subTT_Data29.NINETH_period_1}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Tue</th>
+          <td>{{subTT_Data29.FIRST_period_2}}</td>
+          <td>{{subTT_Data29.SECOND_period_2}}</td>
+          <td>{{subTT_Data29.THIRD_period_2}}</td>
+          <td>{{subTT_Data29.FOURTH_period_2}}</td>
+          <td>{{subTT_Data29.FIFTH_period_2}}</td>
+          <td>{{subTT_Data29.SIXTH_period_2}}</td>
+          <td>{{subTT_Data29.SEVENTH_period_2}}</td>
+          <td>{{subTT_Data29.EIGHTH_period_2}}</td>
+          <td>{{subTT_Data29.NINETH_period_2}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Wed</th>
+          <td>{{subTT_Data29.FIRST_period_3}}</td>
+          <td>{{subTT_Data29.SECOND_period_3}}</td>
+          <td>{{subTT_Data29.THIRD_period_3}}</td>
+          <td>{{subTT_Data29.FOURTH_period_3}}</td>
+          <td>{{subTT_Data29.FIFTH_period_3}}</td>
+          <td>{{subTT_Data29.SIXTH_period_3}}</td>
+          <td>{{subTT_Data29.SEVENTH_period_3}}</td>
+          <td>{{subTT_Data29.EIGHTH_period_3}}</td>
+          <td>{{subTT_Data29.NINETH_period_3}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Thu</th>
+          <td>{{subTT_Data29.FIRST_period_4}}</td>
+          <td>{{subTT_Data29.SECOND_period_4}}</td>
+          <td>{{subTT_Data29.THIRD_period_4}}</td>
+          <td>{{subTT_Data29.FOURTH_period_4}}</td>
+          <td>{{subTT_Data29.FIFTH_period_4}}</td>
+          <td>{{subTT_Data29.SIXTH_period_4}}</td>
+          <td>{{subTT_Data29.SEVENTH_period_4}}</td>
+          <td>{{subTT_Data29.EIGHTH_period_4}}</td>
+          <td>{{subTT_Data29.NINETH_period_4}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Fri</th>
+          <td>{{subTT_Data29.FIRST_period_5}}</td>
+          <td>{{subTT_Data29.SECOND_period_5}}</td>
+          <td>{{subTT_Data29.THIRD_period_5}}</td>
+          <td>{{subTT_Data29.FOURTH_period_5}}</td>
+          <td>{{subTT_Data29.FIFTH_period_5}}</td>
+          <td>{{subTT_Data29.SIXTH_period_5}}</td>
+          <td>{{subTT_Data29.SEVENTH_period_5}}</td>
+          <td>{{subTT_Data29.EIGHTH_period_5}}</td>
+          <td>{{subTT_Data29.NINETH_period_5}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Sat</th>
+          <td>{{subTT_Data29.FIRST_period_6}}</td>
+          <td>{{subTT_Data29.SECOND_period_6}}</td>
+          <td>{{subTT_Data29.THIRD_period_6}}</td>
+          <td>{{subTT_Data29.FOURTH_period_6}}</td>
+          <td>{{subTT_Data29.FIFTH_period_6}}</td>
+          <td>{{subTT_Data29.SIXTH_period_6}}</td>
+          <td>{{subTT_Data29.SEVENTH_period_6}}</td>
+          <td>{{subTT_Data29.EIGHTH_period_6}}</td>
+          <td>{{subTT_Data29.NINETH_period_6}}</td>
+        </tr>
+      </tbody>
+    </table>
+    {% endfor %}
+    
+    {% for subTT_Data30 in subTT_Data30 %}
+    
+    <table id="sub30_TT" class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th scope="col"><button class="Teacher_name">{{subTT_Data30.Teacher.Acronym}}</button></th>
+          <th scope="col" style="color: aquamarine;">1</th>
+          <th scope="col" style="color: aquamarine;">2</th>
+          <th scope="col" style="color: aquamarine;">3</th>
+          <th scope="col" style="color: aquamarine;">4</th>
+          <th scope="col" style="color: aquamarine;">5</th>
+          <th scope="col" style="color: aquamarine;">6</th>
+          <th scope="col" style="color: aquamarine;">7</th>
+          <th scope="col" style="color: aquamarine;">8</th>
+          <th scope="col" style="color: aquamarine;">9</th>
+        </tr>
+      </thead>
+      <tbody>
+    
+        <tr>
+          <th scope="row">Mon</th>
+          <td>{{subTT_Data30.FIRST_period_1}}</td>
+          <td>{{subTT_Data30.SECOND_period_1}}</td>
+          <td>{{subTT_Data30.THIRD_period_1}}</td>
+          <td>{{subTT_Data30.FOURTH_period_1}}</td>
+          <td>{{subTT_Data30.FIFTH_period_1}}</td>
+          <td>{{subTT_Data30.SIXTH_period_1}}</td>
+          <td>{{subTT_Data30.SEVENTH_period_1}}</td>
+          <td>{{subTT_Data30.EIGHTH_period_1}}</td>
+          <td>{{subTT_Data30.NINETH_period_1}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Tue</th>
+          <td>{{subTT_Data30.FIRST_period_2}}</td>
+          <td>{{subTT_Data30.SECOND_period_2}}</td>
+          <td>{{subTT_Data30.THIRD_period_2}}</td>
+          <td>{{subTT_Data30.FOURTH_period_2}}</td>
+          <td>{{subTT_Data30.FIFTH_period_2}}</td>
+          <td>{{subTT_Data30.SIXTH_period_2}}</td>
+          <td>{{subTT_Data30.SEVENTH_period_2}}</td>
+          <td>{{subTT_Data30.EIGHTH_period_2}}</td>
+          <td>{{subTT_Data30.NINETH_period_2}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Wed</th>
+          <td>{{subTT_Data30.FIRST_period_3}}</td>
+          <td>{{subTT_Data30.SECOND_period_3}}</td>
+          <td>{{subTT_Data30.THIRD_period_3}}</td>
+          <td>{{subTT_Data30.FOURTH_period_3}}</td>
+          <td>{{subTT_Data30.FIFTH_period_3}}</td>
+          <td>{{subTT_Data30.SIXTH_period_3}}</td>
+          <td>{{subTT_Data30.SEVENTH_period_3}}</td>
+          <td>{{subTT_Data30.EIGHTH_period_3}}</td>
+          <td>{{subTT_Data30.NINETH_period_3}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Thu</th>
+          <td>{{subTT_Data30.FIRST_period_4}}</td>
+          <td>{{subTT_Data30.SECOND_period_4}}</td>
+          <td>{{subTT_Data30.THIRD_period_4}}</td>
+          <td>{{subTT_Data30.FOURTH_period_4}}</td>
+          <td>{{subTT_Data30.FIFTH_period_4}}</td>
+          <td>{{subTT_Data30.SIXTH_period_4}}</td>
+          <td>{{subTT_Data30.SEVENTH_period_4}}</td>
+          <td>{{subTT_Data30.EIGHTH_period_4}}</td>
+          <td>{{subTT_Data30.NINETH_period_4}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Fri</th>
+          <td>{{subTT_Data30.FIRST_period_5}}</td>
+          <td>{{subTT_Data30.SECOND_period_5}}</td>
+          <td>{{subTT_Data30.THIRD_period_5}}</td>
+          <td>{{subTT_Data30.FOURTH_period_5}}</td>
+          <td>{{subTT_Data30.FIFTH_period_5}}</td>
+          <td>{{subTT_Data30.SIXTH_period_5}}</td>
+          <td>{{subTT_Data30.SEVENTH_period_5}}</td>
+          <td>{{subTT_Data30.EIGHTH_period_5}}</td>
+          <td>{{subTT_Data30.NINETH_period_5}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Sat</th>
+          <td>{{subTT_Data30.FIRST_period_6}}</td>
+          <td>{{subTT_Data30.SECOND_period_6}}</td>
+          <td>{{subTT_Data30.THIRD_period_6}}</td>
+          <td>{{subTT_Data30.FOURTH_period_6}}</td>
+          <td>{{subTT_Data30.FIFTH_period_6}}</td>
+          <td>{{subTT_Data30.SIXTH_period_6}}</td>
+          <td>{{subTT_Data30.SEVENTH_period_6}}</td>
+          <td>{{subTT_Data30.EIGHTH_period_6}}</td>
+          <td>{{subTT_Data30.NINETH_period_6}}</td>
+        </tr>
+      </tbody>
+    </table>
+    {% endfor %}
+    
+    {% for subTT_Data31 in subTT_Data31 %}
+    
+    <table id="sub31_TT" class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th scope="col"><button class="Teacher_name">{{subTT_Data31.Teacher.Acronym}}</button></th>
+          <th scope="col" style="color: aquamarine;">1</th>
+          <th scope="col" style="color: aquamarine;">2</th>
+          <th scope="col" style="color: aquamarine;">3</th>
+          <th scope="col" style="color: aquamarine;">4</th>
+          <th scope="col" style="color: aquamarine;">5</th>
+          <th scope="col" style="color: aquamarine;">6</th>
+          <th scope="col" style="color: aquamarine;">7</th>
+          <th scope="col" style="color: aquamarine;">8</th>
+          <th scope="col" style="color: aquamarine;">9</th>
+        </tr>
+      </thead>
+      <tbody>
+    
+        <tr>
+          <th scope="row">Mon</th>
+          <td>{{subTT_Data31.FIRST_period_1}}</td>
+          <td>{{subTT_Data31.SECOND_period_1}}</td>
+          <td>{{subTT_Data31.THIRD_period_1}}</td>
+          <td>{{subTT_Data31.FOURTH_period_1}}</td>
+          <td>{{subTT_Data31.FIFTH_period_1}}</td>
+          <td>{{subTT_Data31.SIXTH_period_1}}</td>
+          <td>{{subTT_Data31.SEVENTH_period_1}}</td>
+          <td>{{subTT_Data31.EIGHTH_period_1}}</td>
+          <td>{{subTT_Data31.NINETH_period_1}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Tue</th>
+          <td>{{subTT_Data31.FIRST_period_2}}</td>
+          <td>{{subTT_Data31.SECOND_period_2}}</td>
+          <td>{{subTT_Data31.THIRD_period_2}}</td>
+          <td>{{subTT_Data31.FOURTH_period_2}}</td>
+          <td>{{subTT_Data31.FIFTH_period_2}}</td>
+          <td>{{subTT_Data31.SIXTH_period_2}}</td>
+          <td>{{subTT_Data31.SEVENTH_period_2}}</td>
+          <td>{{subTT_Data31.EIGHTH_period_2}}</td>
+          <td>{{subTT_Data31.NINETH_period_2}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Wed</th>
+          <td>{{subTT_Data31.FIRST_period_3}}</td>
+          <td>{{subTT_Data31.SECOND_period_3}}</td>
+          <td>{{subTT_Data31.THIRD_period_3}}</td>
+          <td>{{subTT_Data31.FOURTH_period_3}}</td>
+          <td>{{subTT_Data31.FIFTH_period_3}}</td>
+          <td>{{subTT_Data31.SIXTH_period_3}}</td>
+          <td>{{subTT_Data31.SEVENTH_period_3}}</td>
+          <td>{{subTT_Data31.EIGHTH_period_3}}</td>
+          <td>{{subTT_Data31.NINETH_period_3}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Thu</th>
+          <td>{{subTT_Data31.FIRST_period_4}}</td>
+          <td>{{subTT_Data31.SECOND_period_4}}</td>
+          <td>{{subTT_Data31.THIRD_period_4}}</td>
+          <td>{{subTT_Data31.FOURTH_period_4}}</td>
+          <td>{{subTT_Data31.FIFTH_period_4}}</td>
+          <td>{{subTT_Data31.SIXTH_period_4}}</td>
+          <td>{{subTT_Data31.SEVENTH_period_4}}</td>
+          <td>{{subTT_Data31.EIGHTH_period_4}}</td>
+          <td>{{subTT_Data31.NINETH_period_4}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Fri</th>
+          <td>{{subTT_Data31.FIRST_period_5}}</td>
+          <td>{{subTT_Data31.SECOND_period_5}}</td>
+          <td>{{subTT_Data31.THIRD_period_5}}</td>
+          <td>{{subTT_Data31.FOURTH_period_5}}</td>
+          <td>{{subTT_Data31.FIFTH_period_5}}</td>
+          <td>{{subTT_Data31.SIXTH_period_5}}</td>
+          <td>{{subTT_Data31.SEVENTH_period_5}}</td>
+          <td>{{subTT_Data31.EIGHTH_period_5}}</td>
+          <td>{{subTT_Data31.NINETH_period_5}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Sat</th>
+          <td>{{subTT_Data31.FIRST_period_6}}</td>
+          <td>{{subTT_Data31.SECOND_period_6}}</td>
+          <td>{{subTT_Data31.THIRD_period_6}}</td>
+          <td>{{subTT_Data31.FOURTH_period_6}}</td>
+          <td>{{subTT_Data31.FIFTH_period_6}}</td>
+          <td>{{subTT_Data31.SIXTH_period_6}}</td>
+          <td>{{subTT_Data31.SEVENTH_period_6}}</td>
+          <td>{{subTT_Data31.EIGHTH_period_6}}</td>
+          <td>{{subTT_Data31.NINETH_period_6}}</td>
+        </tr>
+      </tbody>
+    </table>
+    {% endfor %}
+    
+    {% for subTT_Data32 in subTT_Data32 %}
+    
+    <table id="sub32_TT" class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th scope="col"><button class="Teacher_name">{{subTT_Data32.Teacher.Acronym}}</button></th>
+          <th scope="col" style="color: aquamarine;">1</th>
+          <th scope="col" style="color: aquamarine;">2</th>
+          <th scope="col" style="color: aquamarine;">3</th>
+          <th scope="col" style="color: aquamarine;">4</th>
+          <th scope="col" style="color: aquamarine;">5</th>
+          <th scope="col" style="color: aquamarine;">6</th>
+          <th scope="col" style="color: aquamarine;">7</th>
+          <th scope="col" style="color: aquamarine;">8</th>
+          <th scope="col" style="color: aquamarine;">9</th>
+        </tr>
+      </thead>
+      <tbody>
+    
+        <tr>
+          <th scope="row">Mon</th>
+          <td>{{subTT_Data32.FIRST_period_1}}</td>
+          <td>{{subTT_Data32.SECOND_period_1}}</td>
+          <td>{{subTT_Data32.THIRD_period_1}}</td>
+          <td>{{subTT_Data32.FOURTH_period_1}}</td>
+          <td>{{subTT_Data32.FIFTH_period_1}}</td>
+          <td>{{subTT_Data32.SIXTH_period_1}}</td>
+          <td>{{subTT_Data32.SEVENTH_period_1}}</td>
+          <td>{{subTT_Data32.EIGHTH_period_1}}</td>
+          <td>{{subTT_Data32.NINETH_period_1}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Tue</th>
+          <td>{{subTT_Data32.FIRST_period_2}}</td>
+          <td>{{subTT_Data32.SECOND_period_2}}</td>
+          <td>{{subTT_Data32.THIRD_period_2}}</td>
+          <td>{{subTT_Data32.FOURTH_period_2}}</td>
+          <td>{{subTT_Data32.FIFTH_period_2}}</td>
+          <td>{{subTT_Data32.SIXTH_period_2}}</td>
+          <td>{{subTT_Data32.SEVENTH_period_2}}</td>
+          <td>{{subTT_Data32.EIGHTH_period_2}}</td>
+          <td>{{subTT_Data32.NINETH_period_2}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Wed</th>
+          <td>{{subTT_Data32.FIRST_period_3}}</td>
+          <td>{{subTT_Data32.SECOND_period_3}}</td>
+          <td>{{subTT_Data32.THIRD_period_3}}</td>
+          <td>{{subTT_Data32.FOURTH_period_3}}</td>
+          <td>{{subTT_Data32.FIFTH_period_3}}</td>
+          <td>{{subTT_Data32.SIXTH_period_3}}</td>
+          <td>{{subTT_Data32.SEVENTH_period_3}}</td>
+          <td>{{subTT_Data32.EIGHTH_period_3}}</td>
+          <td>{{subTT_Data32.NINETH_period_3}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Thu</th>
+          <td>{{subTT_Data32.FIRST_period_4}}</td>
+          <td>{{subTT_Data32.SECOND_period_4}}</td>
+          <td>{{subTT_Data32.THIRD_period_4}}</td>
+          <td>{{subTT_Data32.FOURTH_period_4}}</td>
+          <td>{{subTT_Data32.FIFTH_period_4}}</td>
+          <td>{{subTT_Data32.SIXTH_period_4}}</td>
+          <td>{{subTT_Data32.SEVENTH_period_4}}</td>
+          <td>{{subTT_Data32.EIGHTH_period_4}}</td>
+          <td>{{subTT_Data32.NINETH_period_4}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Fri</th>
+          <td>{{subTT_Data32.FIRST_period_5}}</td>
+          <td>{{subTT_Data32.SECOND_period_5}}</td>
+          <td>{{subTT_Data32.THIRD_period_5}}</td>
+          <td>{{subTT_Data32.FOURTH_period_5}}</td>
+          <td>{{subTT_Data32.FIFTH_period_5}}</td>
+          <td>{{subTT_Data32.SIXTH_period_5}}</td>
+          <td>{{subTT_Data32.SEVENTH_period_5}}</td>
+          <td>{{subTT_Data32.EIGHTH_period_5}}</td>
+          <td>{{subTT_Data32.NINETH_period_5}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Sat</th>
+          <td>{{subTT_Data32.FIRST_period_6}}</td>
+          <td>{{subTT_Data32.SECOND_period_6}}</td>
+          <td>{{subTT_Data32.THIRD_period_6}}</td>
+          <td>{{subTT_Data32.FOURTH_period_6}}</td>
+          <td>{{subTT_Data32.FIFTH_period_6}}</td>
+          <td>{{subTT_Data32.SIXTH_period_6}}</td>
+          <td>{{subTT_Data32.SEVENTH_period_6}}</td>
+          <td>{{subTT_Data32.EIGHTH_period_6}}</td>
+          <td>{{subTT_Data32.NINETH_period_6}}</td>
+        </tr>
+      </tbody>
+    </table>
+    {% endfor %}
+    
+    {% for subTT_Data34 in subTT_Data34 %}
+    
+    <table id="sub34_TT" class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th scope="col"><button class="Teacher_name">{{subTT_Data34.Teacher.Acronym}}</button></th>
+          <th scope="col" style="color: aquamarine;">1</th>
+          <th scope="col" style="color: aquamarine;">2</th>
+          <th scope="col" style="color: aquamarine;">3</th>
+          <th scope="col" style="color: aquamarine;">4</th>
+          <th scope="col" style="color: aquamarine;">5</th>
+          <th scope="col" style="color: aquamarine;">6</th>
+          <th scope="col" style="color: aquamarine;">7</th>
+          <th scope="col" style="color: aquamarine;">8</th>
+          <th scope="col" style="color: aquamarine;">9</th>
+        </tr>
+      </thead>
+      <tbody>
+    
+        <tr>
+          <th scope="row">Mon</th>
+          <td>{{subTT_Data34.FIRST_period_1}}</td>
+          <td>{{subTT_Data34.SECOND_period_1}}</td>
+          <td>{{subTT_Data34.THIRD_period_1}}</td>
+          <td>{{subTT_Data34.FOURTH_period_1}}</td>
+          <td>{{subTT_Data34.FIFTH_period_1}}</td>
+          <td>{{subTT_Data34.SIXTH_period_1}}</td>
+          <td>{{subTT_Data34.SEVENTH_period_1}}</td>
+          <td>{{subTT_Data34.EIGHTH_period_1}}</td>
+          <td>{{subTT_Data34.NINETH_period_1}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Tue</th>
+          <td>{{subTT_Data34.FIRST_period_2}}</td>
+          <td>{{subTT_Data34.SECOND_period_2}}</td>
+          <td>{{subTT_Data34.THIRD_period_2}}</td>
+          <td>{{subTT_Data34.FOURTH_period_2}}</td>
+          <td>{{subTT_Data34.FIFTH_period_2}}</td>
+          <td>{{subTT_Data34.SIXTH_period_2}}</td>
+          <td>{{subTT_Data34.SEVENTH_period_2}}</td>
+          <td>{{subTT_Data34.EIGHTH_period_2}}</td>
+          <td>{{subTT_Data34.NINETH_period_2}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Wed</th>
+          <td>{{subTT_Data34.FIRST_period_3}}</td>
+          <td>{{subTT_Data34.SECOND_period_3}}</td>
+          <td>{{subTT_Data34.THIRD_period_3}}</td>
+          <td>{{subTT_Data34.FOURTH_period_3}}</td>
+          <td>{{subTT_Data34.FIFTH_period_3}}</td>
+          <td>{{subTT_Data34.SIXTH_period_3}}</td>
+          <td>{{subTT_Data34.SEVENTH_period_3}}</td>
+          <td>{{subTT_Data34.EIGHTH_period_3}}</td>
+          <td>{{subTT_Data34.NINETH_period_3}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Thu</th>
+          <td>{{subTT_Data34.FIRST_period_4}}</td>
+          <td>{{subTT_Data34.SECOND_period_4}}</td>
+          <td>{{subTT_Data34.THIRD_period_4}}</td>
+          <td>{{subTT_Data34.FOURTH_period_4}}</td>
+          <td>{{subTT_Data34.FIFTH_period_4}}</td>
+          <td>{{subTT_Data34.SIXTH_period_4}}</td>
+          <td>{{subTT_Data34.SEVENTH_period_4}}</td>
+          <td>{{subTT_Data34.EIGHTH_period_4}}</td>
+          <td>{{subTT_Data34.NINETH_period_4}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Fri</th>
+          <td>{{subTT_Data34.FIRST_period_5}}</td>
+          <td>{{subTT_Data34.SECOND_period_5}}</td>
+          <td>{{subTT_Data34.THIRD_period_5}}</td>
+          <td>{{subTT_Data34.FOURTH_period_5}}</td>
+          <td>{{subTT_Data34.FIFTH_period_5}}</td>
+          <td>{{subTT_Data34.SIXTH_period_5}}</td>
+          <td>{{subTT_Data34.SEVENTH_period_5}}</td>
+          <td>{{subTT_Data34.EIGHTH_period_5}}</td>
+          <td>{{subTT_Data34.NINETH_period_5}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Sat</th>
+          <td>{{subTT_Data34.FIRST_period_6}}</td>
+          <td>{{subTT_Data34.SECOND_period_6}}</td>
+          <td>{{subTT_Data34.THIRD_period_6}}</td>
+          <td>{{subTT_Data34.FOURTH_period_6}}</td>
+          <td>{{subTT_Data34.FIFTH_period_6}}</td>
+          <td>{{subTT_Data34.SIXTH_period_6}}</td>
+          <td>{{subTT_Data34.SEVENTH_period_6}}</td>
+          <td>{{subTT_Data34.EIGHTH_period_6}}</td>
+          <td>{{subTT_Data34.NINETH_period_6}}</td>
+        </tr>
+      </tbody>
+    </table>
+    {% endfor %}
+    
+    {% for subTT_Data35 in subTT_Data35 %}
+    
+    <table id="sub35_TT" class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th scope="col"><button class="Teacher_name">{{subTT_Data35.Teacher.Acronym}}</button></th>
+          <th scope="col" style="color: aquamarine;">1</th>
+          <th scope="col" style="color: aquamarine;">2</th>
+          <th scope="col" style="color: aquamarine;">3</th>
+          <th scope="col" style="color: aquamarine;">4</th>
+          <th scope="col" style="color: aquamarine;">5</th>
+          <th scope="col" style="color: aquamarine;">6</th>
+          <th scope="col" style="color: aquamarine;">7</th>
+          <th scope="col" style="color: aquamarine;">8</th>
+          <th scope="col" style="color: aquamarine;">9</th>
+        </tr>
+      </thead>
+      <tbody>
+    
+        <tr>
+          <th scope="row">Mon</th>
+          <td>{{subTT_Data35.FIRST_period_1}}</td>
+          <td>{{subTT_Data35.SECOND_period_1}}</td>
+          <td>{{subTT_Data35.THIRD_period_1}}</td>
+          <td>{{subTT_Data35.FOURTH_period_1}}</td>
+          <td>{{subTT_Data35.FIFTH_period_1}}</td>
+          <td>{{subTT_Data35.SIXTH_period_1}}</td>
+          <td>{{subTT_Data35.SEVENTH_period_1}}</td>
+          <td>{{subTT_Data35.EIGHTH_period_1}}</td>
+          <td>{{subTT_Data35.NINETH_period_1}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Tue</th>
+          <td>{{subTT_Data35.FIRST_period_2}}</td>
+          <td>{{subTT_Data35.SECOND_period_2}}</td>
+          <td>{{subTT_Data35.THIRD_period_2}}</td>
+          <td>{{subTT_Data35.FOURTH_period_2}}</td>
+          <td>{{subTT_Data35.FIFTH_period_2}}</td>
+          <td>{{subTT_Data35.SIXTH_period_2}}</td>
+          <td>{{subTT_Data35.SEVENTH_period_2}}</td>
+          <td>{{subTT_Data35.EIGHTH_period_2}}</td>
+          <td>{{subTT_Data35.NINETH_period_2}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Wed</th>
+          <td>{{subTT_Data35.FIRST_period_3}}</td>
+          <td>{{subTT_Data35.SECOND_period_3}}</td>
+          <td>{{subTT_Data35.THIRD_period_3}}</td>
+          <td>{{subTT_Data35.FOURTH_period_3}}</td>
+          <td>{{subTT_Data35.FIFTH_period_3}}</td>
+          <td>{{subTT_Data35.SIXTH_period_3}}</td>
+          <td>{{subTT_Data35.SEVENTH_period_3}}</td>
+          <td>{{subTT_Data35.EIGHTH_period_3}}</td>
+          <td>{{subTT_Data35.NINETH_period_3}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Thu</th>
+          <td>{{subTT_Data35.FIRST_period_4}}</td>
+          <td>{{subTT_Data35.SECOND_period_4}}</td>
+          <td>{{subTT_Data35.THIRD_period_4}}</td>
+          <td>{{subTT_Data35.FOURTH_period_4}}</td>
+          <td>{{subTT_Data35.FIFTH_period_4}}</td>
+          <td>{{subTT_Data35.SIXTH_period_4}}</td>
+          <td>{{subTT_Data35.SEVENTH_period_4}}</td>
+          <td>{{subTT_Data35.EIGHTH_period_4}}</td>
+          <td>{{subTT_Data35.NINETH_period_4}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Fri</th>
+          <td>{{subTT_Data35.FIRST_period_5}}</td>
+          <td>{{subTT_Data35.SECOND_period_5}}</td>
+          <td>{{subTT_Data35.THIRD_period_5}}</td>
+          <td>{{subTT_Data35.FOURTH_period_5}}</td>
+          <td>{{subTT_Data35.FIFTH_period_5}}</td>
+          <td>{{subTT_Data35.SIXTH_period_5}}</td>
+          <td>{{subTT_Data35.SEVENTH_period_5}}</td>
+          <td>{{subTT_Data35.EIGHTH_period_5}}</td>
+          <td>{{subTT_Data35.NINETH_period_5}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Sat</th>
+          <td>{{subTT_Data35.FIRST_period_6}}</td>
+          <td>{{subTT_Data35.SECOND_period_6}}</td>
+          <td>{{subTT_Data35.THIRD_period_6}}</td>
+          <td>{{subTT_Data35.FOURTH_period_6}}</td>
+          <td>{{subTT_Data35.FIFTH_period_6}}</td>
+          <td>{{subTT_Data35.SIXTH_period_6}}</td>
+          <td>{{subTT_Data35.SEVENTH_period_6}}</td>
+          <td>{{subTT_Data35.EIGHTH_period_6}}</td>
+          <td>{{subTT_Data35.NINETH_period_6}}</td>
+        </tr>
+      </tbody>
+    </table>
+    {% endfor %}
+    
+    {% for subTT_Data36 in subTT_Data36 %}
+    
+    <table id="sub36_TT" class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th scope="col"><button class="Teacher_name">{{subTT_Data36.Teacher.Acronym}}</button></th>
+          <th scope="col" style="color: aquamarine;">1</th>
+          <th scope="col" style="color: aquamarine;">2</th>
+          <th scope="col" style="color: aquamarine;">3</th>
+          <th scope="col" style="color: aquamarine;">4</th>
+          <th scope="col" style="color: aquamarine;">5</th>
+          <th scope="col" style="color: aquamarine;">6</th>
+          <th scope="col" style="color: aquamarine;">7</th>
+          <th scope="col" style="color: aquamarine;">8</th>
+          <th scope="col" style="color: aquamarine;">9</th>
+        </tr>
+      </thead>
+      <tbody>
+    
+        <tr>
+          <th scope="row">Mon</th>
+          <td>{{subTT_Data36.FIRST_period_1}}</td>
+          <td>{{subTT_Data36.SECOND_period_1}}</td>
+          <td>{{subTT_Data36.THIRD_period_1}}</td>
+          <td>{{subTT_Data36.FOURTH_period_1}}</td>
+          <td>{{subTT_Data36.FIFTH_period_1}}</td>
+          <td>{{subTT_Data36.SIXTH_period_1}}</td>
+          <td>{{subTT_Data36.SEVENTH_period_1}}</td>
+          <td>{{subTT_Data36.EIGHTH_period_1}}</td>
+          <td>{{subTT_Data36.NINETH_period_1}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Tue</th>
+          <td>{{subTT_Data36.FIRST_period_2}}</td>
+          <td>{{subTT_Data36.SECOND_period_2}}</td>
+          <td>{{subTT_Data36.THIRD_period_2}}</td>
+          <td>{{subTT_Data36.FOURTH_period_2}}</td>
+          <td>{{subTT_Data36.FIFTH_period_2}}</td>
+          <td>{{subTT_Data36.SIXTH_period_2}}</td>
+          <td>{{subTT_Data36.SEVENTH_period_2}}</td>
+          <td>{{subTT_Data36.EIGHTH_period_2}}</td>
+          <td>{{subTT_Data36.NINETH_period_2}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Wed</th>
+          <td>{{subTT_Data36.FIRST_period_3}}</td>
+          <td>{{subTT_Data36.SECOND_period_3}}</td>
+          <td>{{subTT_Data36.THIRD_period_3}}</td>
+          <td>{{subTT_Data36.FOURTH_period_3}}</td>
+          <td>{{subTT_Data36.FIFTH_period_3}}</td>
+          <td>{{subTT_Data36.SIXTH_period_3}}</td>
+          <td>{{subTT_Data36.SEVENTH_period_3}}</td>
+          <td>{{subTT_Data36.EIGHTH_period_3}}</td>
+          <td>{{subTT_Data36.NINETH_period_3}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Thu</th>
+          <td>{{subTT_Data36.FIRST_period_4}}</td>
+          <td>{{subTT_Data36.SECOND_period_4}}</td>
+          <td>{{subTT_Data36.THIRD_period_4}}</td>
+          <td>{{subTT_Data36.FOURTH_period_4}}</td>
+          <td>{{subTT_Data36.FIFTH_period_4}}</td>
+          <td>{{subTT_Data36.SIXTH_period_4}}</td>
+          <td>{{subTT_Data36.SEVENTH_period_4}}</td>
+          <td>{{subTT_Data36.EIGHTH_period_4}}</td>
+          <td>{{subTT_Data36.NINETH_period_4}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Fri</th>
+          <td>{{subTT_Data36.FIRST_period_5}}</td>
+          <td>{{subTT_Data36.SECOND_period_5}}</td>
+          <td>{{subTT_Data36.THIRD_period_5}}</td>
+          <td>{{subTT_Data36.FOURTH_period_5}}</td>
+          <td>{{subTT_Data36.FIFTH_period_5}}</td>
+          <td>{{subTT_Data36.SIXTH_period_5}}</td>
+          <td>{{subTT_Data36.SEVENTH_period_5}}</td>
+          <td>{{subTT_Data36.EIGHTH_period_5}}</td>
+          <td>{{subTT_Data36.NINETH_period_5}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Sat</th>
+          <td>{{subTT_Data36.FIRST_period_6}}</td>
+          <td>{{subTT_Data36.SECOND_period_6}}</td>
+          <td>{{subTT_Data36.THIRD_period_6}}</td>
+          <td>{{subTT_Data36.FOURTH_period_6}}</td>
+          <td>{{subTT_Data36.FIFTH_period_6}}</td>
+          <td>{{subTT_Data36.SIXTH_period_6}}</td>
+          <td>{{subTT_Data36.SEVENTH_period_6}}</td>
+          <td>{{subTT_Data36.EIGHTH_period_6}}</td>
+          <td>{{subTT_Data36.NINETH_period_6}}</td>
+        </tr>
+      </tbody>
+    </table>
+    {% endfor %}
+    
+    {% for subTT_Data37 in subTT_Data37 %}
+    
+    <table id="sub37_TT" class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th scope="col"><button class="Teacher_name">{{subTT_Data37.Teacher.Acronym}}</button></th>
+          <th scope="col" style="color: aquamarine;">1</th>
+          <th scope="col" style="color: aquamarine;">2</th>
+          <th scope="col" style="color: aquamarine;">3</th>
+          <th scope="col" style="color: aquamarine;">4</th>
+          <th scope="col" style="color: aquamarine;">5</th>
+          <th scope="col" style="color: aquamarine;">6</th>
+          <th scope="col" style="color: aquamarine;">7</th>
+          <th scope="col" style="color: aquamarine;">8</th>
+          <th scope="col" style="color: aquamarine;">9</th>
+        </tr>
+      </thead>
+      <tbody>
+    
+        <tr>
+          <th scope="row">Mon</th>
+          <td>{{subTT_Data37.FIRST_period_1}}</td>
+          <td>{{subTT_Data37.SECOND_period_1}}</td>
+          <td>{{subTT_Data37.THIRD_period_1}}</td>
+          <td>{{subTT_Data37.FOURTH_period_1}}</td>
+          <td>{{subTT_Data37.FIFTH_period_1}}</td>
+          <td>{{subTT_Data37.SIXTH_period_1}}</td>
+          <td>{{subTT_Data37.SEVENTH_period_1}}</td>
+          <td>{{subTT_Data37.EIGHTH_period_1}}</td>
+          <td>{{subTT_Data37.NINETH_period_1}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Tue</th>
+          <td>{{subTT_Data37.FIRST_period_2}}</td>
+          <td>{{subTT_Data37.SECOND_period_2}}</td>
+          <td>{{subTT_Data37.THIRD_period_2}}</td>
+          <td>{{subTT_Data37.FOURTH_period_2}}</td>
+          <td>{{subTT_Data37.FIFTH_period_2}}</td>
+          <td>{{subTT_Data37.SIXTH_period_2}}</td>
+          <td>{{subTT_Data37.SEVENTH_period_2}}</td>
+          <td>{{subTT_Data37.EIGHTH_period_2}}</td>
+          <td>{{subTT_Data37.NINETH_period_2}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Wed</th>
+          <td>{{subTT_Data37.FIRST_period_3}}</td>
+          <td>{{subTT_Data37.SECOND_period_3}}</td>
+          <td>{{subTT_Data37.THIRD_period_3}}</td>
+          <td>{{subTT_Data37.FOURTH_period_3}}</td>
+          <td>{{subTT_Data37.FIFTH_period_3}}</td>
+          <td>{{subTT_Data37.SIXTH_period_3}}</td>
+          <td>{{subTT_Data37.SEVENTH_period_3}}</td>
+          <td>{{subTT_Data37.EIGHTH_period_3}}</td>
+          <td>{{subTT_Data37.NINETH_period_3}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Thu</th>
+          <td>{{subTT_Data37.FIRST_period_4}}</td>
+          <td>{{subTT_Data37.SECOND_period_4}}</td>
+          <td>{{subTT_Data37.THIRD_period_4}}</td>
+          <td>{{subTT_Data37.FOURTH_period_4}}</td>
+          <td>{{subTT_Data37.FIFTH_period_4}}</td>
+          <td>{{subTT_Data37.SIXTH_period_4}}</td>
+          <td>{{subTT_Data37.SEVENTH_period_4}}</td>
+          <td>{{subTT_Data37.EIGHTH_period_4}}</td>
+          <td>{{subTT_Data37.NINETH_period_4}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Fri</th>
+          <td>{{subTT_Data37.FIRST_period_5}}</td>
+          <td>{{subTT_Data37.SECOND_period_5}}</td>
+          <td>{{subTT_Data37.THIRD_period_5}}</td>
+          <td>{{subTT_Data37.FOURTH_period_5}}</td>
+          <td>{{subTT_Data37.FIFTH_period_5}}</td>
+          <td>{{subTT_Data37.SIXTH_period_5}}</td>
+          <td>{{subTT_Data37.SEVENTH_period_5}}</td>
+          <td>{{subTT_Data37.EIGHTH_period_5}}</td>
+          <td>{{subTT_Data37.NINETH_period_5}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Sat</th>
+          <td>{{subTT_Data37.FIRST_period_6}}</td>
+          <td>{{subTT_Data37.SECOND_period_6}}</td>
+          <td>{{subTT_Data37.THIRD_period_6}}</td>
+          <td>{{subTT_Data37.FOURTH_period_6}}</td>
+          <td>{{subTT_Data37.FIFTH_period_6}}</td>
+          <td>{{subTT_Data37.SIXTH_period_6}}</td>
+          <td>{{subTT_Data37.SEVENTH_period_6}}</td>
+          <td>{{subTT_Data37.EIGHTH_period_6}}</td>
+          <td>{{subTT_Data37.NINETH_period_6}}</td>
+        </tr>
+      </tbody>
+    </table>
+    {% endfor %}
+    
+    {% for subTT_Data38 in subTT_Data38 %}
+    
+    <table id="sub38_TT" class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th scope="col"><button class="Teacher_name">{{subTT_Data38.Teacher.Acronym}}</button></th>
+          <th scope="col" style="color: aquamarine;">1</th>
+          <th scope="col" style="color: aquamarine;">2</th>
+          <th scope="col" style="color: aquamarine;">3</th>
+          <th scope="col" style="color: aquamarine;">4</th>
+          <th scope="col" style="color: aquamarine;">5</th>
+          <th scope="col" style="color: aquamarine;">6</th>
+          <th scope="col" style="color: aquamarine;">7</th>
+          <th scope="col" style="color: aquamarine;">8</th>
+          <th scope="col" style="color: aquamarine;">9</th>
+        </tr>
+      </thead>
+      <tbody>
+    
+        <tr>
+          <th scope="row">Mon</th>
+          <td>{{subTT_Data38.FIRST_period_1}}</td>
+          <td>{{subTT_Data38.SECOND_period_1}}</td>
+          <td>{{subTT_Data38.THIRD_period_1}}</td>
+          <td>{{subTT_Data38.FOURTH_period_1}}</td>
+          <td>{{subTT_Data38.FIFTH_period_1}}</td>
+          <td>{{subTT_Data38.SIXTH_period_1}}</td>
+          <td>{{subTT_Data38.SEVENTH_period_1}}</td>
+          <td>{{subTT_Data38.EIGHTH_period_1}}</td>
+          <td>{{subTT_Data38.NINETH_period_1}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Tue</th>
+          <td>{{subTT_Data38.FIRST_period_2}}</td>
+          <td>{{subTT_Data38.SECOND_period_2}}</td>
+          <td>{{subTT_Data38.THIRD_period_2}}</td>
+          <td>{{subTT_Data38.FOURTH_period_2}}</td>
+          <td>{{subTT_Data38.FIFTH_period_2}}</td>
+          <td>{{subTT_Data38.SIXTH_period_2}}</td>
+          <td>{{subTT_Data38.SEVENTH_period_2}}</td>
+          <td>{{subTT_Data38.EIGHTH_period_2}}</td>
+          <td>{{subTT_Data38.NINETH_period_2}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Wed</th>
+          <td>{{subTT_Data38.FIRST_period_3}}</td>
+          <td>{{subTT_Data38.SECOND_period_3}}</td>
+          <td>{{subTT_Data38.THIRD_period_3}}</td>
+          <td>{{subTT_Data38.FOURTH_period_3}}</td>
+          <td>{{subTT_Data38.FIFTH_period_3}}</td>
+          <td>{{subTT_Data38.SIXTH_period_3}}</td>
+          <td>{{subTT_Data38.SEVENTH_period_3}}</td>
+          <td>{{subTT_Data38.EIGHTH_period_3}}</td>
+          <td>{{subTT_Data38.NINETH_period_3}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Thu</th>
+          <td>{{subTT_Data38.FIRST_period_4}}</td>
+          <td>{{subTT_Data38.SECOND_period_4}}</td>
+          <td>{{subTT_Data38.THIRD_period_4}}</td>
+          <td>{{subTT_Data38.FOURTH_period_4}}</td>
+          <td>{{subTT_Data38.FIFTH_period_4}}</td>
+          <td>{{subTT_Data38.SIXTH_period_4}}</td>
+          <td>{{subTT_Data38.SEVENTH_period_4}}</td>
+          <td>{{subTT_Data38.EIGHTH_period_4}}</td>
+          <td>{{subTT_Data38.NINETH_period_4}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Fri</th>
+          <td>{{subTT_Data38.FIRST_period_5}}</td>
+          <td>{{subTT_Data38.SECOND_period_5}}</td>
+          <td>{{subTT_Data38.THIRD_period_5}}</td>
+          <td>{{subTT_Data38.FOURTH_period_5}}</td>
+          <td>{{subTT_Data38.FIFTH_period_5}}</td>
+          <td>{{subTT_Data38.SIXTH_period_5}}</td>
+          <td>{{subTT_Data38.SEVENTH_period_5}}</td>
+          <td>{{subTT_Data38.EIGHTH_period_5}}</td>
+          <td>{{subTT_Data38.NINETH_period_5}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Sat</th>
+          <td>{{subTT_Data38.FIRST_period_6}}</td>
+          <td>{{subTT_Data38.SECOND_period_6}}</td>
+          <td>{{subTT_Data38.THIRD_period_6}}</td>
+          <td>{{subTT_Data38.FOURTH_period_6}}</td>
+          <td>{{subTT_Data38.FIFTH_period_6}}</td>
+          <td>{{subTT_Data38.SIXTH_period_6}}</td>
+          <td>{{subTT_Data38.SEVENTH_period_6}}</td>
+          <td>{{subTT_Data38.EIGHTH_period_6}}</td>
+          <td>{{subTT_Data38.NINETH_period_6}}</td>
+        </tr>
+      </tbody>
+    </table>
+    {% endfor %}
+    
+    {% for subTT_Data39 in subTT_Data39 %}
+    
+    <table id="sub39_TT" class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th scope="col"><button class="Teacher_name">{{subTT_Data39.Teacher.Acronym}}</button></th>
+          <th scope="col" style="color: aquamarine;">1</th>
+          <th scope="col" style="color: aquamarine;">2</th>
+          <th scope="col" style="color: aquamarine;">3</th>
+          <th scope="col" style="color: aquamarine;">4</th>
+          <th scope="col" style="color: aquamarine;">5</th>
+          <th scope="col" style="color: aquamarine;">6</th>
+          <th scope="col" style="color: aquamarine;">7</th>
+          <th scope="col" style="color: aquamarine;">8</th>
+          <th scope="col" style="color: aquamarine;">9</th>
+        </tr>
+      </thead>
+      <tbody>
+    
+        <tr>
+          <th scope="row">Mon</th>
+          <td>{{subTT_Data39.FIRST_period_1}}</td>
+          <td>{{subTT_Data39.SECOND_period_1}}</td>
+          <td>{{subTT_Data39.THIRD_period_1}}</td>
+          <td>{{subTT_Data39.FOURTH_period_1}}</td>
+          <td>{{subTT_Data39.FIFTH_period_1}}</td>
+          <td>{{subTT_Data39.SIXTH_period_1}}</td>
+          <td>{{subTT_Data39.SEVENTH_period_1}}</td>
+          <td>{{subTT_Data39.EIGHTH_period_1}}</td>
+          <td>{{subTT_Data39.NINETH_period_1}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Tue</th>
+          <td>{{subTT_Data39.FIRST_period_2}}</td>
+          <td>{{subTT_Data39.SECOND_period_2}}</td>
+          <td>{{subTT_Data39.THIRD_period_2}}</td>
+          <td>{{subTT_Data39.FOURTH_period_2}}</td>
+          <td>{{subTT_Data39.FIFTH_period_2}}</td>
+          <td>{{subTT_Data39.SIXTH_period_2}}</td>
+          <td>{{subTT_Data39.SEVENTH_period_2}}</td>
+          <td>{{subTT_Data39.EIGHTH_period_2}}</td>
+          <td>{{subTT_Data39.NINETH_period_2}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Wed</th>
+          <td>{{subTT_Data39.FIRST_period_3}}</td>
+          <td>{{subTT_Data39.SECOND_period_3}}</td>
+          <td>{{subTT_Data39.THIRD_period_3}}</td>
+          <td>{{subTT_Data39.FOURTH_period_3}}</td>
+          <td>{{subTT_Data39.FIFTH_period_3}}</td>
+          <td>{{subTT_Data39.SIXTH_period_3}}</td>
+          <td>{{subTT_Data39.SEVENTH_period_3}}</td>
+          <td>{{subTT_Data39.EIGHTH_period_3}}</td>
+          <td>{{subTT_Data39.NINETH_period_3}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Thu</th>
+          <td>{{subTT_Data39.FIRST_period_4}}</td>
+          <td>{{subTT_Data39.SECOND_period_4}}</td>
+          <td>{{subTT_Data39.THIRD_period_4}}</td>
+          <td>{{subTT_Data39.FOURTH_period_4}}</td>
+          <td>{{subTT_Data39.FIFTH_period_4}}</td>
+          <td>{{subTT_Data39.SIXTH_period_4}}</td>
+          <td>{{subTT_Data39.SEVENTH_period_4}}</td>
+          <td>{{subTT_Data39.EIGHTH_period_4}}</td>
+          <td>{{subTT_Data39.NINETH_period_4}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Fri</th>
+          <td>{{subTT_Data39.FIRST_period_5}}</td>
+          <td>{{subTT_Data39.SECOND_period_5}}</td>
+          <td>{{subTT_Data39.THIRD_period_5}}</td>
+          <td>{{subTT_Data39.FOURTH_period_5}}</td>
+          <td>{{subTT_Data39.FIFTH_period_5}}</td>
+          <td>{{subTT_Data39.SIXTH_period_5}}</td>
+          <td>{{subTT_Data39.SEVENTH_period_5}}</td>
+          <td>{{subTT_Data39.EIGHTH_period_5}}</td>
+          <td>{{subTT_Data39.NINETH_period_5}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Sat</th>
+          <td>{{subTT_Data39.FIRST_period_6}}</td>
+          <td>{{subTT_Data39.SECOND_period_6}}</td>
+          <td>{{subTT_Data39.THIRD_period_6}}</td>
+          <td>{{subTT_Data39.FOURTH_period_6}}</td>
+          <td>{{subTT_Data39.FIFTH_period_6}}</td>
+          <td>{{subTT_Data39.SIXTH_period_6}}</td>
+          <td>{{subTT_Data39.SEVENTH_period_6}}</td>
+          <td>{{subTT_Data39.EIGHTH_period_6}}</td>
+          <td>{{subTT_Data39.NINETH_period_6}}</td>
+        </tr>
+      </tbody>
+    </table>
+    {% endfor %}
+    
+    
+    {% for subTT_Data40 in subTT_Data40 %}
+    
+    <table id="sub40_TT" class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th scope="col"><button class="Teacher_name">{{subTT_Data40.Teacher.Acronym}}</button></th>
+          <th scope="col" style="color: aquamarine;">1</th>
+          <th scope="col" style="color: aquamarine;">2</th>
+          <th scope="col" style="color: aquamarine;">3</th>
+          <th scope="col" style="color: aquamarine;">4</th>
+          <th scope="col" style="color: aquamarine;">5</th>
+          <th scope="col" style="color: aquamarine;">6</th>
+          <th scope="col" style="color: aquamarine;">7</th>
+          <th scope="col" style="color: aquamarine;">8</th>
+          <th scope="col" style="color: aquamarine;">9</th>
+        </tr>
+      </thead>
+      <tbody>
+    
+        <tr>
+          <th scope="row">Mon</th>
+          <td>{{subTT_Data40.FIRST_period_1}}</td>
+          <td>{{subTT_Data40.SECOND_period_1}}</td>
+          <td>{{subTT_Data40.THIRD_period_1}}</td>
+          <td>{{subTT_Data40.FOURTH_period_1}}</td>
+          <td>{{subTT_Data40.FIFTH_period_1}}</td>
+          <td>{{subTT_Data40.SIXTH_period_1}}</td>
+          <td>{{subTT_Data40.SEVENTH_period_1}}</td>
+          <td>{{subTT_Data40.EIGHTH_period_1}}</td>
+          <td>{{subTT_Data40.NINETH_period_1}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Tue</th>
+          <td>{{subTT_Data40.FIRST_period_2}}</td>
+          <td>{{subTT_Data40.SECOND_period_2}}</td>
+          <td>{{subTT_Data40.THIRD_period_2}}</td>
+          <td>{{subTT_Data40.FOURTH_period_2}}</td>
+          <td>{{subTT_Data40.FIFTH_period_2}}</td>
+          <td>{{subTT_Data40.SIXTH_period_2}}</td>
+          <td>{{subTT_Data40.SEVENTH_period_2}}</td>
+          <td>{{subTT_Data40.EIGHTH_period_2}}</td>
+          <td>{{subTT_Data40.NINETH_period_2}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Wed</th>
+          <td>{{subTT_Data40.FIRST_period_3}}</td>
+          <td>{{subTT_Data40.SECOND_period_3}}</td>
+          <td>{{subTT_Data40.THIRD_period_3}}</td>
+          <td>{{subTT_Data40.FOURTH_period_3}}</td>
+          <td>{{subTT_Data40.FIFTH_period_3}}</td>
+          <td>{{subTT_Data40.SIXTH_period_3}}</td>
+          <td>{{subTT_Data40.SEVENTH_period_3}}</td>
+          <td>{{subTT_Data40.EIGHTH_period_3}}</td>
+          <td>{{subTT_Data40.NINETH_period_3}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Thu</th>
+          <td>{{subTT_Data40.FIRST_period_4}}</td>
+          <td>{{subTT_Data40.SECOND_period_4}}</td>
+          <td>{{subTT_Data40.THIRD_period_4}}</td>
+          <td>{{subTT_Data40.FOURTH_period_4}}</td>
+          <td>{{subTT_Data40.FIFTH_period_4}}</td>
+          <td>{{subTT_Data40.SIXTH_period_4}}</td>
+          <td>{{subTT_Data40.SEVENTH_period_4}}</td>
+          <td>{{subTT_Data40.EIGHTH_period_4}}</td>
+          <td>{{subTT_Data40.NINETH_period_4}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Fri</th>
+          <td>{{subTT_Data40.FIRST_period_5}}</td>
+          <td>{{subTT_Data40.SECOND_period_5}}</td>
+          <td>{{subTT_Data40.THIRD_period_5}}</td>
+          <td>{{subTT_Data40.FOURTH_period_5}}</td>
+          <td>{{subTT_Data40.FIFTH_period_5}}</td>
+          <td>{{subTT_Data40.SIXTH_period_5}}</td>
+          <td>{{subTT_Data40.SEVENTH_period_5}}</td>
+          <td>{{subTT_Data40.EIGHTH_period_5}}</td>
+          <td>{{subTT_Data40.NINETH_period_5}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Sat</th>
+          <td>{{subTT_Data40.FIRST_period_6}}</td>
+          <td>{{subTT_Data40.SECOND_period_6}}</td>
+          <td>{{subTT_Data40.THIRD_period_6}}</td>
+          <td>{{subTT_Data40.FOURTH_period_6}}</td>
+          <td>{{subTT_Data40.FIFTH_period_6}}</td>
+          <td>{{subTT_Data40.SIXTH_period_6}}</td>
+          <td>{{subTT_Data40.SEVENTH_period_6}}</td>
+          <td>{{subTT_Data40.EIGHTH_period_6}}</td>
+          <td>{{subTT_Data40.NINETH_period_6}}</td>
+        </tr>
+      </tbody>
+    </table>
+    {% endfor %}
+    </div>
+</div>
+  </body>
+  
+  <style>
+    
+    @import url('https://fonts.googleapis.com/css2?family=Saira:wght@200&display=swap');
+
+    .Save_btn{
+      font-family: 'Saira', sans-serif;
+        font-weight: bold;
+        background-color: rgb(62, 255, 94);
+        position: relative;
+        width: 100px;
+        margin-top: 20px;
+        left: 90px;
+        border: none;
+        border-radius: 5px;
+        font-size: 17px;
+        transition: 0.3s;
+
+    }
+    .Save_btn:hover{
+        background-color: rgb(154, 255, 169);
+    }
+    .form_body{
+        font-family: 'Saira', sans-serif;
+        font-weight: bold;
+        position: fixed;
+        top: -10px;
+        width: 500px;
+        margin-right: -100px;
+        right: 0;
+
+    }
+    .back_btn {
+        justify-content: center;
+        text-align: center;
+        background-color: rgb(0, 205, 85);
+        border: none;
+        height: 45px;
+        width: 45px;
+        color: black;
+        position: relative;
+        top: 20px;
+        left: 20px;
+        transition: 0.4s;
+        text-align: justify;
+        color: white;
+  }
+
+  .back_btn:hover {
+        background-color: rgb(24, 255, 120);
+  }
+
+
+  .TT_container{
+      left: 10px;
+      top: -10px;
+      overflow: auto;
+      position: relative;
+      max-width: 1000px;
+
+    }
+
+    .table {
+      margin-top: 300px;
+      table-layout: fixed;
+      word-spacing: 5px;
+      height: 500px;
+      font-size: large
+    }
+
+    td.table {
+      letter-spacing: 2px;
+    }
+
+    .Teacher_name{
+      font-weight: bold;
+      color: white;
+      background-color: rgb(17, 230, 159);
+      border-radius: 5px;
+      border: none;
+      height: 30px;
+      width: 40px;
+      transition: 0.4s;
+      text-align: center;
+      color: white; 
+    }
+
+    .Teacher_name:hover{
+      background-color: rgb(49, 138, 109);
+      cursor: pointer;
+    }
+
+    #submit_form{
+      background-color: rgb(0, 205, 85);
+      position: sticky;
+      border: none;
+      border-radius: 3px;
+      font-size: 17px;
+      transition: 0.3s;
+    }
+
+    #submit_form:hover{
+      background-color: rgb(154, 255, 169);
+
+    }
+
+    #search{
+      color: black;
+      position: sticky;
+      max-width: 200px;
+      height: 30px;
+      padding: 3px;
+      margin-left: 400px;
+      border: 0;
+      border-radius: 3px;
+      background-color: rgb(199, 199, 199);
+    }
+
+
+
+</style>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+      $('.Teacher_name').click(function() {
+          $.ajax({
+              type: 'GET',
+              url: '/locate_image/',
+              dataType: 'json',
+          });
+      });
+  });
+</script>
+
+<script>
+  function checkInput() {
+      var query = document.getElementById('search').value;
+      window.find(query);
+      return true;
+  }
+</script>
+
+<script>
+var input = document.getElementById("search");
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("submit_form").click();
+  }
+});
+</script>
