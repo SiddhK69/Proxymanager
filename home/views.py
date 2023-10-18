@@ -27,7 +27,7 @@ def index(request):
     print(request.user)
     if request.user.is_anonymous:
         return redirect("/login")
-    return render(request, 'Design.html', {'PRX_Data': PRX_data, 'TT_Data': TT_Data, "Sts_Data": Sts_Data})
+    return render(request, 'Index.html', {'PRX_Data': PRX_data, 'TT_Data': TT_Data, "Sts_Data": Sts_Data})
 
 
 def index_NA(request):
@@ -1291,7 +1291,7 @@ def get_subs(request, id):
         subTT_Data50 = Tsub50.objects.all()
         return render (request, 'Show_TT.html', {'subTT_Data50':subTT_Data50})
     else:
-        return render (request, 'Design.html')
+        return render (request, 'Index.html')
 
 
 def All_Proxy(request):

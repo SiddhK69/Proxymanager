@@ -1,0 +1,7 @@
+pip install datetime
+pip install pyautogui
+pip install image
+pip install keyboard
+pip install xlwt
+pip install pytesseract
+pip install opencv-python
