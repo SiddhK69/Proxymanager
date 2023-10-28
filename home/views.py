@@ -20,17 +20,17 @@ from django.http import JsonResponse
 
 
 # Create your views here.
-def index(request):
+def Index(request):
     PRX_data = Data_PRX.objects.all()
     TT_Data = TimeTable.objects.all()
     Sts_Data = stats.objects.all()
     print(request.user)
     if request.user.is_anonymous:
         return redirect("/login")
-    return render(request, 'index.html', {'PRX_Data': PRX_data, 'TT_Data': TT_Data, "Sts_Data": Sts_Data})
+    return render(request, 'Design.html', {'PRX_Data': PRX_data, 'TT_Data': TT_Data, "Sts_Data": Sts_Data})
 
 
-def index_NA(request):
+def Design_NA(request):
     PRX_Data = Data_PRX.objects.all()
     print(request.user)
     return render(request, 'Design_NA.html', {'PRXData': PRX_Data})
@@ -1291,7 +1291,7 @@ def get_subs(request, id):
         subTT_Data50 = Tsub50.objects.all()
         return render (request, 'Show_TT.html', {'subTT_Data50':subTT_Data50})
     else:
-        return render (request, 'index.html')
+        return render (request, 'Design.html')
 
 
 def All_Proxy(request):
