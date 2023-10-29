@@ -1,3 +1,4 @@
+virtualenv==3.3
 django==4.2.6
 datetime==5.2
 pyautogui==0.9.54
